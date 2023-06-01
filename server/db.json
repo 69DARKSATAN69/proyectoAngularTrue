@@ -1,0 +1,38 @@
+{
+	"characters": [
+		{
+			"id": 0,
+			"name": "",
+			"image": "",
+			"alignment": "",
+			"height": 0,
+			"game": "",
+			"weapon": "",
+			"info": ""
+		}
+	],
+	"monsters": [
+		{
+			"id": 0,
+			"name": "",
+			"image": "",
+			"moneyDrop": "",
+			"game": "",
+			"drops": [],
+			"type": ""
+		}
+	],
+	"magic": [
+		{
+			"id": 2,
+			"name": "",
+			"type": {},
+			"effect": "",
+			"mana cost": "",
+			"element": {}
+		}
+	],
+	"users": [
+	]
+}
+  
