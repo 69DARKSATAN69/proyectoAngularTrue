@@ -39,6 +39,46 @@
       "weapon": "Staff",
       "info": "Seymour Guado is the secondary antagonist of Final Fantasy X, as well as a guest in a battle. As a maester in the temple of Yevon, Seymour has influence over Spira, but uses his power towards a sinister end. According to the Final Fantasy X Scenario Ultimania Seymour is the Minister of Temple Affairs, which maintains the temples' rituals and teachings and oversees the summoners. This position allows him the authority to handle records of the sealed histories. He is also the High Priest of Macalania Temple. Seymour is a skilled mage and a summoner himself. Seymour believes, as many do, that Sin is eternal and sees death as a release from the sorrow of life. This mindset gains him respect from the majority of Spira, with only Tidus and Auron showing distrust and dislike for him in their first meeting. Seymour appears courteous and affable, and is popular among Yevonites.",
       "id": 4
+    },
+    {
+      "name": "Tifa Lockhart",
+      "image": "https://i.imgur.com/MT6StZL.png",
+      "alignment": "good",
+      "height": 167,
+      "game": "VII",
+      "weapon": "Premium Heart",
+      "info": "Tifa grew up with Cloud in Nibelheim, but lost contact with him years ago. When she meets him again, she convinces him to join Avalanche to fight the Shinra Electric Power Company, whom she bears hatred for due to the destruction of their hometown. She supports Cloud as his comrade and helps him and his allies fight Sephiroth. Tifa is reserved, moral, and empathic, acting as a motherly figure towards her allies when providing encouragement and emotional support. She also serves as the voice of reason grounding them to think things through and do the right thing. Tifa is empathic, motherly, intuitive, and reserved, both out of being observant and for being emotionally shy. Tifa identifies the feelings of others, offering sanctuary and protection for her teammates. While looking out for others, she rarely discusses her own feelings: when asked, she will either express surprise, or quickly change the subject. Tifa considers all options and takes in all information before acting, (best seen when she does not speak up about Cloud's confused past until she is certain of her own recollection of events), and encourages others to practice this same restraint and think things through first. Tifa can and does fight to defend herself, often preferring to so as not to get others involved. While normally reserved, Tifa still shows aggression at times, but has low self-confidence and is overly self-critical of her faults, always pushing herself to do better.",
+      "id": 5
+    },
+    {
+      "name": "Cloud Strife",
+      "image": "https://i.imgur.com/bya841h.png",
+      "alignment": "good",
+      "height": 173,
+      "game": "VII",
+      "weapon": "Ultima Weapon",
+      "info": "An arrogant and proud swordsman at first, Cloud introduces himself to Avalanche as a former member of an elite warrior unit called SOLDIER who has turned mercenary, and uninterested in anything beyond his hired task at hand. Beneath his hardened outer persona is a softer, more caring individual who simply struggles to open up, but is striving to be a hero. Cloud later discovers more about his past and, with the help of his friends, learns there is more to being a hero than possessing physical strength and fame. He develops compassion for the planet and the people he fights to protect from the Shinra Electric Power Company and his nemesis, Sephiroth. On the surface, Cloud Strife presents himself as a hardened warrior, cocky and headstrong, coldhearted and disinterested in anything beyond completing the hired job at hand. He tells others, often dismissively and with snark, that he has no interest in larger causes, such as the plight of the planet, and appears unshaken by the devastation the bombings he helped carry out cause. He is cool-headed, and mostly carries himself as an expert and professional. Beneath the surface, Cloud is socially awkward, being well-intentioned but unsure how to carry himself in conversations, having difficulties to express himself. Many who are close to him begin to see through the cracks in his hardened persona, recognizing he is softer deep down. Through it all, Cloud is steadfastly loyal to his friends, harboring guilt if he feels he has let them down, and strives to be a hero. He is willing to go through any lengths, from fighting off powerful enemies alone, to crossdressing despite the discomfort to don a disguise, to keep them safe. This, too, does not fool some of his friends, who in turn look out for him when they believe he is out of his depth.",
+      "id": 6
+    },
+    {
+      "name": "Vincent Valentine",
+      "image": "https://i.imgur.com/KGj5tRb.png",
+      "alignment": "good",
+      "height": 184,
+      "game": "VII",
+      "weapon": "Death Penalty",
+      "info": "Vincent wields handguns in battle. His Limit Breaks cause him to shapeshift as a result of the experiments Professor Hojo performed on him. When he transforms, his stats increase and he gains new powerful attacks, but becomes uncontrollable until the battle ends or until he falls into Death status. Dark and brooding over his past experiences, Vincent conceals many secrets. He speaks in a cryptic manner when he talks about his past, calling his traumas 'sins'. Despite his cold personality, he is not uncaring; at a point where Cloud admits he thought Vincent does not care about the Planet, Vincent states that is just how he is, and apologizes for the false impression.\\n\\nVincent despises Professor Hojo for his immoral actions, and it is the promise of meeting him that stirs Vincent to accompany the party in Final Fantasy VII. Vincent is reluctant to speak, although when he does, he typically has something important to say.\\n\\nKazushige Nojima has noted Vincent is naturally a loner, and had he not been a former ally of Cloud and his friends, it is unlikely he would have joined them in the battle with Bahamut SIN in Final Fantasy VII: Advent Children. His voice actor, Shōgo Suzuki, noted Vincent's few appearances have a profound impact and that Tifa Lockhart's remark 'they're our friends', after Vincent's arrival, shows his underlying warmth. He is noted to be similar to Cloud, only more mature, which influenced his character and voice work.",
+      "id": 7
+    },
+    {
+      "name": "Sephiroth",
+      "image": "https://i.imgur.com/L4rUiwH.png",
+      "alignment": "evil",
+      "height": 185,
+      "game": "VII",
+      "weapon": "Masamune",
+      "info": "Before his fall from grace, Sephiroth was one of the most lauded success stories of the Shinra Electric Power Company's SOLDIER program. His successes in the field of battle during the conflicts surrounding Shinra's bid for global domination led to his status as a celebrity war hero and the poster boy for both SOLDIER and the Shinra military as a whole. Later driven insane after discovering the unnatural circumstances of his creation, Sephiroth developed delusions of godhood and a misanthropic ambition to destroy the planet.\\n\\nBefore his madness, as shown in Crisis Core -Final Fantasy VII-, Sephiroth maintains an outwardly aloof and professional demeanor during his time at Shinra. He is known for hardly mingling with anyone besides his only friends, Angeal Hewley and Genesis Rhapsodos, and being indifferent toward his fans. He can act humane and caring in contrast to his reputation, befriending Zack over their shared reluctance to hunt down their friends and desire to bring them back, and asking Cloud how he felt to be back in his hometown, having no similar experience himself. \\nSephiroth is intelligent and respects those he deems worthy—he considers Professor Gast a great scientist but scorns Professor Hojo. Well-spoken and graceful, Sephiroth is calm, collected, and in control. He has a dry sense of humor. Sometimes, he can be frustrated and caught off-guard. As the strongest SOLDIER, Sephiroth is confident to the point of arrogance, yet has no interest in personal glory, as he tells Genesis, who envies Sephiroth's reputation, that he can have it.",
+      "id": 8
     }
   ],
   "monsters": [
