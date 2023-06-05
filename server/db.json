@@ -1,38 +1,66 @@
 {
-	"characters": [
-		{
-			"id": 0,
-			"name": "",
-			"image": "",
-			"alignment": "",
-			"height": 0,
-			"game": "",
-			"weapon": "",
-			"info": ""
-		}
-	],
-	"monsters": [
-		{
-			"id": 0,
-			"name": "",
-			"image": "",
-			"moneyDrop": "",
-			"game": "",
-			"drops": [],
-			"type": ""
-		}
-	],
-	"magic": [
-		{
-			"id": 2,
-			"name": "",
-			"type": {},
-			"effect": "",
-			"mana cost": "",
-			"element": {}
-		}
-	],
-	"users": [
-	]
+  "characters": [
+    {
+      "name": "Tidus",
+      "image": "https://i.imgur.com/mI9ZZr6.png",
+      "alignment": "good",
+      "height": 175,
+      "game": "X",
+      "weapon": "Caladbolg",
+      "info": "He is a rising star blitzball player from Zanarkand, and the son of major blitzball star Jecht. After the gargantuan monster known as Sin attacks his hometown, Tidus is transported to the world of Spira. Lost, confused, and seemingly out of place, Tidus meets a newly-fledged summoner named Yuna, and her guardians. Yuna is to set out on a pilgrimage to put an end to Sin, and by joining Yuna on her pilgrimage, Tidus hopes he will find his way home. Tidus is upbeat and initially childish and naive to the world of Spira. He is also selfless and will do what he believes is right, even if he doesn't think it through first. Throughout the pilgrimage, he matures and becomes more level-headed and grounded. Tidus is upbeat and carefree and at first appears childish. He turns more serious when things get hectic, and despite his carefree ways, conceals a troubled past. Tidus is sensitive and even when giving an emotional response to most of his arguments, tends to give a good rationale. Despite having been picked on throughout his childhood by his blitzball-playing father, Tidus was motivated to become a top blitzball player himself.",
+      "id": 1
+    },
+    {
+      "name": "Yuna",
+      "image": "https://i.imgur.com/nLqci91.png",
+      "alignment": "good",
+      "height": 161,
+      "game": "X",
+      "weapon": "Nirvana",
+      "info": "In Final Fantasy X, Yuna becomes a summoner like her father before her, and embarks on a pilgrimage to expel Sin, a monstrous creature that terrorizes the world of Spira. She meets Tidus who teaches her there is more to life than sacrifice. In Final Fantasy X-2, Yuna is a sphere hunter on a personal quest to uncover the mystery behind a movie sphere, and becomes involved in rising political tensions and an ancient force that threaten to end Spira's Eternal Calm. Yuna is a kind, loyal, honest, polite and passionate humanitarian who strives to see the best in others and has a strong conviction to complete whatever task she feels is her duty. She is naive, always believing in the best of people, and places the needs of others above her own, becoming apologetic when she feels she has let someone down. Like most summoners, Yuna is a devout follower of Yevon's teachings. She hides her feelings of fear and sadness while encouraging her friends to express themselves in her place. She is willing to carry others' burdens and sacrifice everything she has to destroy Sin, giving up chances for her own happiness if it means helping others. Her interactions with Tidus make her question Yevon's teachings, and she becomes more direct and open. When her faith in Yevon is shaken, Yuna must find her own path in life and pursue her goals without the backing of faith.",
+      "id": 2
+    },
+    {
+      "name": "Lulu",
+      "image": "https://i.imgur.com/OxmEsco.png",
+      "alignment": "good",
+      "height": 167,
+      "game": "X",
+      "weapon": "Onion Knight",
+      "info": "Since Lulu grew up with Yuna in Besaid, she and Wakka view her as a younger sister. Lulu was Wakka's brother Chappu's girlfriend, and still grieves over his death. Her stoic and self-possessed nature makes her seem insensitive, but conceals a gentleness underneath. She is instrumental in supporting Tidus to adjust to the world of Spira, although she does not initially believe his claim of hailing from Zanarkand. Lulu specializes in the art of Blk Magic, with her Sphere Grid giving her access to many offensive spells, and her Overdrive, Fury, allows her to cast many Blk Magic spells rapidly. She commands various dolls to attack and help her cast spells, and equips bangles as defensive gear. Her Celestial Weapon, Onion Knight, reduces the cost of casting a spell to 2 MP, and amplifies the damage her spells deal. Lulu is stern and scathing (particularly to Wakka), self-possessed, sardonic, moody, cynical, and does not smile often. She is nonetheless kind-hearted, caring and intelligent, and is one of the few Yevonites to question the religion on objective terms. Having lost her lover to Sin, Lulu has become reserved and prefers to keep her emotions locked up, choosing to examine the world with realism and logic. She is a big-sister figure to Yuna to whom she is fiercely loyal.",
+      "id": 3
+    },
+    {
+      "name": "Seymour Guado",
+      "image": "https://i.imgur.com/8r8XF9O.png",
+      "alignment": "evil",
+      "height": 187,
+      "game": "X",
+      "weapon": "Staff",
+      "info": "Seymour Guado is the secondary antagonist of Final Fantasy X, as well as a guest in a battle. As a maester in the temple of Yevon, Seymour has influence over Spira, but uses his power towards a sinister end. According to the Final Fantasy X Scenario Ultimania Seymour is the Minister of Temple Affairs, which maintains the temples' rituals and teachings and oversees the summoners. This position allows him the authority to handle records of the sealed histories. He is also the High Priest of Macalania Temple. Seymour is a skilled mage and a summoner himself. Seymour believes, as many do, that Sin is eternal and sees death as a release from the sorrow of life. This mindset gains him respect from the majority of Spira, with only Tidus and Auron showing distrust and dislike for him in their first meeting. Seymour appears courteous and affable, and is popular among Yevonites.",
+      "id": 4
+    }
+  ],
+  "monsters": [
+    {
+      "id": 0,
+      "name": "",
+      "image": "",
+      "moneyDrop": "",
+      "game": "",
+      "drops": [],
+      "type": ""
+    }
+  ],
+  "magic": [
+    {
+      "id": 2,
+      "name": "",
+      "type": {},
+      "effect": "",
+      "mana cost": "",
+      "element": {}
+    }
+  ],
+  "users": []
 }
-  
