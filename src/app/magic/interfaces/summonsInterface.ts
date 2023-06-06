@@ -1,0 +1,14 @@
+export interface SummonInterface {
+  id: number;
+  game: string;
+  name: string;
+  location: string;
+  magicMateria: string;
+  image: string;
+  element: string;
+  MP: number;
+  Attack: string;
+  Attributes: string;
+  effect: string;
+  infoExtra: string;
+}
