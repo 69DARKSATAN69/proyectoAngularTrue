@@ -1,1 +1,16 @@
-<p>auth works!</p>
+<section>
+    <header>
+    <h2>Formulario de alta</h2>
+        </header>
+        
+    <form [formGroup]="formGroup">
+        <fieldset>
+            <p><label for="email">Email</label></p>
+            <p><input type="text" name="email" formControlName="email"/></p>
+            <p><label for="password">Password</label></p>
+            <p><input type="password" name="password" formControlName="password"></p>
+        </fieldset>
+        <input type="button" name="envio" value="Enviar" (click)="registerUsuario()" [disabled]="formGroup.invalid" *ngIf="!editing"/>
+        <!-- <input type="button" name="envio" value="Editar" (click)="editUsuario()" [disabled]="formGroup.invalid" *ngIf="editing"/> -->
+    </form>
+    </section>

@@ -135,13 +135,106 @@
   ],
   "monsters": [
     {
-      "id": 0,
-      "name": "",
-      "image": "",
-      "moneyDrop": "",
-      "game": "",
+      
+      "name": "Skarnbulette",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/0/0b/Skarnbulette.png/revision/latest?cb=20170903212824",
+      "moneyDrop": "6910",
+      "game": "XV",
+      "drops": ["Mega Phoenix"],
+      "type": "Beast",
+      "id": 1
+    },
+    {
+      "name": "Wyvern",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/d5/Wyvern_FFXV.png/revision/latest?cb=20170907222453",
+      "moneyDrop": "7290",
+      "game": "XV",
+      "drops": ["Sapphire Bracelet"],
+      "type": "Beast",
+      "id": 2
+    },
+    {
+      "name": "Custard",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/c/cc/Custard.png/revision/latest?cb=20170916115834",
+      "moneyDrop": "3150",
+      "game": "XV",
+      "drops": ["Lightning Crest"],
+      "type": "Daemon",
+      "id": 3
+    },
+    {
+      "name": "Falxfang",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/6/60/Falxfang.png/revision/latest?cb=20170919205712",
+      "moneyDrop": "5520",
+      "game": "XV",
+      "drops": ["Crimson Tongue"],
+      "type": "Beast",
+      "id": 4
+    },
+    {
+      "name": "Abyss Worm",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/9/91/Land_Worm.jpg/revision/latest?cb=20120718191403",
+      "moneyDrop": "700",
+      "game": "X",
+      "drops": ["Stamina Tonic", "Dark Matter"],
+      "type": "Worm",
+      "id": 5
+    },
+    {
+      "name": "Ogre",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/a/a3/Ogre_%28FFX%29.jpg/revision/latest?cb=20120719002021",
+      "moneyDrop": "500",
+      "game": "X",
+      "drops": ["Power Sphere"],
+      "type": "Ogre",
+      "id": 6
+    },
+    {
+      
+        "name": "Shinryu",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/0/0a/Shinryu-ffx-enemy.png/revision/latest?cb=20120719223617",
+        "moneyDrop": "1000",
+        "game": "X",
+        "drops": ["Wings to Discovery", "Dark Matter"],
+        "type": "Dragon",
+        "id": 7
+      
+    },
+    {
+      "name": "Gold Element",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/d9/GoldElement-ffx.png/revision/latest?cb=20130630053640",
+      "moneyDrop": "200",
+      "game": "X",
+      "drops": ["Mana Sphere"],
+      "type": "Elemental",
+      "id": 8
+    },
+    {
+      "name": "Desert Sahagin",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/da/Desert_Sahagin_FF7.png/revision/latest?cb=20120718001450",
+      "moneyDrop": "300",
+      "game": "VII",
+      "drops": ["Potion"],
+      "type": "Tortoise",
+      "id": 9
+    },
+    {
+      "name": "Dragon Zombie",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/9/9b/Dragon_Zombie_FF7.png/revision/latest?cb=20120322135748",
+      "moneyDrop": "2800",
+      "game": "VII",
+      "drops": ["Cauldron", "X-Potion"],
+      "type": "Undead",
+      "id": 10
+    },
+    {
+      "name": "Cactuar",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/2/20/Cactuar_FF7.png/revision/latest?cb=20120609001954",
+      "moneyDrop": "10000",
+      "game": "VII",
       "drops": [],
-      "type": ""
+      "type": "Undead",
+      "id": 11
     }
   ],
   "magic": [
