@@ -1,0 +1,24 @@
+<section>
+  <header>
+    <h1>Monsters</h1>
+  </header>
+  <main class="content-control">
+    <div class="image-control">
+      <img />
+    </div>
+    <div class="card-grid">
+      <mat-grid-list cols="2" rowHeight="2:1" *ngIf="monsterList$ | async as monsters">
+        <mat-grid-tile *ngFor="let monster of monsters"> <mat-card class="monster-card">
+            <mat-card-header>
+              <div mat-card-avatar class="header-image"></div>
+              <mat-card-title>{{monster.name}}</mat-card-title>
+              <mat-card-subtitle>{{monster.game}}</mat-card-subtitle>
+            </mat-card-header>
+            <img class="monster-image" mat-card-lg-image [src]=monster.image alt="Photo of a Shiba Inu">
+
+          </mat-card></mat-grid-tile>
+
+      </mat-grid-list>
+    </div>
+  </main>
+</section>
