@@ -28,6 +28,10 @@ const routes: Routes = [
 	},
 	{ path: 'monsters', loadChildren: () => import('./monsters/monsters.module').then(m => m.MonstersModule) },
 	{ 
+		path: 'characters', 
+		loadChildren: () => import('./characters/characters.module').then(m => m.CharactersModule) 
+	},
+	{ 
 		path: '**', 
 		component: NotFoundComponent
 	},
