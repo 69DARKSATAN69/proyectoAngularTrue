@@ -267,7 +267,6 @@
     }
   ],
 
-  "magic": {
     "summons": [
       {
         "id": 0,
@@ -583,8 +582,7 @@
         "power": "Any (need special treasure)",
         "use": "These spells are entirely fire-based and create and explosive firestorm of varying levels that will burn anyone who ends up in it."
       }
-    ]
-  },
+    ],
   "users": [
     {
       "email": "bb@bb",
