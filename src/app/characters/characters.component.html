@@ -1,0 +1,27 @@
+<div>
+	<div class="div-selector">
+		<mat-form-field class="selector-game">
+			<select #game matNativeControl (change)="onSelected(game.value)" required>
+				<option value="VII" default>Final Fantasy VII</option>
+				<option value="X">Final Fantasy X</option>
+				<option value="XV">Final Fantasy XV</option>
+			</select>
+		</mat-form-field>
+	</div>
+	<div class="main-content">
+		<figure class="main-image">
+			<img src="https://i.imgur.com/45zaybr.png">
+		</figure>
+		<div class="div-cards" *ngIf="characterObservable$ | async as characters">
+			<mat-card class="character-card" *ngFor="let char of characters">
+				<mat-card-title>{{char.name}}</mat-card-title>
+				<img mat-card-image src="{{char.image}}" alt="Photo of a FF character">
+				<mat-card-content>
+					<p>
+						{{char.recap}}
+					</p>
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
+</div>
