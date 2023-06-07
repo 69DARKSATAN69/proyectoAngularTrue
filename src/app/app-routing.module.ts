@@ -37,6 +37,11 @@ const routes: Routes = [
       import('./magic/magic.module').then((m) => m.MagicModule),
   },
   {
+    path: 'characters',
+    loadChildren: () =>
+      import('./characters/characters.module').then((m) => m.CharactersModule),
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },

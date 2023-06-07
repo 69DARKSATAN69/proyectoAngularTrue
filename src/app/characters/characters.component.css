@@ -1,0 +1,44 @@
+.div-selector {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+	margin-top: 1.25rem;
+	margin-right: 1.25rem;
+}
+
+.main-image {
+	flex-grow: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.div-cards {
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+	flex-grow: 3;
+	gap: 1.5rem;
+}
+
+.character-card {
+	max-width: 25rem;
+	height: 30rem;
+  }
+  
+.main-content {
+	display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+}
+
+
+mat-card img{
+	width: 100%;
+	height: 200px;
+	object-fit: contain;
+  }
+
+mat-grid-tile{
+	background-color: lightblue;
+}
+
