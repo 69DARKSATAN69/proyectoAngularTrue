@@ -255,6 +255,15 @@
       "drops": [],
       "type": "Undead",
       "id": 11
+    },
+    {
+      "name": "Jemnezmy",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/1/16/Jemmezmy_FF7.png/revision/latest?cb=20210226164211",
+      "moneyDrop": "400",
+      "game": "VII",
+      "drops": [],
+      "type": "Humanoid",
+      "id": 12
     }
   ],
   "magic": {
