@@ -11,9 +11,14 @@ header{
 
   .about-us-card {
 	max-width: 25rem;
+	height: 30rem;
   }
   
   .header-image {
 	background-image: url('https://i.imgur.com/Rd00hsK.png');
 	background-size: cover;
+  }
+
+  .handsome{
+	width: 100%;
   }

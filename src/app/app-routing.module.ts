@@ -26,6 +26,7 @@ const routes: Routes = [
 		path: 'contact', 
 		component: ContactComponent 
 	},
+	{ path: 'monsters', loadChildren: () => import('./monsters/monsters.module').then(m => m.MonstersModule) },
 	{ 
 		path: '**', 
 		component: NotFoundComponent
