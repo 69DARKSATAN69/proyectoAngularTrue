@@ -1,20 +1,19 @@
 <section>
   <header>
-    <h1>Monsters</h1>
+    <h1>Magic</h1>
   </header>
   <main class="content-control">
     <div class="image-control">
-      <img />
     </div>
     <div class="card-grid">
-      <mat-grid-list cols="2" rowHeight="2:1" *ngIf="monsterList$ | async as monsters">
-        <mat-grid-tile *ngFor="let monster of monsters"> <mat-card class="monster-card">
+      <mat-grid-list cols="2" rowHeight="2:1" *ngIf="summonsList$ | async as summons">
+        <mat-grid-tile *ngFor="let summon of summons"> <mat-card class="magic-card">
             <mat-card-header>
               <div mat-card-avatar class="header-image"></div>
-              <mat-card-title>{{monster.name}}</mat-card-title>
-              <mat-card-subtitle>{{monster.game}}</mat-card-subtitle>
+              <mat-card-title>{{ summon.name }}</mat-card-title>
+              <mat-card-subtitle>{{ summon.game}}</mat-card-subtitle>
             </mat-card-header>
-            <img class="monster-image" mat-card-lg-image [src]=monster.image alt="Photo of a Shiba Inu">
+            <img class="summon-image" mat-card-lg-image [src]=summon.image alt="Photo of a Shiba Inu">
 
           </mat-card></mat-grid-tile>
 
