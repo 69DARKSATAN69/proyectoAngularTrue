@@ -257,7 +257,6 @@
       "id": 11
     }
   ],
-
   "magic": {
     "summons": [
       {
@@ -322,7 +321,7 @@
         "location": "Macalania Temple",
         "magic materia": "-",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 26,
         "Attack": "Heavenly Strike",
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
@@ -335,7 +334,7 @@
         "location": "Bevelle Temple, Remien Temple, Inside Sin",
         "magic materia": "Boss",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 18,
         "Attack": "Impulse",
         "Attributes": " PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
@@ -348,7 +347,7 @@
         "location": "Besaid Temple",
         "magic materia": "-",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 24,
         "Attack": "Impulse",
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
@@ -361,7 +360,7 @@
         "location": "",
         "magic materia": "Eon",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 12,
         "Attack": "Pain",
         "Attributes": "PG(-3%);PM(+10%),magia(+5),Espíritu(+8)",
@@ -374,7 +373,7 @@
         "location": "Chocobo mount",
         "magic materia": "",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 12,
         "Attack": "CureSpell",
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
@@ -387,7 +386,7 @@
         "location": " rare daytime monsters appearing in parts of Duscae, Leide and Cleigne, and will only respawn after a minimum of 15 minutes.",
         "magic materia": "-",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 12,
         "Attack": "CureSpell",
         "Attributes": "",
@@ -400,7 +399,7 @@
         "location": "",
         "magic materia": "-",
         "image": "",
-        "element":"",
+        "element": "",
         "MP": 12,
         "Attack": "Blademaster",
         "Attributes": "-",
@@ -413,7 +412,7 @@
         "location": " Disc of Cauthess",
         "magic materia": "-",
         "image": "",
-        "element":"earth",
+        "element": "earth",
         "MP": "-",
         "Attack": "Gaia's Wrath",
         "Attributes": "-",
@@ -471,7 +470,7 @@
         "type": "White Magic",
         "game": "X",
         "image": "",
-        "required":"Master magic, white magic license",
+        "required": "Master magic, white magic license",
         "effect": "remove all negative status effects except Curse,Zombie,Doom,Power Break,Magic Break,Marmor Break and Mental Break",
         "MP": 5,
         "power": 0,
@@ -482,7 +481,7 @@
         "type": "White Magic",
         "game": "X",
         "image": "",
-        "required":"Master magic, white magic license",
+        "required": "Master magic, white magic license",
         "effect": "revive a KO'd party member with max MP",
         "MP": 60,
         "power": 3,
@@ -493,7 +492,7 @@
         "type": " White Magic",
         "game": "X",
         "image": "",
-        "required":"Master magic, white magic license",
+        "required": "Master magic, white magic license",
         "effect": "increases Agility of party",
         "MP": 8,
         "power": "-",
@@ -504,7 +503,7 @@
         "type": " White Magic",
         "game": "X",
         "image": "",
-        "required":"Master magic, white magic license",
+        "required": "Master magic, white magic license",
         "effect": "Slow-lock some enemies.",
         "MP": 12,
         "power": "Slowga",
@@ -515,46 +514,52 @@
         "type": "Black Magic",
         "game": "XV",
         "image": "",
-        "required":"Lightning",
+        "required": "Lightning",
         "effect": "Can paralize enemies, stopping their actions",
-        "MP":"" ,
-        "power":"100-199",
-        "use":" Thundara can be fused with status inflicting Materia to create Dark Thundara."
+        "MP": "",
+        "power": "100-199",
+        "use": " Thundara can be fused with status inflicting Materia to create Dark Thundara."
       },
       {
         "name": "Unicast III",
         "type": "Black Magic",
         "game": "XV",
         "image": "",
-        "required":"Firaga, Blizzaga, or Thundaga",
+        "required": "Firaga, Blizzaga, or Thundaga",
         "effect": "Can paralize enemies, stopping their actions",
-        "MP":"" ,
-        "power":"200+",
-        "use":"Spell crafting power increase is now 50."
+        "MP": "",
+        "power": "200+",
+        "use": "Spell crafting power increase is now 50."
       },
       {
         "name": "Blizzard/Burizado",
         "type": "Black Magic",
         "game": "XV",
         "image": "",
-        "required":"Ice element",
+        "required": "Ice element",
         "effect": "These spells are entirely ice-based and create an ice field that will slow and freeze anyone who gets into it.",
-        "MP":"" ,
-        "power":"1-99",
-        "use":"Ice is one the three elements the player can use in Elemancy. The player can collect ice energy from ice deposits, and from enemies defeated with Noctis with Insomnian weapons that have an engine hilt. The player can add various catalysts to their crafting process to improve the spells. The highest grade blizzard spell is Freeze, crafted with the best catalysts."
+        "MP": "",
+        "power": "1-99",
+        "use": "Ice is one the three elements the player can use in Elemancy. The player can collect ice energy from ice deposits, and from enemies defeated with Noctis with Insomnian weapons that have an engine hilt. The player can add various catalysts to their crafting process to improve the spells. The highest grade blizzard spell is Freeze, crafted with the best catalysts."
       },
       {
         "name": "Flare/ Fureā",
         "type": "Black Magic",
         "game": "XV",
         "image": "",
-        "required":"fire element",
+        "required": "fire element",
         "effect": "It inflicts massive fire damage on all enemies",
-        "MP":"" ,
-        "power":"Any (need special treasure)",
-        "use":"These spells are entirely fire-based and create and explosive firestorm of varying levels that will burn anyone who ends up in it."
+        "MP": "",
+        "power": "Any (need special treasure)",
+        "use": "These spells are entirely fire-based and create and explosive firestorm of varying levels that will burn anyone who ends up in it."
       }
     ]
   },
-  "users": []
+  "users": [
+    {
+      "email": "bb@bb",
+      "password": "$2a$10$F4a1d.9ZSRVdnClBIeiQB.KIbkLM3m8YUQuLz6y5eTlwfd46Mq8A6",
+      "id": 1
+    }
+  ]
 }
