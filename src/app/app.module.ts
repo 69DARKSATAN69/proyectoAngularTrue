@@ -9,6 +9,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LayoutModule } from './layout/layout.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LayoutModule } from './layout/layout.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-	LayoutModule
+	LayoutModule,
+	MatGridListModule,
+	MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

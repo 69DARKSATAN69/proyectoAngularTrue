@@ -1,0 +1,21 @@
+header{
+	text-align: center;
+	margin-top: 1.3rem;
+}
+
+img {
+	max-width: 50%;
+}
+
+div {
+	width: 85%;
+	padding: 1.3rem;
+	margin: 1.87rem auto;
+	text-align: center;
+	border-radius: 10px;
+	background-color: lightgrey;
+}
+
+h2, ul{
+	text-align: left;
+}
