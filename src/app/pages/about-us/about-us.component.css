@@ -1,0 +1,19 @@
+mat-grid-tile {
+	background: lightgray;
+	margin-top: 1.25rem;
+	border-radius: 10px;
+  }
+
+header{
+	text-align: center;
+	margin-top: 1.25rem;
+}
+
+  .about-us-card {
+	max-width: 25rem;
+  }
+  
+  .header-image {
+	background-image: url('https://i.imgur.com/Rd00hsK.png');
+	background-size: cover;
+  }
