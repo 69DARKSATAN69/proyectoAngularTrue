@@ -257,26 +257,304 @@
       "id": 11
     }
   ],
-  "magic": [
-    {
-      "id": 2,
-      "name": "",
-      "type": {},
-      "effect": "",
-      "mana cost": "",
-      "element": {}
-    }
-  ],
-  "users": [
-    {
-      "email": "aa@aa",
-      "password": "$2a$10$slCZWN4iw3OjpTJtqOKUbeo0/VnxFX68oo.P0ljOOth9854tRJA6u",
-      "id": 1
-    },
-    {
-      "email": "bb@bb",
-      "password": "$2a$10$qERY30EtCgtUTp7F7TBJMutzZAhhFP98CiOGItad4z9gNWxDX3NNa",
-      "id": 2
-    }
-  ]
+
+  "magic": {
+    "summons": [
+      {
+        "id": 0,
+        "game": "VII",
+        "name": "Choco/Mog / Chokobo&Mōguri",
+        "location": "Chocobo Farm",
+        "magic materia": "invocation",
+        "image": "",
+        "element": "wind",
+        "MP": 14,
+        "Attack": "Deathblow!!",
+        "Attributes": "PG(-2%);PM(+2%),magia(+1)",
+        "effect": " It Deathblow attack has a 40% chance of inflicting the enemies with Stop.",
+        "info extra": "  if  a Fat Chocobo appear instead of Choco/Mog, which deals 25% more damage than the normal summon and is also non-elemental, but does inflict Stop"
+      },
+      {
+        "id": 1,
+        "game": "VII",
+        "name": "Kjata / Kujata",
+        "location": "Sleeping Forest",
+        "magic materia": "invocation",
+        "image": "",
+        "element": "Lightning, Ice and Fire",
+        "MP": 110,
+        "Attack": "Tetra-disaster",
+        "Attributes": "PG(-5%);PM(+5%),magia(+1),Espíritu(+1)",
+        "effect": "Fire, Ice and Lightning to all enemies",
+        "info extra": " This attack reveals its true form in an explosion of light before the final earth-rippling blow(although this does not actually add Earth element)."
+      },
+      {
+        "id": 2,
+        "game": "VII",
+        "name": "Knights of the Round / Naitsu obu Raundo",
+        "location": "Hidden island in the northeast of the map",
+        "magic materia": "invocation",
+        "image": "",
+        "element": "none",
+        "MP": 250,
+        "Attack": "Knights of the Round",
+        "Attributes": "PG(-10%);PM(+20%),magia(+8),Espíritu(+8)",
+        "effect": "When summoned, thirteen medieval knights attack the enemy party. Knights of  Round is a series of 13 individual attacks hitting enemies with damage that ignores targets defensive stats",
+        "info extra": "Only accessed with a gold chocobo, or as part of the Master Materia set received from the Kalm traveler after defeating Emerald Weapon. "
+      },
+      {
+        "id": 3,
+        "game": "VII",
+        "name": "Hades / Hādesu",
+        "location": "The Sunken Gelnika",
+        "magic materia": "invocation",
+        "image": "",
+        "element": "none",
+        "MP": 150,
+        "Attack": "Black Cauldron",
+        "Attributes": "PG(-10%);PM(+15%),magia(+4),Espíritu(+4)",
+        "effect": "Sleep, Poison, Confusion, Silence,Frog,MIni,Slow and Paralyzed.",
+        "info extra": "Hades's spell power is equal to 5.625x the base magic damage. If paired with the Added Effect Materia, Hades will grant either Slow or Paralyze"
+      },
+      {
+        "game": "X",
+        "name": "Shiva / Shiva",
+        "location": "Macalania Temple",
+        "magic materia": "-",
+        "image": "",
+        "element":"",
+        "MP": 26,
+        "Attack": "Heavenly Strike",
+        "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
+        "Effect": "Inflicting ice damage to all enemies",
+        "info extra": " Ice attacks will heal her. Her special attack is called Heavenly Strike, which inflicts the Threaten status, and her Overdrive is Diamond Dust, inflicting Ice damage to all enemies. Though she starts out knowing only ice magic, she can be taught any ability provided the player has enough items."
+      },
+      {
+        "game": "X",
+        "name": " Bahamut / Bahamūto",
+        "location": "Bevelle Temple, Remien Temple, Inside Sin",
+        "magic materia": "Boss",
+        "image": "",
+        "element":"",
+        "MP": 18,
+        "Attack": "Impulse",
+        "Attributes": " PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
+        "Effect": " moderate damage to all enemies, and his Overdrive is Mega Flare.",
+        "info extra": "Bahamut is the most powerful storyline aeon, as well as one of the few that can exceed the 9,999 damage limit from the start"
+      },
+      {
+        "game": "X",
+        "name": "Valefor / Varufāre",
+        "location": "Besaid Temple",
+        "magic materia": "-",
+        "image": "",
+        "element":"",
+        "MP": 24,
+        "Attack": "Impulse",
+        "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
+        "Effect": "main attack is non-elemental",
+        "info extra": " Valefor is unique in not having the Piercing auto-ability, and also has a slightly lower attack power. This has no impact when using the Attack command, as the aeons use a different version of this comman"
+      },
+      {
+        "game": "X",
+        "name": "Anima / Anima",
+        "location": "",
+        "magic materia": "Eon",
+        "image": "",
+        "element":"",
+        "MP": 12,
+        "Attack": "Pain",
+        "Attributes": "PG(-3%);PM(+10%),magia(+5),Espíritu(+8)",
+        "Effect": "instant kill, as well as dealing colossal damage to the few enemies that are immune to Death",
+        "info extra": "it ignores defense and is even more effective than its Turbo, 'Chaos Unleashed' against different enemies such as Dark Bahamut."
+      },
+      {
+        "game": "XV",
+        "name": "Unicorn /Yunikōn",
+        "location": "Chocobo mount",
+        "magic materia": "",
+        "image": "",
+        "element":"",
+        "MP": 12,
+        "Attack": "CureSpell",
+        "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
+        "Effect": "-",
+        "info extra": "As soon as you finish the level 30 class quest from the guildmaster of the Conjurer’s Guild, a new quest will open up inside the guild house. Before you exit, talk to Braya and she’ll give you a quest called ‘Unicorn Power’."
+      },
+      {
+        "game": "XV",
+        "name": "Cactilio / Sabotendā",
+        "location": " rare daytime monsters appearing in parts of Duscae, Leide and Cleigne, and will only respawn after a minimum of 15 minutes.",
+        "magic materia": "-",
+        "image": "",
+        "element":"",
+        "MP": 12,
+        "Attack": "CureSpell",
+        "Attributes": "",
+        "Effect": "-",
+        "info extra": "The main difference between a cactuar and slactuar is that the former uses poison and the latter uses confusion."
+      },
+      {
+        "game": "XV",
+        "name": "Gilgamesh / Girugamesshu",
+        "location": "",
+        "magic materia": "-",
+        "image": "",
+        "element":"",
+        "MP": 12,
+        "Attack": "Blademaster",
+        "Attributes": "-",
+        "Effect": "",
+        "info extra": "-"
+      },
+      {
+        "game": "XV",
+        "name": "Titan/ Taitan",
+        "location": " Disc of Cauthess",
+        "magic materia": "-",
+        "image": "",
+        "element":"earth",
+        "MP": "-",
+        "Attack": "Gaia's Wrath",
+        "Attributes": "-",
+        "Effect": " The player can't use character-swap in this battle",
+        "info extra": " Titan can be summoned in certain regions of Lucis, such as Leide, Duscae around the Disc of Cauthess, and the Rock of Ravatogh.He can also emerge from the Vesperpool. He cannot be summoned in dungeons or near the ocean. He can be summoned in Insomnia in Chapter 14."
+      }
+    ],
+    "spells": [
+      {
+        "name": "Poisona / Poizona",
+        "type": "Restore magic",
+        "game": "VII",
+        "image": "",
+        "required": "Heal materia, Master Magic",
+        "effect": "Removes Poison",
+        "MP": 3,
+        "power": 0,
+        "use": "Poisona is useful in many situations as removing the Poison effect can save an entire fight, and it is extremely cheap to use. Later on, there are many ways to simply prevent the Poison status effect. Linking the Poison Materia with Elemental can prevent Poison by providing resistance to or absorbing Poison damage, while linking it with Added Effect on armor can prevent the status entirely."
+      },
+      {
+        "name": "Fire(2) / Faira",
+        "type": "Attack magic",
+        "game": "VII",
+        "image": "",
+        "required": "Fire materia, Master Magic",
+        "effect": "Removes Poison",
+        "MP": 22,
+        "power": 20,
+        "use": "Fire2 can be cast by the enemies Scrutin Eye, Soul Fire, Jersey, Killbin, Manhole, and Poodler Sample. It can also be cast by Turks:Rude during the Sunken Gelnika encounter."
+      },
+      {
+        "name": "Silence / Sairesu",
+        "type": "Indirect magic",
+        "game": "VII",
+        "image": "",
+        "required": "Seal Materia, Master Magic",
+        "effect": "60% chance of inflicting Silence on target",
+        "MP": 24,
+        "power": 0,
+        "use": " Silence can be cast by the enemies Eligor, Bahba Velamyu, SOLDIER:2nd, and SOLDIER:1st, Helletic Hojo, Lifeform-Hojo N, and Jenova∙DEATH."
+      },
+      {
+        "name": "Tornado / Tatsumaki",
+        "type": "Magic",
+        "game": "VII",
+        "image": "",
+        "required": "Contain Materia, Master Magic",
+        "effect": "High wind-element damage 32% chance of inflicting Confusion",
+        "MP": 90,
+        "power": 100,
+        "use": "Tornado's Wind damage is also both a strength and a weakness, as enemies weak to Wind will suffer even more damage, while the spell is effectively useless against those that absorb or are immune to it."
+      },
+      {
+        "name": "Esuna",
+        "type": "White Magic",
+        "game": "X",
+        "image": "",
+        "required":"Master magic, white magic license",
+        "effect": "remove all negative status effects except Curse,Zombie,Doom,Power Break,Magic Break,Marmor Break and Mental Break",
+        "MP": 5,
+        "power": 0,
+        "use": " obtainable in Yuna's section of the basic Sphere Grid. It is one of the abilities she begins with; along with Cure."
+      },
+      {
+        "name": "Full-life / Araise",
+        "type": "White Magic",
+        "game": "X",
+        "image": "",
+        "required":"Master magic, white magic license",
+        "effect": "revive a KO'd party member with max MP",
+        "MP": 60,
+        "power": 3,
+        "use": "It can also destroy undead monsters in some games. Its upgrade is Reraise."
+      },
+      {
+        "name": "Haste / Heisuto",
+        "type": " White Magic",
+        "game": "X",
+        "image": "",
+        "required":"Master magic, white magic license",
+        "effect": "increases Agility of party",
+        "MP": 8,
+        "power": "-",
+        "use": "Found in Tidus’s section of the Sphere Grid. It raises one character's agility so their turns arrive more frequently. Haste can be cast by Evrae, Ixion, Sanctuary Keeper, Th'uban, Varuna, and Yenke Ronso."
+      },
+      {
+        "name": "Slow / Surou",
+        "type": " White Magic",
+        "game": "X",
+        "image": "",
+        "required":"Master magic, white magic license",
+        "effect": "Slow-lock some enemies.",
+        "MP": 12,
+        "power": "Slowga",
+        "use": " It can be used to 'Slow-lock' some enemies, as repeated casts can keep pushing back the target's turn on the Act List."
+      },
+      {
+        "name": "Thundara / Sandara",
+        "type": "Black Magic",
+        "game": "XV",
+        "image": "",
+        "required":"Lightning",
+        "effect": "Can paralize enemies, stopping their actions",
+        "MP":"" ,
+        "power":"100-199",
+        "use":" Thundara can be fused with status inflicting Materia to create Dark Thundara."
+      },
+      {
+        "name": "Unicast III",
+        "type": "Black Magic",
+        "game": "XV",
+        "image": "",
+        "required":"Firaga, Blizzaga, or Thundaga",
+        "effect": "Can paralize enemies, stopping their actions",
+        "MP":"" ,
+        "power":"200+",
+        "use":"Spell crafting power increase is now 50."
+      },
+      {
+        "name": "Blizzard/Burizado",
+        "type": "Black Magic",
+        "game": "XV",
+        "image": "",
+        "required":"Ice element",
+        "effect": "These spells are entirely ice-based and create an ice field that will slow and freeze anyone who gets into it.",
+        "MP":"" ,
+        "power":"1-99",
+        "use":"Ice is one the three elements the player can use in Elemancy. The player can collect ice energy from ice deposits, and from enemies defeated with Noctis with Insomnian weapons that have an engine hilt. The player can add various catalysts to their crafting process to improve the spells. The highest grade blizzard spell is Freeze, crafted with the best catalysts."
+      },
+      {
+        "name": "Flare/ Fureā",
+        "type": "Black Magic",
+        "game": "XV",
+        "image": "",
+        "required":"fire element",
+        "effect": "It inflicts massive fire damage on all enemies",
+        "MP":"" ,
+        "power":"Any (need special treasure)",
+        "use":"These spells are entirely fire-based and create and explosive firestorm of varying levels that will burn anyone who ends up in it."
+      }
+    ]
+  },
+  "users": []
 }

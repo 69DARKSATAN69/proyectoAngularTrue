@@ -5,9 +5,15 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink=''>Home</a>
-      <a mat-list-item routerLink="auth">Login</a>
-      <a mat-list-item href="#">Characters</a>
+
+      <a mat-list-item routerLink="">Home</a>
+	  <a mat-list-item routerLink="login">Login</a>
+      <a mat-list-item routerLink="characters">Characters</a>
+      <a mat-list-item routerLink="monsters">Monsters</a>
+	  <a mat-list-item routerLink="magic">Magic</a>
+	  <a mat-list-item routerLink="about-us">About Us</a>
+	  <a mat-list-item routerLink="contact">Contact</a>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,10 +26,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>proyectoFinalAngular</span>
+      <span>Final Fantasy Wiki</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-	<h1>hola</h1>
 	<router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
