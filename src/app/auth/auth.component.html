@@ -4,13 +4,18 @@
         </header>
         
     <form [formGroup]="formGroup">
+        <mat-form-field>
         <fieldset>
             <p><label for="email">Email</label></p>
+            <mat-label>E-mail</mat-label>
             <p><input type="text" name="email" formControlName="email"/></p>
             <p><label for="password">Password</label></p>
+            <mat-label>Password</mat-label>
             <p><input type="password" name="password" formControlName="password"></p>
         </fieldset>
-        <input type="button" name="envio" value="Enviar" (click)="registerUsuario()" [disabled]="formGroup.invalid" *ngIf="!editing"/>
+        </mat-form-field>
+        <input type="button" name="envio" [value]=logText (click)="handleAuth()" [disabled]="formGroup.invalid"/>
+        <button type="button" name="switchMode" (click)="switchMode()">{{switchText}}</button>
         <!-- <input type="button" name="envio" value="Editar" (click)="editUsuario()" [disabled]="formGroup.invalid" *ngIf="editing"/> -->
     </form>
     </section>
