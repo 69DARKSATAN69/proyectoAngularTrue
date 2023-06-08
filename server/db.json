@@ -136,7 +136,7 @@
   "monsters": [
     {
       "name": "Skarnbulette",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/0/0b/Skarnbulette.png/revision/latest?cb=20170903212824",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/0/0b/Skarnbulette.png",
       "moneyDrop": "6910",
       "game": "XV",
       "drops": [
@@ -147,7 +147,7 @@
     },
     {
       "name": "Wyvern",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/d5/Wyvern_FFXV.png/revision/latest?cb=20170907222453",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/d5/Wyvern_FFXV.png",
       "moneyDrop": "7290",
       "game": "XV",
       "drops": [
@@ -158,7 +158,7 @@
     },
     {
       "name": "Custard",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/c/cc/Custard.png/revision/latest?cb=20170916115834",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/c/cc/Custard.png",
       "moneyDrop": "3150",
       "game": "XV",
       "drops": [
@@ -169,7 +169,7 @@
     },
     {
       "name": "Falxfang",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/6/60/Falxfang.png/revision/latest?cb=20170919205712",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/6/60/Falxfang.png",
       "moneyDrop": "5520",
       "game": "XV",
       "drops": [
@@ -180,7 +180,7 @@
     },
     {
       "name": "Abyss Worm",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/9/91/Land_Worm.jpg/revision/latest?cb=20120718191403",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/9/91/Land_Worm.jpg",
       "moneyDrop": "700",
       "game": "X",
       "drops": [
@@ -192,7 +192,7 @@
     },
     {
       "name": "Ogre",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/a/a3/Ogre_%28FFX%29.jpg/revision/latest?cb=20120719002021",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/a/a3/Ogre_%28FFX%29.jpg",
       "moneyDrop": "500",
       "game": "X",
       "drops": [
@@ -203,7 +203,7 @@
     },
     {
       "name": "Shinryu",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/0/0a/Shinryu-ffx-enemy.png/revision/latest?cb=20120719223617",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/0/0a/Shinryu-ffx-enemy.png",
       "moneyDrop": "1000",
       "game": "X",
       "drops": [
@@ -215,7 +215,7 @@
     },
     {
       "name": "Gold Element",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/d9/GoldElement-ffx.png/revision/latest?cb=20130630053640",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/d9/GoldElement-ffx.png",
       "moneyDrop": "200",
       "game": "X",
       "drops": [
@@ -226,7 +226,7 @@
     },
     {
       "name": "Desert Sahagin",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/da/Desert_Sahagin_FF7.png/revision/latest?cb=20120718001450",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/d/da/Desert_Sahagin_FF7.png",
       "moneyDrop": "300",
       "game": "VII",
       "drops": [
@@ -237,7 +237,7 @@
     },
     {
       "name": "Dragon Zombie",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/9/9b/Dragon_Zombie_FF7.png/revision/latest?cb=20120322135748",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/9/9b/Dragon_Zombie_FF7.png",
       "moneyDrop": "2800",
       "game": "VII",
       "drops": [
@@ -249,7 +249,7 @@
     },
     {
       "name": "Cactuar",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/2/20/Cactuar_FF7.png/revision/latest?cb=20120609001954",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/2/20/Cactuar_FF7.png",
       "moneyDrop": "10000",
       "game": "VII",
       "drops": [],
@@ -258,7 +258,7 @@
     },
     {
       "name": "Jemnezmy",
-      "image": "https://static.wikia.nocookie.net/finalfantasy/images/1/16/Jemmezmy_FF7.png/revision/latest?cb=20210226164211",
+      "image": "https://static.wikia.nocookie.net/finalfantasy/images/1/16/Jemmezmy_FF7.png",
       "moneyDrop": "400",
       "game": "VII",
       "drops": [],
@@ -569,6 +569,11 @@
       "email": "bb@bb",
       "password": "$2a$10$F4a1d.9ZSRVdnClBIeiQB.KIbkLM3m8YUQuLz6y5eTlwfd46Mq8A6",
       "id": 1
+    },
+    {
+      "email": "aa@aa",
+      "password": "$2a$10$cgKawc5Q.CarlrZ27zW.fubalP0PA8lpa1UvRR7KdYXR//w5MnwAG",
+      "id": 2
     }
   ]
 }

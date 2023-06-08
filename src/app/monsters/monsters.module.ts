@@ -6,6 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MonsterServiceService } from './services/monster-service.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -17,7 +22,12 @@ import {MatCardModule} from '@angular/material/card';
     MonstersRoutingModule,
     HttpClientModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule
+    
   ],
   providers: [
     MonsterServiceService
