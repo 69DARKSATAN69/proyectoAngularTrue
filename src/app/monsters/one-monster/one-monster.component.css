@@ -1,0 +1,18 @@
+.monster-card{
+    width: 50%;
+    margin: 1em auto;
+    text-align: center;
+    background: radial-gradient(circle, #fabada, #FFFFFF);
+}
+
+h1{
+    margin-left: 11em;
+}
+
+h3{
+    margin-left: 18em;
+}
+
+ul{
+    list-style: none;
+}

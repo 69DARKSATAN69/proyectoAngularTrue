@@ -22,9 +22,17 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: palevioletred;
+    background: radial-gradient(circle, #fabada, #FFFFFF);
 }
 .header-image{
     text-align: center;
     margin-left: 2em;
+}
+footer{
+    text-align: center;
+}
+.button-post{
+    margin-top: 1em;
+    width:50%;
+    text-align: center;
 }
