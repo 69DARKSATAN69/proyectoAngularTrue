@@ -2,22 +2,62 @@
   <header>
     <h1>Magic</h1>
   </header>
-  <main class="content-control">
-    <div class="image-control">
-    </div>
-    <div class="card-grid">
-      <mat-grid-list cols="2" rowHeight="2:1" *ngIf="summonsList$ | async as summons">
-        <mat-grid-tile *ngFor="let summon of summons"> <mat-card class="magic-card">
-            <mat-card-header>
-              <div mat-card-avatar class="header-image"></div>
-              <mat-card-title>{{ summon.name }}</mat-card-title>
-              <mat-card-subtitle>{{ summon.game}}</mat-card-subtitle>
-            </mat-card-header>
-            <img class="summon-image" mat-card-lg-image [src]=summon.image alt="Photo of a Shiba Inu">
+  <div class="div-selector">
+    <mat-form-field class="selector-game">
+      <mat-label>Game</mat-label>
+      <mat-select #game matNativeControl (selectionChange)="onSelectedGame()" [(value)]="selectedGame">
+        <mat-option value="VII">Final Fantasy VII</mat-option>
+        <mat-option value="X">Final Fantasy X</mat-option>
+        <mat-option value="XV">Final Fantasy XV</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="selector-game">
+      <mat-label>Magic</mat-label>
+      <mat-select #magic matNativeControl (selectionChange)="onSelectedMagic()" [(value)]="selectedMagic">
+        <mat-option value="summons" default>Summons</mat-option>
+        <mat-option value="spells">Spells</mat-option>
+      </mat-select>
+    </mat-form-field>
 
-          </mat-card></mat-grid-tile>
-
-      </mat-grid-list>
+  </div>
+  <div class="main-content">
+    <div class="main-content" *ngIf="selectedMagic === 'summons'">
+      <div class="main-image">
+        <figure>
+          <img src="https://i.imgur.com/PiRwA14.png">
+        </figure>
+      </div>
+      <div class="cards-container" *ngIf="summonsList$| async as summons">
+        <mat-card class="magic-card" *ngFor="let summon of summons">
+          <mat-card-title class="card-title">{{ summon.name }}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle> <!--pipe para japones-->
+          <img mat-card-image src="{{summon.image}}" alt="Photo of a FF summon">
+          <mat-card-content>
+            <p>
+              {{summon.resume}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
     </div>
-  </main>
+    <div class="main-content" *ngIf="selectedMagic === 'spells'">
+      <div class="main-image">
+        <figure>
+          <img src="https://i.imgur.com/btWFAtq.png">
+        </figure>
+      </div>
+      <div class="cards-container" *ngIf="spellsList$ | async as spells">
+        <mat-card class="magic-card" *ngFor="let spell of spells">
+          <mat-card-title class="card-title">{{ spell.name }}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+          <img mat-card-image src="{{ spell.image }}" alt="Photo of a FF spell">
+          <mat-card-content>
+            <p>
+              {{ spell.resume }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </section>

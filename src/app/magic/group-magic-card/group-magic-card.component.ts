@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, filter, map, of } from 'rxjs';
 import { SummonsDTO } from '../magicDTO/summonsDTO';
 import { MagicService } from '../services/magic.service';
 import { SpellsDTO } from '../magicDTO/spellsDTO';
@@ -12,28 +12,49 @@ import { SpellsDTO } from '../magicDTO/spellsDTO';
 export class GroupMagicCardComponent {
   spellsList$: Observable<SpellsDTO[]>;
   summonsList$: Observable<SummonsDTO[]>;
+  selectedMagic: string = 'summons';
+  selectedGame: string = 'VII';
 
-  constructor(private fetcher: MagicService) {
+  constructor(private magicService: MagicService) {
     this.spellsList$ = new Observable<SpellsDTO[]>();
     this.summonsList$ = new Observable<SummonsDTO[]>();
   }
 
-  public getSummonList(): void {
-    this.summonsList$ = this.fetcher
+  public getSummonsList(game: string): void {
+    this.magicService
       .getSummonsList()
-      .pipe(
-        map((summons) => summons.filter((summon) => summon.game === 'VII'))
-      );
+      .pipe(map((summons) => summons.filter((summon) => summon.game === game)))
+      .subscribe((summonsList: SummonsDTO[]) => {
+        this.summonsList$ = of(summonsList);
+      });
   }
 
-  public getSpellsList(): void {
-    this.spellsList$ = this.fetcher
+  public getSpellsList(game: string): void {
+    this.magicService
       .getSpellsList()
-      .pipe(map((spells) => spells.filter((spells) => spells.game === 'VII')));
+      .pipe(map((spells) => spells.filter((spell) => spell.game === game)))
+      .subscribe((spellsList: SpellsDTO[]) => {
+        this.spellsList$ = of(spellsList);
+      });
+  }
+
+  onSelectedMagic() {
+    if (this.selectedMagic === 'spells') {
+      this.getSpellsList(this.selectedGame);
+    } else if (this.selectedMagic === 'summons') {
+      this.getSummonsList(this.selectedGame);
+    }
+  }
+
+  onSelectedGame() {
+    if (this.selectedMagic === 'summons')
+      this.getSummonsList(this.selectedGame);
+    else if (this.selectedMagic === 'spells')
+      this.getSpellsList(this.selectedGame);
   }
 
   ngOnInit() {
-    this.getSummonList();
-    this.getSpellsList();
+    this.getSummonsList(this.selectedGame);
+    this.getSpellsList(this.selectedGame);
   }
 }
