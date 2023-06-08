@@ -7,7 +7,9 @@
         <mat-card-content>
             <img mat-card-image [src]="monster.image">
             <p>If it wasn't obvious, this monster is type: {{monster.type}}</p>
-            <p>Slaughtering it results in being {{monster.moneyDrop}} gil richer <button mat-stroked-button>Convert to €</button></p>
+            <p *ngIf="!convertingToEur">Slaughtering it results in being {{monster.moneyDrop}} gil richer <button mat-stroked-button (click)="toggleConvert()">Convert to €</button></p>
+            <p *ngIf="convertingToEur">Slaughtering it results in being {{monster.moneyDrop | cashConversion:'eur'}}€ richer <button mat-stroked-button (click)="toggleConvert()">Convert to €</button></p>
+
             <p>It also may result in the following drops:</p>
             <ul *ngIf="monster.drops && monster.drops.length > 0; else noDrops"><li *ngFor="let drop of monster.drops"> {{drop}} </li></ul>
             <ng-template #noDrops>It doesn't actually drop anything else.</ng-template>
@@ -17,3 +19,5 @@
 </mat-card-footer>
 </mat-card>
 </article>
+
+<!-- {{monster.moneyDrop | cashConversion:'eur'}} -->
