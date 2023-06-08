@@ -266,7 +266,7 @@
       "id": 12
     }
   ],
-  "magic": {
+
     "summons": [
       {
         "id": 0,
@@ -274,7 +274,7 @@
         "name": "Choco/Mog / Chokobo&Mōguri",
         "location": "Chocobo Farm",
         "magic materia": "invocation",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/6/6c/Card_897_EN_ChocoMog_FFVII_5.png/revision/latest/scale-to-width-down/300?cb=20180525215916",
         "element": "wind",
         "MP": 14,
         "Attack": "Deathblow!!",
@@ -288,7 +288,7 @@
         "name": "Kjata / Kujata",
         "location": "Sleeping Forest",
         "magic materia": "invocation",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/b/b2/MFF_Kujata_FFVII.jpg/revision/latest?cb=20170205062258",
         "element": "Lightning, Ice and Fire",
         "MP": 110,
         "Attack": "Tetra-disaster",
@@ -302,7 +302,7 @@
         "name": "Knights of the Round / Naitsu obu Raundo",
         "location": "Hidden island in the northeast of the map",
         "magic materia": "invocation",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/f/f1/Card_899_EN_Knights_of_the_Round_FFVII_5.png/revision/latest/scale-to-width-down/300?cb=20171023094229",
         "element": "none",
         "MP": 250,
         "Attack": "Knights of the Round",
@@ -316,7 +316,7 @@
         "name": "Hades / Hādesu",
         "location": "The Sunken Gelnika",
         "magic materia": "invocation",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/2/22/Card_641_EN_Hades_5.png/revision/latest/scale-to-width-down/300?cb=20171024132641",
         "element": "none",
         "MP": 150,
         "Attack": "Black Cauldron",
@@ -325,50 +325,54 @@
         "info extra": "Hades's spell power is equal to 5.625x the base magic damage. If paired with the Added Effect Materia, Hades will grant either Slow or Paralyze"
       },
       {
+        "id": 4,
         "game": "X",
         "name": "Shiva / Shiva",
         "location": "Macalania Temple",
         "magic materia": "-",
-        "image": "",
-        "element": "",
+        "image": "https://steamuserimages-a.akamaihd.net/ugc/96105795489770737/2C229817F81ED9F498A473D4020C42E735BE4F47/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+        "element":"ice",
         "MP": 26,
         "Attack": "Heavenly Strike",
-        "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
+        "Attributes": "PG(-2%);PM(+2%),Magic(+1)",
         "Effect": "Inflicting ice damage to all enemies",
         "info extra": " Ice attacks will heal her. Her special attack is called Heavenly Strike, which inflicts the Threaten status, and her Overdrive is Diamond Dust, inflicting Ice damage to all enemies. Though she starts out knowing only ice magic, she can be taught any ability provided the player has enough items."
       },
       {
+        "id": 5,
         "game": "X",
         "name": " Bahamut / Bahamūto",
         "location": "Bevelle Temple, Remien Temple, Inside Sin",
-        "magic materia": "Boss",
-        "image": "",
-        "element": "",
-        "MP": 18,
+        "magic materia": "Black magic",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/7/71/Card_862_EN_Bahamut_FFVII_3.png/revision/latest?cb=20171023100042",
+        "element": "Fire",
+        "MP": 35,
         "Attack": "Impulse",
         "Attributes": " PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
         "Effect": " moderate damage to all enemies, and his Overdrive is Mega Flare.",
         "info extra": "Bahamut is the most powerful storyline aeon, as well as one of the few that can exceed the 9,999 damage limit from the start"
       },
       {
+        "id": 6,
         "game": "X",
         "name": "Valefor / Varufāre",
         "location": "Besaid Temple",
         "magic materia": "-",
-        "image": "",
-        "element": "",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/5/56/Card_66_EN_Valefor_3.png/revision/latest?cb=20171024155622",
+        "element": "Fire, Water",
         "MP": 24,
-        "Attack": "Impulse",
+        "Attack": "Sonic Wings",
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
         "Effect": "main attack is non-elemental",
         "info extra": " Valefor is unique in not having the Piercing auto-ability, and also has a slightly lower attack power. This has no impact when using the Attack command, as the aeons use a different version of this comman"
       },
       {
+        "id": 7,
         "game": "X",
         "name": "Anima / Anima",
-        "location": "",
+        "location": "Remien Temple",
         "magic materia": "Eon",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/a/a0/Mobius_-_Anima_R3_Ability_Card.png/revision/latest/scale-to-width-down/250?cb=20160814220542",
         "element": "",
         "MP": 12,
         "Attack": "Pain",
@@ -377,50 +381,54 @@
         "info extra": "it ignores defense and is even more effective than its Turbo, 'Chaos Unleashed' against different enemies such as Dark Bahamut."
       },
       {
+        "id": 8,
         "game": "XV",
         "name": "Unicorn /Yunikōn",
         "location": "Chocobo mount",
-        "magic materia": "",
+        "magic materia": "https://static.wikia.nocookie.net/esfinalfantasy/images/4/4f/Unicorn_%28XIV%29.png/revision/latest?cb=20160803140734",
         "image": "",
-        "element": "",
+        "element": "monture",
         "MP": 12,
-        "Attack": "CureSpell",
+        "Attack": "Unicorn Power",
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
         "Effect": "-",
-        "info extra": "As soon as you finish the level 30 class quest from the guildmaster of the Conjurer’s Guild, a new quest will open up inside the guild house. Before you exit, talk to Braya and she’ll give you a quest called ‘Unicorn Power’."
+        "info extra": "As soon as you finish the level 30 class quest from the guildmaster of the Conjurer’s Guild, a new quest will open up inside the guild house. Before you exit, talk to Braya and she’ll give you a quest called ‘Unicorn Power’"
       },
       {
+        "id": 9,
         "game": "XV",
-        "name": "Cactilio / Sabotendā",
-        "location": " rare daytime monsters appearing in parts of Duscae, Leide and Cleigne, and will only respawn after a minimum of 15 minutes.",
-        "magic materia": "-",
-        "image": "",
-        "element": "",
+        "name": "Leviathan / Suijin Rivaiasan",
+        "location": "Altissia",
+        "magic materia": "Black magic",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/f/f3/Card_2933_EN_Leviathan_FFVIII_4.png/revision/latest?cb=20190809085152",
+        "element": "Water",
         "MP": 12,
-        "Attack": "CureSpell",
-        "Attributes": "",
-        "Effect": "-",
-        "info extra": "The main difference between a cactuar and slactuar is that the former uses poison and the latter uses confusion."
+        "Attack": "tsunamis",
+        "Attributes": "PG(-2%);PM(+2%),Magic(+1),Spirit(+60)",
+        "Effect": "She can turn to liquid and summon tsunamis that can flood entire cities",
+        "info extra": "Leviathan is one of the six Astrals of Eos in Final Fantasy XV. She is a colossal sea serpent who controls water, slumbering under the waters of Altissia. She is looked upon with both fear and respect. Prince Noctis forges a pact with Leviathan in Chapter 9."
       },
       {
+        "id": 10,
         "game": "XV",
         "name": "Gilgamesh / Girugamesshu",
-        "location": "",
+        "location": "Tempering Grounds",
         "magic materia": "-",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/d/d7/Gilgamesh.png/revision/latest?cb=20190518011129",
         "element": "",
         "MP": 12,
         "Attack": "Blademaster",
         "Attributes": "-",
-        "Effect": "",
-        "info extra": "-"
+        "Effect": " even though you'll be finding a lot of potions very soon, do not heal yourself; there's a place you can make camp at just up ahead",
+        "info extra": "As past Gilgameshes in the Final Fantasy series, Gilgamesh in Final Fantasy XV is associated with the color red and numerous swords, has a cape, and wears a mask, although the mask is not painted like in his usual appearances, instead being plain silver"
       },
       {
+        "id": 11,
         "game": "XV",
         "name": "Titan/ Taitan",
         "location": " Disc of Cauthess",
-        "magic materia": "-",
-        "image": "",
+        "magic materia": "earth",
+        "image": "https://static.wikia.nocookie.net/mobius_gamepedia_en/images/6/64/Card_859_EN_Titan_FFVII_3.png/revision/latest?cb=20171023100732",
         "element": "earth",
         "MP": "-",
         "Attack": "Gaia's Wrath",
@@ -431,10 +439,11 @@
     ],
     "spells": [
       {
+        "id": 0,
         "name": "Poisona / Poizona",
         "type": "Restore magic",
         "game": "VII",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/8/81/Poisona_from_FFVII_Remake.jpg/revision/latest/scale-to-width-down/700?cb=20200520050710",
         "required": "Heal materia, Master Magic",
         "effect": "Removes Poison",
         "MP": 3,
@@ -442,10 +451,11 @@
         "use": "Poisona is useful in many situations as removing the Poison effect can save an entire fight, and it is extremely cheap to use. Later on, there are many ways to simply prevent the Poison status effect. Linking the Poison Materia with Elemental can prevent Poison by providing resistance to or absorbing Poison damage, while linking it with Added Effect on armor can prevent the status entirely."
       },
       {
+        "id": 1,
         "name": "Fire(2) / Faira",
         "type": "Attack magic",
         "game": "VII",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/a/af/Fira_from_FFVII_Remake.jpg/revision/latest?cb=20200519045329",
         "required": "Fire materia, Master Magic",
         "effect": "Removes Poison",
         "MP": 22,
@@ -453,10 +463,11 @@
         "use": "Fire2 can be cast by the enemies Scrutin Eye, Soul Fire, Jersey, Killbin, Manhole, and Poodler Sample. It can also be cast by Turks:Rude during the Sunken Gelnika encounter."
       },
       {
+        "id": 2,
         "name": "Silence / Sairesu",
         "type": "Indirect magic",
         "game": "VII",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/5/56/Silence_from_FFVII_Remake.jpg/revision/latest?cb=20200519051125",
         "required": "Seal Materia, Master Magic",
         "effect": "60% chance of inflicting Silence on target",
         "MP": 24,
@@ -464,10 +475,11 @@
         "use": " Silence can be cast by the enemies Eligor, Bahba Velamyu, SOLDIER:2nd, and SOLDIER:1st, Helletic Hojo, Lifeform-Hojo N, and Jenova∙DEATH."
       },
       {
+        "id": 3,
         "name": "Tornado / Tatsumaki",
         "type": "Magic",
         "game": "VII",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/7/7a/Dissidia_Terra_Tornado.jpeg/revision/latest?cb=20101228105518",
         "required": "Contain Materia, Master Magic",
         "effect": "High wind-element damage 32% chance of inflicting Confusion",
         "MP": 90,
@@ -475,10 +487,11 @@
         "use": "Tornado's Wind damage is also both a strength and a weakness, as enemies weak to Wind will suffer even more damage, while the spell is effectively useless against those that absorb or are immune to it."
       },
       {
+        "id": 4,
         "name": "Esuna",
         "type": "White Magic",
         "game": "X",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/6/67/Esuna_from_FFVII_Remake.jpg/revision/latest?cb=20200520050710",
         "required": "Master magic, white magic license",
         "effect": "remove all negative status effects except Curse,Zombie,Doom,Power Break,Magic Break,Marmor Break and Mental Break",
         "MP": 5,
@@ -486,10 +499,11 @@
         "use": " obtainable in Yuna's section of the basic Sphere Grid. It is one of the abilities she begins with; along with Cure."
       },
       {
+        "id": 5,
         "name": "Full-life / Araise",
         "type": "White Magic",
         "game": "X",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/3/3e/FFVIII_Full-Life.png/revision/latest/scale-to-width-down/1200?cb=20191222204818",
         "required": "Master magic, white magic license",
         "effect": "revive a KO'd party member with max MP",
         "MP": 60,
@@ -497,10 +511,11 @@
         "use": "It can also destroy undead monsters in some games. Its upgrade is Reraise."
       },
       {
+        "id": 6,
         "name": "Haste / Heisuto",
         "type": " White Magic",
         "game": "X",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/7/70/Haste_spell_from_FFVII_Remake.jpg/revision/latest?cb=20200519050434",
         "required": "Master magic, white magic license",
         "effect": "increases Agility of party",
         "MP": 8,
@@ -508,10 +523,11 @@
         "use": "Found in Tidus’s section of the Sphere Grid. It raises one character's agility so their turns arrive more frequently. Haste can be cast by Evrae, Ixion, Sanctuary Keeper, Th'uban, Varuna, and Yenke Ronso."
       },
       {
+        "id": 7,
         "name": "Slow / Surou",
         "type": " White Magic",
         "game": "X",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/e/e5/FFVIII_Slow.png/revision/latest?cb=20091116051607",
         "required": "Master magic, white magic license",
         "effect": "Slow-lock some enemies.",
         "MP": 12,
@@ -519,10 +535,11 @@
         "use": " It can be used to 'Slow-lock' some enemies, as repeated casts can keep pushing back the target's turn on the Act List."
       },
       {
+        "id": 8,
         "name": "Thundara / Sandara",
         "type": "Black Magic",
         "game": "XV",
-        "image": "",
+        "image": "https://assetsio.reedpopcdn.com/ff15_spells.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp",
         "required": "Lightning",
         "effect": "Can paralize enemies, stopping their actions",
         "MP": "",
@@ -530,10 +547,11 @@
         "use": " Thundara can be fused with status inflicting Materia to create Dark Thundara."
       },
       {
+        "id": 9,
         "name": "Unicast III",
         "type": "Black Magic",
         "game": "XV",
-        "image": "",
+        "image": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/final-fantasy-versus-xiii/8/80/Ff15a2.jpg?width=640",
         "required": "Firaga, Blizzaga, or Thundaga",
         "effect": "Can paralize enemies, stopping their actions",
         "MP": "",
@@ -541,10 +559,11 @@
         "use": "Spell crafting power increase is now 50."
       },
       {
+        "id": 10,
         "name": "Blizzard/Burizado",
         "type": "Black Magic",
         "game": "XV",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/b/be/Blizzaga_on_a_Red_Giant_from_FFXV.png/revision/latest?cb=20180803154229",
         "required": "Ice element",
         "effect": "These spells are entirely ice-based and create an ice field that will slow and freeze anyone who gets into it.",
         "MP": "",
@@ -552,18 +571,18 @@
         "use": "Ice is one the three elements the player can use in Elemancy. The player can collect ice energy from ice deposits, and from enemies defeated with Noctis with Insomnian weapons that have an engine hilt. The player can add various catalysts to their crafting process to improve the spells. The highest grade blizzard spell is Freeze, crafted with the best catalysts."
       },
       {
+        "id": 11,
         "name": "Flare/ Fureā",
         "type": "Black Magic",
         "game": "XV",
-        "image": "",
+        "image": "https://static.wikia.nocookie.net/finalfantasy/images/a/ae/FFXIV_ARR_Flare.png/revision/latest/scale-to-width-down/1200?cb=20211009175146",
         "required": "fire element",
         "effect": "It inflicts massive fire damage on all enemies",
         "MP": "",
         "power": "Any (need special treasure)",
         "use": "These spells are entirely fire-based and create and explosive firestorm of varying levels that will burn anyone who ends up in it."
       }
-    ]
-  },
+    ],
   "users": [
     {
       "email": "bb@bb",

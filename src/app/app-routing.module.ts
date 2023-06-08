@@ -6,39 +6,49 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
-	{ 
-		path: '', 
-		component: HomeComponent 
-	},
-	{ 
-		path: 'login', 
-		component: HomeComponent 
-	},
-	{ 
-		path: 'auth', 
-		loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) 
-	},
-	{ 
-		path: 'about-us', 
-		component: AboutUsComponent
-	},
-	{ 
-		path: 'contact', 
-		component: ContactComponent 
-	},
-	{ path: 'monsters', loadChildren: () => import('./monsters/monsters.module').then(m => m.MonstersModule) },
-	{ 
-		path: 'characters', 
-		loadChildren: () => import('./characters/characters.module').then(m => m.CharactersModule) 
-	},
-	{ 
-		path: '**', 
-		component: NotFoundComponent
-	},
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'login',
+    component: HomeComponent,
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'about-us',
+    component: AboutUsComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'monsters',
+    loadChildren: () =>
+      import('./monsters/monsters.module').then((m) => m.MonstersModule),
+  },
+  {
+    path: 'magic',
+    loadChildren: () =>
+      import('./magic/magic.module').then((m) => m.MagicModule),
+  },
+  {
+    path: 'characters',
+    loadChildren: () =>
+      import('./characters/characters.module').then((m) => m.CharactersModule),
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
