@@ -16,6 +16,10 @@
   z-index: 1;
 }
 
-.mat-sidenav-container{
-  background: linear-gradient(180deg, #FFFFFF, #affefe);
+.toolbar {
+  background-color: transparent;
+}
+
+.mat-sidenav-container {
+  background: linear-gradient(180deg, #ffffff, #affefe);
 }
