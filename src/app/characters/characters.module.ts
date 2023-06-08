@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterServiceService } from './services/character-service.service';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { CharacterServiceService } from './services/character-service.service';
 	MatFormFieldModule,
 	MatInputModule,
 	MatSelectModule,
-	HttpClientModule
+	HttpClientModule,
+	MatTableModule
   ],
   providers: [
 	CharacterServiceService

@@ -1,6 +1,7 @@
 import { CharacterInterface } from "../interfaces/character-interface";
 
 export class CharacterDTO implements CharacterInterface{
+	id:number = 0;
 	name: string = '';
 	image: string = '';
 	alignment: string = '';

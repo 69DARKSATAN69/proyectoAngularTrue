@@ -1,40 +1,40 @@
-<section>
-	<div *ngIf="character">
+<section *ngIf="individualCharacter$ | async as character">
+	<div>
 		<header>
-			<h1>Character Name</h1>
+			<h1>{{character.name}}</h1>
 		</header>
-		<img src="https://i.imgur.com/mI9ZZr6.png" alt="Photo of several characters from Final Fantasy">
+		<img src="{{character.image}}" alt="Photo of a Final Fantasy character">
 
-		<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+		<table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
 
 			<!-- Name Column -->
 			<ng-container matColumnDef="name">
 				<th mat-header-cell *matHeaderCellDef> Name </th>
-				<td mat-cell *matCellDef="let element"> {{element.name}} </td>
+				<td mat-cell *matCellDef="let element"> {{character.name}} </td>
 			</ng-container>
 		  
 			<!-- Alignment Column -->
 			<ng-container matColumnDef="alignment">
 			  <th mat-header-cell *matHeaderCellDef> Alignment </th>
-			  <td mat-cell *matCellDef="let element"> {{element.alignment}} </td>
+			  <td mat-cell *matCellDef="let element"> {{character.alignment}} </td>
 			</ng-container>
 		  
 			<!-- Height Column -->
 			<ng-container matColumnDef="height">
 			  <th mat-header-cell *matHeaderCellDef> Height </th>
-			  <td mat-cell *matCellDef="let element"> {{element.height}} </td>
+			  <td mat-cell *matCellDef="let element"> {{character.height}} </td>
 			</ng-container>
 		  
 			<!-- Game Column -->
 			<ng-container matColumnDef="game">
 			  <th mat-header-cell *matHeaderCellDef> Game </th>
-			  <td mat-cell *matCellDef="let element"> {{element.game}} </td>
+			  <td mat-cell *matCellDef="let element"> {{character.game}} </td>
 			</ng-container>
 
 			<!-- Weapon Column -->
 			<ng-container matColumnDef="weapon">
 				<th mat-header-cell *matHeaderCellDef> Weapon </th>
-				<td mat-cell *matCellDef="let element"> {{element.weapon}} </td>
+				<td mat-cell *matCellDef="let element"> {{character.weapon}} </td>
 			</ng-container>
 		  
 			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -44,11 +44,7 @@
 		  <h2>Who is this character?</h2>
 
 			<p>
-				He is a rising star blitzball player from Zanarkand, and the son of major blitzball star Jecht. After the gargantuan monster known as Sin attacks his hometown, Tidus is transported to the world of Spira. 
-				
-				Lost, confused, and seemingly out of place, Tidus meets a newly-fledged summoner named Yuna, and her guardians. Yuna is to set out on a pilgrimage to put an end to Sin, and by joining Yuna on her pilgrimage, Tidus hopes he will find his way home.\\n\\nTidus is upbeat and initially childish and naive to the world of Spira. He is also selfless and will do what he believes is right, even if he doesn't think it through first. Throughout the pilgrimage, he matures and becomes more level-headed and grounded. Tidus is upbeat and carefree and at first appears childish. He turns more serious when things get hectic, and despite his carefree ways, conceals a troubled past. 
-				
-				Tidus is sensitive and even when giving an emotional response to most of his arguments, tends to give a good rationale. Despite having been picked on throughout his childhood by his blitzball-playing father, Tidus was motivated to become a top blitzball player himself.
+				{{character.info}}
 			</p>
 
 	</div>

@@ -4,6 +4,8 @@ import { CharacterDTO } from '../characterDTO/characterDTO';
 import { map } from 'rxjs/internal/operators/map';
 import { filter } from 'rxjs/internal/operators/filter';
 import { tap } from 'rxjs/internal/operators/tap';
+import { Observable } from 'rxjs/internal/Observable';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +13,17 @@ import { tap } from 'rxjs/internal/operators/tap';
 export class CharacterServiceService {
 	private urlApi = 'http://localhost:3000/characters';
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient, private route:ActivatedRoute) { 
   }
 
-  getCharactersByGame(game:string){
+  getCharactersByGame(game:string):Observable<CharacterDTO[]>{
 	return this.http.get<CharacterDTO[]>(this.urlApi).pipe(
 		map(data => data.filter(character => character.game === game)));
+  }
+
+  getCharacterById(id:number){
+	let urlCharacter = this.urlApi + "/" + id;
+	
+	return this.http.get<CharacterDTO>(urlCharacter);
   }
 }

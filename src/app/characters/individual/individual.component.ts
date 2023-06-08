@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CharacterDTO } from '../characterDTO/characterDTO';
 import { Observable } from 'rxjs/internal/Observable';
+import { ActivatedRoute } from '@angular/router';
+import { CharacterServiceService } from '../services/character-service.service';
 
-const ELEMENT_DATA: CharacterDTO[] = [
-	{name: 'Tidus', alignment: 'Good', height: 1.70, game: 'FF X', weapon: 'Caladbolg', id: 0, image: '', recap: '', info: ''}]
+const ELEMENT_DATA: Observable<CharacterDTO>[] = [];
 
 @Component({
   selector: 'app-individual',
@@ -11,10 +12,19 @@ const ELEMENT_DATA: CharacterDTO[] = [
   styleUrls: ['./individual.component.css']
 })
 export class IndividualComponent {
-	public character;
+	public characterObj:CharacterDTO;
+	public individualCharacter$;
 
-	constructor(){
-		this.character = new Observable<CharacterDTO[]>();
+	constructor(route:ActivatedRoute, private service:CharacterServiceService){
+		this.characterObj = new CharacterDTO();
+		this.individualCharacter$ = new Observable<CharacterDTO>();
+
+			route.params.subscribe(params => {		
+				if(Object.keys(params).length != 0){	
+					this.individualCharacter$ = this.service.getCharacterById(params['characterId']);
+					ELEMENT_DATA.push(this.individualCharacter$);	
+				}
+			})
 	}
 
 	displayedColumns: string[] = ['name', 'alignment', 'height', 'game', 'weapon'];
