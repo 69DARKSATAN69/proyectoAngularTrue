@@ -6,18 +6,32 @@ import { HttpClientModule } from '@angular/common/http';
 import { MonsterServiceService } from './services/monster-service.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { OneMonsterComponent } from './one-monster/one-monster.component';
+import { CashConversionPipe } from './pipes/cash-conversion.pipe';
+
 
 
 @NgModule({
   declarations: [
-    MonstersComponent
+    MonstersComponent,
+    OneMonsterComponent,
+    CashConversionPipe
   ],
   imports: [
     CommonModule,
     MonstersRoutingModule,
     HttpClientModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule
+    
   ],
   providers: [
     MonsterServiceService

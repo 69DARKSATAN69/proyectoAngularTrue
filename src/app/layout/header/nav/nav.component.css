@@ -15,3 +15,11 @@
   top: 0;
   z-index: 1;
 }
+
+.toolbar {
+  background-color: transparent;
+}
+
+.mat-sidenav-container {
+  background: linear-gradient(180deg, #ffffff, #affefe);
+}

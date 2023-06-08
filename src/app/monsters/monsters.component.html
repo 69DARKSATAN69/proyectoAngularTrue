@@ -2,24 +2,37 @@
     <header>
        <h1>Monsters</h1>
     </header>
+    <div class="div-selector">
+      <mat-form-field class="selector-game">
+        <select #game matNativeControl (change)="selectGame(game.value)" required>
+          <option value="VII" default>Final Fantasy VII</option>
+          <option value="X">Final Fantasy X</option>
+          <option value="XV">Final Fantasy XV</option>
+        </select>
+      </mat-form-field>
+    </div>
     <main class="content-control">
     <div class="image-control">
         <img />
     </div>
     <div class="card-grid" >
-    <mat-grid-list cols="2" rowHeight="2:1" *ngIf="monsterList$ | async as monsters">
-        <mat-grid-tile *ngFor="let monster of monsters">	<mat-card class="monster-card">
+    <mat-grid-list cols="2" rowHeight="2:1" *ngIf="(monsterList$ | async) as monsters; else loading">
+        <mat-grid-tile *ngFor="let monster of monsters">	<mat-card class="monster-card" routerLink={{monster.id}}>
             <mat-card-header>
               <div mat-card-avatar class="header-image"></div>
               <mat-card-title>{{monster.name}}</mat-card-title>
               <mat-card-subtitle>{{monster.game}}</mat-card-subtitle>
             </mat-card-header>
-            <img class="monster-image" mat-card-lg-image [src]=monster.image alt="Photo of a Shiba Inu">
+            <img class="monster-image" mat-card-lg-image [src]=monster.image alt="A (probably) big and scary monster">
       
           </mat-card></mat-grid-tile>
 
       </mat-grid-list>
+      <ng-template #loading>Loading...</ng-template>
     </div>
 </main>
+<footer>
+  <button class="button-post" *ngIf="isLoggedIn" mat-stroked-button color="accent" routerLink="private">Edit List</button>
+</footer>
 </section>
       

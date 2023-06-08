@@ -5,20 +5,30 @@ import { MagicRoutingModule } from './magic-routing.module';
 import { MagicPipe } from './pipe/magic.pipe';
 import { MagicDirective } from './directives/magic.directive';
 import { IndividualMagicCardComponent } from './individual-magic-card/individual-magic-card.component';
-
+import { GroupMagicCardComponent } from './group-magic-card/group-magic-card.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
     MagicPipe,
     MagicDirective,
-    IndividualMagicCardComponent
+    IndividualMagicCardComponent,
+    GroupMagicCardComponent,
   ],
+
   imports: [
     CommonModule,
-    MagicRoutingModule
+    MagicRoutingModule,
+    MatGridListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
   ],
-  exports: [
-    IndividualMagicCardComponent
-  ]
+  exports: [IndividualMagicCardComponent],
 })
-export class MagicModule { }
+export class MagicModule {}

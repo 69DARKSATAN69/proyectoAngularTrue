@@ -12,5 +12,6 @@ export class SummonsDTO implements SummonInterface {
   Attack: string = '';
   Attributes: string = '';
   effect: string = '';
+  resume: string = '';
   infoExtra: string = '';
 }
