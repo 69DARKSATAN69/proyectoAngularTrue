@@ -1,8 +1,8 @@
 .monster-card{
     width: 50%;
-    margin: auto;
+    margin: 1em auto;
     text-align: center;
-    background: radial-gradient(circle, palevioletred, #FFFFFF);
+    background: radial-gradient(circle, #fabada, #FFFFFF);
 }
 
 h1{

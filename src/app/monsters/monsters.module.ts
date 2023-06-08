@@ -11,13 +11,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { OneMonsterComponent } from './one-monster/one-monster.component';
+import { CashConversionPipe } from './pipes/cash-conversion.pipe';
 
 
 
 @NgModule({
   declarations: [
     MonstersComponent,
-    OneMonsterComponent
+    OneMonsterComponent,
+    CashConversionPipe
   ],
   imports: [
     CommonModule,
