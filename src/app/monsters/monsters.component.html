@@ -2,6 +2,15 @@
     <header>
        <h1>Monsters</h1>
     </header>
+    <div class="div-selector">
+      <mat-form-field class="selector-game">
+        <select #game matNativeControl (change)="selectGame(game.value)" required>
+          <option value="VII" default>Final Fantasy VII</option>
+          <option value="X">Final Fantasy X</option>
+          <option value="XV">Final Fantasy XV</option>
+        </select>
+      </mat-form-field>
+    </div>
     <main class="content-control">
     <div class="image-control">
         <img />
@@ -14,12 +23,15 @@
               <mat-card-title>{{monster.name}}</mat-card-title>
               <mat-card-subtitle>{{monster.game}}</mat-card-subtitle>
             </mat-card-header>
-            <img class="monster-image" mat-card-lg-image [src]=monster.image alt="Photo of a Shiba Inu">
+            <img class="monster-image" mat-card-lg-image [src]=monster.image alt="A probably big and scary monster">
       
           </mat-card></mat-grid-tile>
 
       </mat-grid-list>
     </div>
 </main>
+<footer>
+  <button class="button-post" *ngIf="isLoggedIn" mat-stroked-button color="accent">Post new monster</button>
+</footer>
 </section>
       
