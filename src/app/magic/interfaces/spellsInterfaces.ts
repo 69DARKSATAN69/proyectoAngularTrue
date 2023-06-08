@@ -7,5 +7,6 @@ export interface SpellsInterface {
   effect: string;
   MP: number;
   power: number;
+  resume: string;
   use: string;
 }

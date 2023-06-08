@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SummonsDTO } from '../magicDTO/summonsDTO';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { SpellsDTO } from '../magicDTO/spellsDTO';
 
