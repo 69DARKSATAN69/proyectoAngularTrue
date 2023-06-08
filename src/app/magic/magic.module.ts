@@ -8,6 +8,9 @@ import { IndividualMagicCardComponent } from './individual-magic-card/individual
 import { GroupMagicCardComponent } from './group-magic-card/group-magic-card.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,15 @@ import { MatCardModule } from '@angular/material/card';
     GroupMagicCardComponent,
   ],
 
-  imports: [CommonModule, MagicRoutingModule, MatGridListModule, MatCardModule],
+  imports: [
+    CommonModule,
+    MagicRoutingModule,
+    MatGridListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+  ],
   exports: [IndividualMagicCardComponent],
 })
 export class MagicModule {}
