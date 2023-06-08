@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { ContactService } from './pages/contact/services/contact.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ContactService } from './pages/contact/services/contact.service';
     HttpClientModule,
     MatGridListModule,
     MatCardModule,
+    MatButtonModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
