@@ -22,7 +22,7 @@
             <ng-container matColumnDef="actions">
               <th mat-header-cell *matHeaderCellDef> Actions </th>
               <td mat-cell *matCellDef="let monster">
-                <button mat-raised-button color="primary" >
+                <button mat-raised-button color="accent" >
                   edit
                 </button>
                 <button mat-raised-button color="warn" (click)="deleteMonster(monster.id)">
@@ -36,4 +36,6 @@
           </table>
           
     </main>
+    <button id="go-back" mat-raised-button color="primary" routerLink="/monsters">Back to public area</button>
+
 </section>

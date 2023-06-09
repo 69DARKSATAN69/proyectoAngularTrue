@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { OneMonsterComponent } from './one-monster/one-monster.component';
 import { CashConversionPipe } from './pipes/cash-conversion.pipe';
+import { DisplayDirectiveDirective } from './directives/display-directive.directive';
+import { TokenDirectiveDirective } from './directives/token-directive.directive';
 
 
 
@@ -19,7 +21,9 @@ import { CashConversionPipe } from './pipes/cash-conversion.pipe';
   declarations: [
     MonstersComponent,
     OneMonsterComponent,
-    CashConversionPipe
+    CashConversionPipe,
+    DisplayDirectiveDirective,
+    TokenDirectiveDirective
   ],
   imports: [
     CommonModule,
@@ -30,7 +34,8 @@ import { CashConversionPipe } from './pipes/cash-conversion.pipe';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+
     
   ],
   providers: [
