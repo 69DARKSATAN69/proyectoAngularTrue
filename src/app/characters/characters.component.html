@@ -8,7 +8,7 @@
 			</select>
 		</mat-form-field>
 	</div>
-	<div class="main-content">
+	<main class="main-content">
 		<figure class="main-image">
 			<img src="{{mainImage}}">
 		</figure>
@@ -22,7 +22,8 @@
 						{{char.recap}}
 					</p>
 				</mat-card-content>
-			</mat-card>
+			</mat-card>	
+			<button mat-raised-button [hidden]="!loggedIn" (click)="openModifyList()">Modify character list</button>
 		</div>
-	</div>
+	</main>
 </div>
