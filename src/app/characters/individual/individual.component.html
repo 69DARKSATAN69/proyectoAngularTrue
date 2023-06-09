@@ -1,1 +1,51 @@
-<p>individual works!</p>
+<section *ngIf="individualCharacter$ | async as character">
+	<div>
+		<header>
+			<h1>{{character.name}}</h1>
+		</header>
+		<img src="{{character.image}}" alt="Photo of a Final Fantasy character">
+
+		<table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+
+			<!-- Name Column -->
+			<ng-container matColumnDef="name">
+				<th mat-header-cell *matHeaderCellDef> Name </th>
+				<td mat-cell *matCellDef="let element"> {{character.name}} </td>
+			</ng-container>
+		  
+			<!-- Alignment Column -->
+			<ng-container matColumnDef="alignment">
+			  <th mat-header-cell *matHeaderCellDef> Alignment </th>
+			  <td mat-cell *matCellDef="let element"> {{character.alignment}} </td>
+			</ng-container>
+		  
+			<!-- Height Column -->
+			<ng-container matColumnDef="height">
+			  <th mat-header-cell *matHeaderCellDef> Height </th>
+			  <td mat-cell *matCellDef="let element"> {{character.height}} </td>
+			</ng-container>
+		  
+			<!-- Game Column -->
+			<ng-container matColumnDef="game">
+			  <th mat-header-cell *matHeaderCellDef> Game </th>
+			  <td mat-cell *matCellDef="let element"> {{character.game}} </td>
+			</ng-container>
+
+			<!-- Weapon Column -->
+			<ng-container matColumnDef="weapon">
+				<th mat-header-cell *matHeaderCellDef> Weapon </th>
+				<td mat-cell *matCellDef="let element"> {{character.weapon}} </td>
+			</ng-container>
+		  
+			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		  </table>
+
+		  <h2>Who is this character?</h2>
+
+			<p>
+				{{character.info}}
+			</p>
+
+	</div>
+</section>
