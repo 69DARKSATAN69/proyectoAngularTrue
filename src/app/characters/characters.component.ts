@@ -11,11 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CharactersComponent {
 	public characterObservable$;
-
-
+	public mainImage:string;
 
 	constructor(private serviceCharacter:CharacterServiceService){
 		this.characterObservable$ = new Observable<CharacterDTO[]>();	
+		this.mainImage = 'https://i.imgur.com/TNa7unG.png';
 	}
 
 	ngOnInit(){
@@ -24,10 +24,28 @@ export class CharactersComponent {
 
 	onSelected(value:string){
 		this.characterObservable$ = this.serviceCharacter.getCharactersByGame(value);
+		this.showMainImage(value);
 	}
 
 	showCharacter(id:number){
 		let urlCharacter = "characters/individual/" + id;
 		window.open(urlCharacter);
+	}
+
+	showMainImage(game:string){
+		switch(game) { 
+			case 'X': { 
+				this.mainImage = 'https://i.imgur.com/y6wasHZ.png';
+			break; 
+			} 
+			case 'XV': { 
+				this.mainImage = 'https://i.imgur.com/tCPhSXP.png';
+			break; 
+			} 
+			default: { 
+				this.mainImage = 'https://i.imgur.com/TNa7unG.png'; 
+			break; 
+			} 
+		}
 	}
 }

@@ -49,3 +49,8 @@ mat-grid-tile{
 	background-color: lightblue;
 }
 
+figure img {
+	max-width: 400px;
+	height: auto;
+}
+

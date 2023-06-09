@@ -10,7 +10,7 @@
 	</div>
 	<div class="main-content">
 		<figure class="main-image">
-			<img src="https://i.imgur.com/45zaybr.png">
+			<img src="{{mainImage}}">
 		</figure>
 		<div class="div-cards" *ngIf="characterObservable$ | async as characters">
 			<mat-card class="character-card" *ngFor="let char of characters" (click) = "showCharacter(char.id)">
