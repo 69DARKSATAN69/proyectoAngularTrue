@@ -273,7 +273,7 @@
         "game": "VII",
         "name": "Choco/Mog / Chokobo&Mōguri",
         "location": "Chocobo Farm",
-        "magic materia": "invocation",
+        "magic-materia": "invocation",
         "image": "https://i.imgur.com/pDgGxUt.png",
         "element": "wind",
         "MP": 14,
@@ -281,14 +281,14 @@
         "Attributes": "PG(-2%);PM(+2%),magia(+1)",
         "effect": " It Deathblow attack has a 40% chance of inflicting the enemies with Stop.",
         "resume":"Chocobo & Moogle originally known as Choco/Mog, is a Summon Materia from Final Fantasy VII.",
-        "info extra": "  if  a Fat Chocobo appear instead of Choco/Mog, which deals 25% more damage than the normal summon and is also non-elemental, but does inflict Stop.Chocobo & Moogle is a Summoning Materia Summoning Materia that can be obtained in the discovery sidequest 'Inside the Ventilation Fan' during 'Light the Way', the eighth chapter. The chocobo performs Wind Wind-elemental attacks, meaning that the summon is most effective against bosses who are weak to wind. Chocobo & Moogle's special move is Stampede (必殺技‼, Hissatsuwaza!!?, lit. Killing Blow!!), which runs down the enemy with a herd of chocobos."
+        "info": "  if  a Fat Chocobo appear instead of Choco/Mog, which deals 25% more damage than the normal summon and is also non-elemental, but does inflict Stop.Chocobo & Moogle is a Summoning Materia Summoning Materia that can be obtained in the discovery sidequest 'Inside the Ventilation Fan' during 'Light the Way', the eighth chapter. The chocobo performs Wind Wind-elemental attacks, meaning that the summon is most effective against bosses who are weak to wind. Chocobo & Moogle's special move is Stampede (必殺技‼, Hissatsuwaza!!?, lit. Killing Blow!!), which runs down the enemy with a herd of chocobos."
       },
       {
         "id": 1,
         "game": "VII",
         "name": "Kjata / Kujata",
         "location": "Sleeping Forest",
-        "magic materia": "invocation",
+        "magic-materia": "invocation",
         "image": "https://i.imgur.com/goVXEk8.png",
         "element": "Lightning, Ice and Fire",
         "MP": 110,
@@ -296,14 +296,14 @@
         "Attributes": "PG(-5%);PM(+5%),magia(+1),Espíritu(+1)",
         "effect": "Fire, Ice and Lightning to all enemies",
         "resume":"Kjata is a beast. It is a bull with multiple horns and eyes. Its first appearance in the series was in Final Fantasy VII.",
-        "info extra": " This attack reveals its true form in an explosion of light before the final earth-rippling blow(although this does not actually add Earth element).Kujata requires 110 MP to summon and its spell power is equal to 6.25x the base magic damage. When summoned, Kujata cycles through three elements in order of Lightning, Ice, and Fire to all enemies, then explodes in an earth-ripping blow in an attack called Tetra-Disaster. If an enemy is immune to or absorbs one of the elements, the entire attack is negated or absorbed by the enemy."
+        "info": " This attack reveals its true form in an explosion of light before the final earth-rippling blow(although this does not actually add Earth element).Kujata requires 110 MP to summon and its spell power is equal to 6.25x the base magic damage. When summoned, Kujata cycles through three elements in order of Lightning, Ice, and Fire to all enemies, then explodes in an earth-ripping blow in an attack called Tetra-Disaster. If an enemy is immune to or absorbs one of the elements, the entire attack is negated or absorbed by the enemy."
       },
       {
         "id": 2,
         "game": "VII",
         "name": "Knights of the Round / Naitsu obu Raundo",
         "location": "Hidden island in the northeast of the map",
-        "magic materia": "invocation",
+        "magic-materia": "invocation",
         "image": "https://i.imgur.com/fXT0N9M.png",
         "element": "none",
         "MP": 250,
@@ -311,44 +311,44 @@
         "Attributes": "PG(-10%);PM(+20%),magia(+8),Espíritu(+8)",
         "effect": "When summoned, thirteen medieval knights attack the enemy party. Knights of  Round is a series of 13 individual attacks hitting enemies with damage that ignores targets defensive stats",
         "resume":"Knights of the Round, also known as Knights of Round, is a recurring summon in the series. It is a group of thirteen knights based on the Knights of the Round Table from Arthurian legend.",
-        "info extra": "Only accessed with a gold chocobo, or as part of the Master Materia set received from the Kalm traveler after defeating Emerald Weapon.Knights of Round is the most powerful Summon Materia. It can be obtained from Round Island, a hidden island in the northeast of the map, only be accessed with a gold chocobo, or as part of the Master Materia set received from the Kalm traveler after defeating Emerald Weapon. Though the name of the Materia is 'Knights of Round' in the menu, when picking the orb up the message calls it 'Knights of the Round'. "
+        "info": "Only accessed with a gold chocobo, or as part of the Master Materia set received from the Kalm traveler after defeating Emerald Weapon.Knights of Round is the most powerful Summon Materia. It can be obtained from Round Island, a hidden island in the northeast of the map, only be accessed with a gold chocobo, or as part of the Master Materia set received from the Kalm traveler after defeating Emerald Weapon. Though the name of the Materia is 'Knights of Round' in the menu, when picking the orb up the message calls it 'Knights of the Round'. "
       },
       {
         "id": 3,
         "game": "VII",
         "name": "Hades / Hādesu",
         "location": "The Sunken Gelnika",
-        "magic materia": "invocation",
-        "image": "https://i.imgur.com/iBxzsIV.jpg",
+        "magic-materia": "invocation",
+        "image": "https://i.imgur.com/COW0DjY.png",
         "element": "none",
         "MP": 150,
         "Attack": "Black Cauldron",
         "Attributes": "PG(-10%);PM(+15%),magia(+4),Espíritu(+4)",
         "effect": "Sleep, Poison, Confusion, Silence,Frog,MIni,Slow and Paralyzed.",
         "resume":"The recurring summon,the enemy from Final Fantasy V,the boss from Final Fantasy IX,The server from Final Fantasy XI",
-        "info extra": "Hades's spell power is equal to 5.625x the base magic damage. If paired with the Added Effect Materia, Hades will grant either Slow or Paralyze"
+        "info": "Hades's spell power is equal to 5.625x the base magic damage. If paired with the Added Effect Materia, Hades will grant either Slow or Paralyze"
       },
       {
         "id": 4,
         "game": "X",
         "name": "Shiva / Shiva",
         "location": "Macalania Temple",
-        "magic materia": "-",
+        "magic-materia": "Blizzara",
         "image": "https://i.imgur.com/McGftxb.png",
-        "element":"ice",
+        "element":"Ice",
         "MP": 26,
         "Attack": "Heavenly Strike",
         "Attributes": "PG(-2%);PM(+2%),Magic(+1)",
         "Effect": "Inflicting ice damage to all enemies",
         "resume":"Shiva, also known as the Glacian, is an Astral in Final Fantasy XV. Out of the Six she is the most friendly and compassionate toward mankind and acts as a Messenger of the gods to mortals",
-        "info extra": " Ice attacks will heal her. Her special attack is called Heavenly Strike, which inflicts the Threaten status, and her Overdrive is Diamond Dust, inflicting Ice damage to all enemies. Though she starts out knowing only ice magic, she can be taught any ability provided the player has enough items."
+        "info": " Ice attacks will heal her. Her special attack is called Heavenly Strike, which inflicts the Threaten status, and her Overdrive is Diamond Dust, inflicting Ice damage to all enemies. Though she starts out knowing only ice magic, she can be taught any ability provided the player has enough items."
       },
       {
         "id": 5,
         "game": "X",
         "name": " Bahamut / Bahamūto",
         "location": "Bevelle Temple, Remien Temple, Inside Sin",
-        "magic materia": "Black magic",
+        "magic-materia": "Black magic",
         "image": "https://i.imgur.com/xDDbKW5.png",
         "element": "Fire",
         "MP": 35,
@@ -356,44 +356,44 @@
         "Attributes": " PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
         "Effect": " moderate damage to all enemies, and his Overdrive is Mega Flare.",
         "resume":"Bahamut, the Draconian is an Astral in the Final Fantasy XV Universe. He is one of the Six and is the God of War clad in winged armor. Bahamut is said to have bestowed the powers of the Oracle and given the Ring of the Lucii and the Crystal onto his chosen king.",
-        "info extra": "Bahamut is the most powerful storyline aeon, as well as one of the few that can exceed the 9,999 damage limit from the start"
+        "info": "Bahamut is the most powerful storyline aeon, as well as one of the few that can exceed the 9,999 damage limit from the start"
       },
       {
         "id": 6,
         "game": "X",
         "name": "Valefor / Varufāre",
         "location": "Besaid Temple",
-        "magic materia": "-",
+        "magic-materia": "Fire,Water,Lightning",
         "image": "https://i.imgur.com/E1IjHMJ.png",
-        "element": "Fire, Water",
+        "element": "Wind, No-Elemental",
         "MP": 24,
         "Attack": "Sonic Wings",
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
         "Effect": "main attack is non-elemental",
         "resume":"Valefor is a non-elemental aerial aeon in Final Fantasy X. She is Yuna's first aeon, and her fayth is a teenage girl whose fayth statue resides in the Besaid Temple.",
-        "info extra": " Valefor is unique in not having the Piercing auto-ability, and also has a slightly lower attack power. This has no impact when using the Attack command, as the aeons use a different version of this comman. Valefor also appears as a boss, both in Final Fantasy X and Final Fantasy X-2."
+        "info": " Valefor is unique in not having the Piercing auto-ability, and also has a slightly lower attack power. This has no impact when using the Attack command, as the aeons use a different version of this comman. Valefor also appears as a boss, both in Final Fantasy X and Final Fantasy X-2."
       },
       {
         "id": 7,
         "game": "X",
         "name": "Anima / Anima",
         "location": "Remien Temple",
-        "magic materia": "Eon",
-        "image": "https://i.imgur.com/l2CvzP6.png",
-        "element": "",
+        "magic-materia": "Eon",
+        "image": "https://i.imgur.com/26g2sbl.png",
+        "element": "No-elemental",
         "MP": 12,
         "Attack": "Pain",
         "Attributes": "PG(-3%);PM(+10%),magia(+5),Espíritu(+8)",
         "Effect": "instant kill, as well as dealing colossal damage to the few enemies that are immune to Death",
         "resume":"Anima is a primal from Final Fantasy XIV: Endwalker, based on the aeon of the same name from Final Fantasy X.",
-        "info extra": "it ignores defense and is even more effective than its Turbo, 'Chaos Unleashed' against different enemies such as Dark Bahamut."
+        "info": "it ignores defense and is even more effective than its Turbo, 'Chaos Unleashed' against different enemies such as Dark Bahamut."
       },
       {
         "id": 8,
         "game": "XV",
         "name": "Unicorn /Yunikōn",
         "location": "Chocobo mount",
-        "magic materia": "master magic",
+        "magic-materia": "master magic",
         "image": "https://i.imgur.com/wLfVPMh.png",
         "element": "monture",
         "MP": 12,
@@ -401,14 +401,14 @@
         "Attributes": "PG(-5%);PM(+20%),magia(+10),Espíritu(+10)",
         "Effect": "-",
         "resume":"Unicorn is a recurring summoned monster in the Final Fantasy series. It is a healing summon.",
-        "info extra": "As soon as you finish the level 30 class quest from the guildmaster of the Conjurer’s Guild, a new quest will open up inside the guild house. Before you exit, talk to Braya and she’ll give you a quest called ‘Unicorn Power’"
+        "info": "As soon as you finish the level 30 class quest from the guildmaster of the Conjurer’s Guild, a new quest will open up inside the guild house. Before you exit, talk to Braya and she’ll give you a quest called ‘Unicorn Power’"
       },
       {
         "id": 9,
         "game": "XV",
         "name": "Leviathan / Suijin Rivaiasan",
         "location": "Altissia",
-        "magic materia": "Black magic",
+        "magic-materia": "Black magic",
         "image": "https://i.imgur.com/tNVs4Uv.png",
         "element": "Water",
         "MP": 12,
@@ -416,14 +416,14 @@
         "Attributes": "PG(-2%);PM(+2%),Magic(+1),Spirit(+60)",
         "Effect": "She can turn to liquid and summon tsunamis that can flood entire cities",
         "resume":"Leviathan is one of the six Astrals of Eos in Final Fantasy XV. She is a colossal sea serpent who controls water, slumbering under the waters of Altissia. ",
-        "info extra": "Leviathan is one of the six Astrals of Eos in Final Fantasy XV. She is a colossal sea serpent who controls water, slumbering under the waters of Altissia. She is looked upon with both fear and respect. Prince Noctis forges a pact with Leviathan in Chapter 9."
+        "info": "Leviathan is one of the six Astrals of Eos in Final Fantasy XV. She is a colossal sea serpent who controls water, slumbering under the waters of Altissia. She is looked upon with both fear and respect. Prince Noctis forges a pact with Leviathan in Chapter 9."
       },
       {
         "id": 10,
         "game": "XV",
         "name": "Gilgamesh / Girugamesshu",
         "location": "Tempering Grounds",
-        "magic materia": "-",
+        "magic-materia": "-",
         "image": "https://i.imgur.com/VB9vebS.png",
         "element": "",
         "MP": 12,
@@ -431,14 +431,14 @@
         "Attributes": "-",
         "Effect": " even though you'll be finding a lot of potions very soon, do not heal yourself; there's a place you can make camp at just up ahead",
         "resume":"Gilgamesh is an Elite Mark in Final Fantasy XV petitioned by Montblanc. The hunt can be undertaken after the storyline events in Draklor Laboratory are complete.",
-        "info extra": "As past Gilgameshes in the Final Fantasy series, Gilgamesh in Final Fantasy XV is associated with the color red and numerous swords, has a cape, and wears a mask, although the mask is not painted like in his usual appearances, instead being plain silver"
+        "info": "As past Gilgameshes in the Final Fantasy series, Gilgamesh in Final Fantasy XV is associated with the color red and numerous swords, has a cape, and wears a mask, although the mask is not painted like in his usual appearances, instead being plain silver"
       },
       {
         "id": 11,
         "game": "XV",
         "name": "Titan/ Taitan",
         "location": " Disc of Cauthess",
-        "magic materia": "earth",
+        "magic-materia": "earth",
         "image": "https://i.imgur.com/36gMRVb.png",
         "element": "earth",
         "MP": "-",
@@ -446,7 +446,7 @@
         "Attributes": "-",
         "Effect": " The player can't use character-swap in this battle",
         "resume":"Titan, also known as the Archaean, is an Astral who appears in Final Fantasy XV. He is one of the Six and a giant who controls earth.",
-        "info extra": " Titan can be summoned in certain regions of Lucis, such as Leide, Duscae around the Disc of Cauthess, and the Rock of Ravatogh.He can also emerge from the Vesperpool. He cannot be summoned in dungeons or near the ocean. He can be summoned in Insomnia in Chapter 14."
+        "info": " Titan can be summoned in certain regions of Lucis, such as Leide, Duscae around the Disc of Cauthess, and the Rock of Ravatogh.He can also emerge from the Vesperpool. He cannot be summoned in dungeons or near the ocean. He can be summoned in Insomnia in Chapter 14."
       }
     ],
     "spells": [
