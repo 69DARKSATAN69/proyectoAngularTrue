@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SummonsDTO } from '../magicDTO/summonsDTO';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { SpellsDTO } from '../magicDTO/spellsDTO';
 
@@ -16,7 +16,7 @@ export class MagicService {
   getSummonsList(): Observable<SummonsDTO[]> {
     return this.http.get<SummonsDTO[]>(this.url + '/summons');
   }
-  getOneSummon(id: number): Observable<SummonsDTO> {
+  getSummonById(id: number): Observable<SummonsDTO> {
     return this.http.get<SummonsDTO>(this.url + `/summons/${id}`);
   }
   postSummon(body: SummonsDTO): Observable<SummonsDTO> {
@@ -33,7 +33,7 @@ export class MagicService {
   getSpellsList(): Observable<SpellsDTO[]> {
     return this.http.get<SpellsDTO[]>(this.url + '/spells');
   }
-  getOneSpells(id: number): Observable<SpellsDTO> {
+  getSpellById(id: number): Observable<SpellsDTO> {
     return this.http.get<SpellsDTO>(this.url + `/spells/${id}`);
   }
   postSpell(body: SpellsDTO): Observable<SpellsDTO> {

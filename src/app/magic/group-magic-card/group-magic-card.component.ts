@@ -53,6 +53,16 @@ export class GroupMagicCardComponent {
       this.getSpellsList(this.selectedGame);
   }
 
+  showSpell(id: number) {
+    let urlSpell = 'spells/individual/' + id;
+    window.open(urlSpell);
+  }
+
+  showSummon(id: number) {
+    let urlSummon = 'summons/individual/' + id;
+    window.open(urlSummon);
+  }
+
   ngOnInit() {
     this.getSummonsList(this.selectedGame);
     this.getSpellsList(this.selectedGame);
