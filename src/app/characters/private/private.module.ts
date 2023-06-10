@@ -7,6 +7,8 @@ import { CharacterFormComponent } from './character-form/character-form.componen
 import { CharacterListComponent } from './character-list/character-list.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CharacterInterceptorInterceptor } from './interceptors/character-interceptor.interceptor';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { CharacterInterceptorInterceptor } from './interceptors/character-interc
   ],
   imports: [
     CommonModule,
-    PrivateRoutingModule
+    PrivateRoutingModule,
+	MatPaginatorModule,
+	MatTableModule
   ],
   providers:[
     {

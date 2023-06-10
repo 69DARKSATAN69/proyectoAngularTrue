@@ -59,3 +59,8 @@ figure img {
 	height: auto;
 }
 
+.admin-button{
+	display: block;
+	text-align: center;
+}
+

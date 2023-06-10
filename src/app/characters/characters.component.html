@@ -23,7 +23,9 @@
 					</p>
 				</mat-card-content>
 			</mat-card>	
-			<button mat-raised-button [hidden]="!loggedIn" (click)="openModifyList()">Modify character list</button>
+			<div class="admin-button">
+				<button mat-raised-button [hidden]="!loggedIn" (click)="openModifyList()">Modify character list</button>
+			</div>
 		</div>
 	</main>
 </div>
