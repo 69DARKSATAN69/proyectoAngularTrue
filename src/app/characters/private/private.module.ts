@@ -5,6 +5,8 @@ import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
 import { CharacterFormComponent } from './character-form/character-form.component';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CharacterInterceptorInterceptor } from './interceptors/character-interceptor.interceptor';
 
 
 @NgModule({
@@ -16,6 +18,13 @@ import { CharacterListComponent } from './character-list/character-list.componen
   imports: [
     CommonModule,
     PrivateRoutingModule
+  ],
+  providers:[
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CharacterInterceptorInterceptor,
+      multi: true
+    }
   ]
 })
 export class PrivateModule { }
