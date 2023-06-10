@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, filter, map, of } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 import { SummonsDTO } from '../magicDTO/summonsDTO';
 import { MagicService } from '../services/magic.service';
 import { SpellsDTO } from '../magicDTO/spellsDTO';
