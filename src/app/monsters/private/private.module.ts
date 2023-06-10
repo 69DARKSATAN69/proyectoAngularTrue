@@ -4,6 +4,9 @@ import {MatTableModule} from '@angular/material/table';
 import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
 import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -14,7 +17,10 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     PrivateRoutingModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class PrivateModule { }
