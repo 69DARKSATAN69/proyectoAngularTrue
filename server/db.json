@@ -513,6 +513,7 @@
         "required": "Contain Materia, Master Magic",
         "effect": "High wind-element damage 32% chance of inflicting Confusion",
         "MP": 90,
+        "level": 6,
         "power": 100,
         "resume":"Tornado, also known as Weak, Wind, W Wind and Cyclone, is a recurring spell in the Final Fantasy series. It was initially introduced into the series as late-game spell that dealt percentile damage to lower the target's health to critical levels.",
         "use": "Tornado's Wind damage is also both a strength and a weakness, as enemies weak to Wind will suffer even more damage, while the spell is effectively useless against those that absorb or are immune to it."
