@@ -7,6 +7,7 @@ export interface SummonInterface {
   image: string;
   element: string;
   MP: number;
+  level: number;
   Attack: string;
   Attributes: string;
   effect: string;

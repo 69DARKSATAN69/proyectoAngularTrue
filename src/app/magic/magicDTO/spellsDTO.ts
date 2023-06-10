@@ -9,6 +9,7 @@ export class SpellsDTO implements SpellsInterface {
   required: string = '';
   effect: string = '';
   MP: number = 0;
+  level: number = 0;
   power: number = 0;
   resume: string = '';
   use: string = '';

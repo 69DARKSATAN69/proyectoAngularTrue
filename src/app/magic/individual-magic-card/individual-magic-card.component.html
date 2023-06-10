@@ -11,7 +11,8 @@
         <table class="mat-elevation-z8">
           <tr *ngFor="let item of columnsToShow | keyvalue">
             <th class="th">{{ item.value }}</th>
-            <td class="td">{{magic[item.key] }}</td>
+            <td *ngIf="item.key !== 'damage' " class="td">{{magic[item.key] }}</td>
+            <td *ngIf="item.key === 'damage' " class="td damage">{{ magic | calculateDamage }}</td>
           </tr>
         </table>
       </div>

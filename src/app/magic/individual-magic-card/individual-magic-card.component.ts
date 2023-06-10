@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 })
 export class IndividualMagicCardComponent {
   public individualMagic$: Observable<any>;
-  public ROWS_DATA: Observable<any>[] = [];
   public magicType: string = '';
   public columnsToShow = {};
 
@@ -25,11 +24,9 @@ export class IndividualMagicCardComponent {
       if (magicType === 'summons') {
         this.individualMagic$ = this.service.getSummonById(id);
         this.columnsToShow = this.displayedColumnsSummon;
-        this.ROWS_DATA.push(this.individualMagic$);
       }
       if (magicType === 'spells') {
         this.individualMagic$ = this.service.getSpellById(id);
-        this.ROWS_DATA.push(this.individualMagic$);
         this.columnsToShow = this.displayedColumnSpell;
       }
     });
@@ -41,10 +38,12 @@ export class IndividualMagicCardComponent {
     'magic-materia': 'Materia',
     element: 'Element',
     MP: 'MP',
+    level: 'Level',
     Attack: 'Attack',
     Attributes: 'Attributes',
     effect: 'Effect',
     info: 'About',
+    damage: 'Calculated damage',
   };
 
   displayedColumnSpell = {
@@ -53,8 +52,9 @@ export class IndividualMagicCardComponent {
     required: 'Required',
     effect: 'Effect',
     MP: 'MP',
+    level: 'Level',
     power: 'Power',
     use: 'Use',
+    damage: 'Calculated damage',
   };
-  dataSource = this.ROWS_DATA;
 }

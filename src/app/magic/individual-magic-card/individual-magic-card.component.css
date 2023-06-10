@@ -34,3 +34,8 @@ table {
 .td {
   padding-left: 1rem;
 }
+
+.td.damage {
+  color: red;
+  font-weight: bold;
+}
