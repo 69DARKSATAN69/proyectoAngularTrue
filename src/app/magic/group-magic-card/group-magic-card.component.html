@@ -24,14 +24,15 @@
     <div class="main-content" *ngIf="selectedMagic === 'summons'">
       <div class="main-image">
         <figure>
-          <img src="https://i.imgur.com/PiRwA14.png">
+          <img src="https://i.imgur.com/bw4IuTl.png">
         </figure>
       </div>
       <div class="cards-container" *ngIf="summonsList$| async as summons">
         <mat-card class="magic-card" *ngFor="let summon of summons">
           <mat-card-title class="card-title">{{ summon.name }}</mat-card-title>
-          <mat-card-subtitle></mat-card-subtitle> <!--pipe para japones-->
-          <img mat-card-image src="{{summon.image}}" alt="Photo of a FF summon">
+          <a routerLink='summons/{{summon.id}}'>
+            <img mat-card-image src="{{summon.image}}" alt="Photo of a FF summon">
+          </a>
           <mat-card-content>
             <p>
               {{summon.resume}}
@@ -50,7 +51,9 @@
         <mat-card class="magic-card" *ngFor="let spell of spells">
           <mat-card-title class="card-title">{{ spell.name }}</mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
-          <img mat-card-image src="{{ spell.image }}" alt="Photo of a FF spell">
+          <a routerLink='spells/{{spell.id}}'>
+            <img mat-card-image src="{{ spell.image }}" alt="Photo of a FF spell">
+          </a>
           <mat-card-content>
             <p>
               {{ spell.resume }}
