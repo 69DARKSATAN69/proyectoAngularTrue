@@ -22,7 +22,7 @@ getOneMonster(id:number):Observable<MonsterDTO>{
 }
 
 postMonster(body:MonsterDTO):Observable<MonsterDTO>{
- return this.http.post<MonsterDTO>(this.url, body);
+ return this.http.post<MonsterDTO>(this.url +'/monsters', body);
 }
 
 deleteMonster(id:number):Observable<MonsterDTO>{

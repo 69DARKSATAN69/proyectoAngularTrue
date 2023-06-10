@@ -5,13 +5,16 @@
 
 .image-control{
     background-image: url('https://cdna.artstation.com/p/assets/images/images/029/033/018/4k/scott-brox-atma-full-01-v009.jpg?1596242372');
-    width: 33%;
+    width: 40%;
     background-size: cover;
     background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 12px;
 }
 
 .card-grid{
-    width: 66%;
+    width: 60%;
+   
 }
 
 .monster-card {
@@ -22,6 +25,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    border: 1px solid black;
+    border-radius: 12px;
     background: radial-gradient(circle, #fabada, #FFFFFF);
 }
 .header-image{
