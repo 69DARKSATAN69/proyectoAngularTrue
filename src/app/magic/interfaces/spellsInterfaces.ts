@@ -1,4 +1,5 @@
 export interface SpellsInterface {
+  id: number;
   name: string;
   type: string;
   game: string;

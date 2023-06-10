@@ -1,6 +1,7 @@
 import { SpellsInterface } from '../interfaces/spellsInterfaces';
 
 export class SpellsDTO implements SpellsInterface {
+  id: number = 0;
   name: string = '';
   type: string = '';
   game: string = '';
