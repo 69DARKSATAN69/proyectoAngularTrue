@@ -14,6 +14,7 @@ import { OneMonsterComponent } from './one-monster/one-monster.component';
 import { CashConversionPipe } from './pipes/cash-conversion.pipe';
 import { DisplayDirectiveDirective } from './directives/display-directive.directive';
 import { TokenDirectiveDirective } from './directives/token-directive.directive';
+import { MonsterBackgroundDirective } from './directives/monster-background.directive';
 
 
 
@@ -23,7 +24,8 @@ import { TokenDirectiveDirective } from './directives/token-directive.directive'
     OneMonsterComponent,
     CashConversionPipe,
     DisplayDirectiveDirective,
-    TokenDirectiveDirective
+    TokenDirectiveDirective,
+    MonsterBackgroundDirective
   ],
   imports: [
     CommonModule,

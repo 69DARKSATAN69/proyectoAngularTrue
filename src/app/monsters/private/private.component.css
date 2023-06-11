@@ -9,3 +9,9 @@ button{
 #go-back{
     margin: 2em 0;
 }
+
+#post-put-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
