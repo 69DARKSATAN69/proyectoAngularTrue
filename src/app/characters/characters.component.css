@@ -36,6 +36,10 @@ button {
 	height: 100%;
 }
 
+mat-card{
+	min-width: 400px;
+}
+
 mat-card-title, mat-card-subtitle {
 	text-align: center;
 }
