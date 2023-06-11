@@ -45,6 +45,7 @@ export class CharacterFormComponent {
 				this.characterForm.value.info
 			);
 			this.service.postCharacter(character);
+			window.location.reload();
 		}
 	}
 }
