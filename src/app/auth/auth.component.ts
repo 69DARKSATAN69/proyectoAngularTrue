@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, catchError } from 'rxjs';
+import {  Router } from '@angular/router';
+import {  catchError } from 'rxjs';
 import { AuthServiceService } from './auth-services/auth-service.service';
-import { TokenDTO } from './DTOclasses/tokenDTO';
 
 //Este componente utiliza el servicio creado para manejar el servidor de auth. Utiliza un formulario reactivo para hacer tanto el login como el register
 //de usuarios, cambiando el 'modo' con un botón.
@@ -36,16 +35,16 @@ export class AuthComponent {
   }
   //al montarse el componente se crea el formulario reactivo
   ngOnInit(){
-    this.empezarFormulario();
+    this.startForm();
   }
   //esto es una función intermedia para evitar posibles problemas asíncronos en caso de que queramos crear un crud de usuarios.
-  empezarFormulario():void{
-    this.crearFormulario();
+  startForm():void{
+    this.createForm();
 
   }
   
   //esta es la propia función de crear el formulario reactivo. Aplica validaciones elementales.
-  private crearFormulario():void{
+  private createForm():void{
  
 
     this.formGroup = this.formbuilder.group({
@@ -54,36 +53,34 @@ export class AuthComponent {
       
     });
   }
-  //una función sencilla de testing si el formulario hace cosas raras.
-  public testFormulario(){
-    console.log(this.formGroup.value);
-  }
+
 //esta es la función a la que llama el botón de submit, dependiendo del modo register/login se usa una u otra de las funciones siguientes.
 public handleAuth(){
-  this.register ? this.registerUsuario() : this.logUsuario();
+  this.register ? this.registerUser() : this.logUser();
 }
-//esta función recibe el observable del servicio de la función register, realiza la subscripción y guarda el token resultante.
+//esta función recibe el observable del servicio de la función register, realiza la subscripción y guarda el token resultante y el email del usuario.
 //en caso de errores, los pasa a la variable error para que se muestre en el html.
 //si todo sale bien, redirije al usuario a la página root.
-  public registerUsuario():void{
+  public registerUser():void{
     this.error = null;
 
   this.fetcher.registerUser(this.formGroup.value)
   .pipe(catchError((err:any)=>{this.error = err.error; return []}))
-  .subscribe((data:any) => {sessionStorage.setItem('token', data.accessToken); console.log(data); this.router.navigate(['']);});
+  .subscribe((data:any) => {sessionStorage.setItem('token', data.accessToken); sessionStorage.setItem('userEmail', data.user.email);  this.router.navigate([''])});
+ 
 
   }
   //esta función es similar a la anterior, pero con el método login del servicio. Por el funcionamiento del servidor son prácticamente idénticos.
   //el manejo de errores es como la función anterior.
   //si todo sale bien, redirije al usuario a la página root.
 
-  public logUsuario():void{
+  public logUser():void{
     this.error = null;
 
    
     this.fetcher.logUser(this.formGroup.value)
     .pipe(catchError((err:any)=>{this.error = err.error; return []}))
-    .subscribe((data:any)=>{sessionStorage.setItem('token', data.accessToken); console.log(data);this.router.navigate(['']);});
+    .subscribe((data:any)=>{sessionStorage.setItem('token', data.accessToken); sessionStorage.setItem('userEmail', data.user.email); this.router.navigate(['']);});
   
   }
 //el botón de cambio de modo llama a esta función. Cambia el boolean de register a su contrario y cambia el texto de botones según el valor de dicho boolean.
@@ -91,8 +88,6 @@ public handleAuth(){
     this.register = !this.register;
     this.logText = this.register ? 'Register' : 'Login';
     this.switchText = this.register ? 'You might want to log in instead' : 'Would you rather register instead?';
-//esta parte se puede borrar, es sencillamente para ver que el texto sea concordante con el modo.
-    console.log('register is', this.register);
 
   }
 

@@ -13,10 +13,9 @@ let ELEMENT_DATA: CharacterDTO[] = [];
   styleUrls: ['./character-list.component.css']
 })
 export class CharacterListComponent implements AfterViewInit {
-	displayedColumns: string[] = ['id', 'name', 'alignment', 'height', 'game', 'weapon', 'buttons'];
+	displayedColumns: string[] = ['id', 'name', 'alignment', 'height', 'game', 'weapon', 'actions'];
 	dataSource = new MatTableDataSource<CharacterDTO>(ELEMENT_DATA);
 
-	//@ViewChild(MatPaginator) paginator: MatPaginator;
 	@Input() characters:CharacterDTO[];
 
 	constructor(private service:CharacterServiceService){
@@ -33,6 +32,5 @@ export class CharacterListComponent implements AfterViewInit {
 
 	ngAfterViewInit() {
 		ELEMENT_DATA = this.characters;
-		//this.dataSource.paginator = this.paginator;  
 	}
 }

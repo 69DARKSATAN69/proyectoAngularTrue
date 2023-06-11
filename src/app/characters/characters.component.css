@@ -60,8 +60,9 @@ figure img {
 }
 
 .admin-button{
-	display: block;
-	text-align: center;
+	justify-content: end;
+	display: flex;
+	margin-right: 1.25rem;
 }
 
 p{

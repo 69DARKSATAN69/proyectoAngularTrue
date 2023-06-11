@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MonstersRoutingModule } from './monsters-routing.module';
 import { MonstersComponent } from './monsters.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MonsterServiceService } from './services/monster-service.service';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
@@ -15,6 +15,8 @@ import { CashConversionPipe } from './pipes/cash-conversion.pipe';
 import { DisplayDirectiveDirective } from './directives/display-directive.directive';
 import { TokenDirectiveDirective } from './directives/token-directive.directive';
 import { MonsterBackgroundDirective } from './directives/monster-background.directive';
+import { InterdictPrivateNavService } from './services/interdict-private-nav.service';
+import { UlcontrolPipe } from './pipes/ulcontrol.pipe';
 
 
 
@@ -25,7 +27,8 @@ import { MonsterBackgroundDirective } from './directives/monster-background.dire
     CashConversionPipe,
     DisplayDirectiveDirective,
     TokenDirectiveDirective,
-    MonsterBackgroundDirective
+    MonsterBackgroundDirective,
+    UlcontrolPipe
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,12 @@ import { MonsterBackgroundDirective } from './directives/monster-background.dire
     
   ],
   providers: [
-    MonsterServiceService
+    MonsterServiceService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterdictPrivateNavService,
+      multi: true
+    }
   ]
 })
 export class MonstersModule { }

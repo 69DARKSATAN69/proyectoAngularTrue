@@ -15,3 +15,16 @@ button{
     flex-direction: column;
     width: 100%;
 }
+
+.error-control{
+    color: crimson;
+}
+
+.submit-control{
+    padding: 1em;
+    border: 1px solid green;
+    color: green;
+    font-size:large;
+    font-weight:bold;
+    
+}

@@ -264,21 +264,6 @@
       "drops": [],
       "type": "Humanoid",
       "id": 12
-    },
-    {
-      "name": "ultima weapon",
-      "image": "https://cdnb.artstation.com/p/assets/images/images/033/597/295/large/matthew-arnone-untitled-artwork-19.jpg",
-      "moneyDrop": 5555,
-      "game": "X",
-      "drops": [
-        "genji glove",
-        " offering",
-        " tongue",
-        " arms",
-        " tongue"
-      ],
-      "type": "Elemental",
-      "id": 13
     }
   ],
   "summons": [
@@ -655,6 +640,16 @@
       "email": "aa@aa",
       "password": "$2a$10$cgKawc5Q.CarlrZ27zW.fubalP0PA8lpa1UvRR7KdYXR//w5MnwAG",
       "id": 2
+    },
+    {
+      "email": "cc@cc",
+      "password": "$2a$10$bmB5LuIUXTy4bRK/rF7o1O9e.e3uw868I5FcwXXIz2.drPp9EmqDm",
+      "id": 3
+    },
+    {
+      "email": "dd@dd",
+      "password": "$2a$10$cSBUmuh791Z9PhGs77ux/.OTWzVhGB9pTlI.Qw4sJiLClvc/./Yp.",
+      "id": 4
     }
   ]
 }

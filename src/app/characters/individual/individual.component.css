@@ -33,3 +33,7 @@ p{
 	white-space: pre;
 	white-space: pre-wrap; 
 }
+
+div {
+	text-align: center;
+}

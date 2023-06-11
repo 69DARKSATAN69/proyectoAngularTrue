@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { CharacterServiceService } from '../services/character-service.service';
 import {MatRadioModule} from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {MatRadioModule} from '@angular/material/radio';
 	MatInputModule,
 	MatFormFieldModule,
 	MatCardModule,
-	MatRadioModule
+	MatRadioModule,
+	MatButtonModule
   ],
   providers:[
 	CharacterServiceService,
