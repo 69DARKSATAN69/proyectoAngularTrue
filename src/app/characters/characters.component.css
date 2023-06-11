@@ -64,3 +64,8 @@ figure img {
 	text-align: center;
 }
 
+p{
+	white-space: pre;
+	white-space: pre-wrap; 
+}
+
