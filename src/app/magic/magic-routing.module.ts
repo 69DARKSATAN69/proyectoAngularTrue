@@ -23,6 +23,11 @@ const routes: Routes = [
     matcher: regexMatcher,
     component: IndividualMagicCardComponent,
   },
+  {
+    path: 'private',
+    loadChildren: () =>
+      import('./private/private.module').then((m) => m.PrivateModule),
+  },
 ];
 
 @NgModule({
