@@ -20,7 +20,6 @@ export class MagicDirective {
         const maxRandomIndex = data.length;
         const randomIndex = Math.floor(Math.random() * maxRandomIndex);
         const srcGif = data[randomIndex].images.downsized_large.url;
-        console.log(data[randomIndex].images.downsized_large.url);
         this.setSrcImage(srcGif);
       });
   }
