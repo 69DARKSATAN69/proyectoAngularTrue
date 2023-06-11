@@ -42,7 +42,7 @@
 			<th mat-header-cell *matHeaderCellDef> Buttons </th>
 			<td mat-cell *matCellDef="let element"> 
 				<button mat-raised-button>Edit</button>
-				<button mat-raised-button>Delete</button>
+				<button mat-raised-button (click)="deleteCharacter(element.id)">Delete</button>
 			</td>
 		</ng-container>
 	

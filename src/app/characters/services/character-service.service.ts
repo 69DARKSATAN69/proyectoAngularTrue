@@ -45,8 +45,15 @@ export class CharacterServiceService {
     return this.http.put<CharacterDTO>(url, character);
   }
 
-  public deleteCharacter(id:number):Observable<CharacterDTO>{
+  public deleteCharacter(id:number){
     let url = this.urlApi + "/" + id;
-    return this.http.delete<CharacterDTO>(url);
+    this.http.delete<CharacterDTO>(url).subscribe({
+		next: (data) => {
+			this.resultado.push(data);
+		},
+		error: (error) => {
+			console.log(error)
+		}
+	});
   }
 }
