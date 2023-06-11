@@ -7,6 +7,10 @@ article{
     margin: 1em auto;
     text-align: center;
     background: radial-gradient(circle, #fabada, #FFFFFF);
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0.5em 5px 0.5em rgba(0, 0, 0, 0.6); 
+    padding: 1em;
 }
 
 h1{
@@ -20,3 +24,4 @@ h3{
 ul{
     list-style: none;
 }
+

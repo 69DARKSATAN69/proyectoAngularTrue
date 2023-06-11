@@ -18,6 +18,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { ContactService } from './pages/contact/services/contact.service';
 import { MatButtonModule } from '@angular/material/button';
+import { NotificationComponent } from './pages/notification/notification.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogComponent } from './pages/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     NotFoundComponent,
     AboutUsComponent,
     HomeComponent,
+    NotificationComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +47,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
+    MatSnackBarModule,
+    MatDialogModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
+  exports: [DialogComponent],
 })
 export class AppModule {}

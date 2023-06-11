@@ -1,33 +1,35 @@
 <section>
 <header>
   <h1>Edición de monstruos</h1>
-  <button (click)="changeView()">{{buttonMsg}}</button>
+  <button mat-stroked-button color="primary" (click)="changeView()">{{buttonMsg}}</button>
 
   </header>
   <article *ngIf="showForm">
     <header>
     <h2>Formulario de entrada de monstruos</h2>
 </header>
+<p class="submit-control" *ngIf="formSubmitted">Formulario enviado con éxito!</p>
+
 <main class="form-control">
   <form id="post-put-form" [formGroup]="formGroup">
     <mat-form-field>
       <mat-label for="name">Name</mat-label>
-      <input matInput id="name-input" type="text" name="name" placeholder="ex. Atma Weapon" formControlName="name">
-      <span class="error-control">{{getError('name')}}</span>
+      <input matInput id="name-input" type="text" name="name" placeholder="ex. Atma Weapon" formControlName="name" >
+      <mat-error><span class="error-control">{{getError('name')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="image">Image</mat-label>
       <input matInput id="image-input" type="text" name="image" placeholder="url to an image" formControlName="image">
-      <span class="error-control">{{getError('image')}}</span>
+      <mat-error><span class="error-control">{{getError('image')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="moneyDrop">Money drops in gil</mat-label>
-      <input matInput id="money-input" type="number" name="moneyDrop" placeholder="ex. 5000" formControlName="moneyDrop">
-      <span class="error-control">{{getError('moneyDrop')}}</span>
+      <input matInput id="money-input" type="number" name="moneyDrop" placeholder="ex. 5000" formControlName="moneyDrop" >
+      <mat-error><span class="error-control">{{getError('moneyDrop')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="game">Game</mat-label>
-      <mat-select   name="game" formControlName="game">
+      <mat-select   name="game" formControlName="game" >
         <mat-option value="VII">
           VII
         </mat-option>
@@ -38,16 +40,16 @@
           XV
         </mat-option>
         </mat-select>
-      <span class="error-control">{{getError('game')}}</span>
+        <mat-error><span class="error-control">{{getError('game')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="drops">Item drops (separate them with commas)</mat-label>
       <input matInput id="item-input" type="text" name="drops" placeholder="ex. genji glove, offering" formControlName="drops">
-      <span class="error-control">{{getError('drops')}}</span>
+      <mat-error><span class="error-control">{{getError('drops')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
     <mat-label for="type">Monster type</mat-label>
-    <mat-select   name="type" formControlName="type">
+    <mat-select   name="type" formControlName="type" >
       <mat-option value="Beast">
         Beast
       </mat-option>
@@ -76,17 +78,16 @@
         Elemental
       </mat-option>
       </mat-select>
-    <span class="error-control">{{getError('type')}}</span>
+      <mat-error><span class="error-control">{{getError('type')}}</span></mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label for="id">Monster ID</mat-label>
-    <input matInput id="moster-id" type="number" name="id" placeholder="ex. 616" formControlName="id">
-    <span class="error-control">{{getError('id')}}</span>
+    <input matInput id="moster-id" type="number" name="id" placeholder="ex. 616" formControlName="id" [readonly]="isEditing">
+    <mat-error><span class="error-control">{{getError('id')}}</span></mat-error>
   </mat-form-field>
-  <button type="button" name="send" mat-raised-button color="primary" *ngIf="!isEditing" (click)="newMonster()">Submit new monster</button>
-  <button type="button" name="send" mat-raised-button color="primary" *ngIf="isEditing" (click)="editMonster()">Edit existing monster</button>
+  <button type="button" name="send" mat-raised-button color="primary" *ngIf="!isEditing" (click)="newMonster()" [disabled]="formGroup.invalid">Submit new monster</button>
+  <button type="button" name="send" mat-raised-button color="primary" *ngIf="isEditing" (click)="editMonster()" [disabled]="formGroup.invalid">Edit existing monster</button>
   <button type="button" name="send" mat-raised-button color="warn" *ngIf="isEditing" (click)="cancelEdit()">Cancel edit</button>  
-
 </form>
 </main>
   </article>
@@ -114,7 +115,7 @@
             <ng-container matColumnDef="actions">
               <th mat-header-cell *matHeaderCellDef> Actions </th>
               <td mat-cell *matCellDef="let monster">
-                <button mat-raised-button color="accent" (click)="testEdit(monster)" >
+                <button mat-raised-button color="accent" (click)="editStart(monster)" >
                   edit
                 </button>
                 <button mat-raised-button color="warn" (click)="deleteMonster(monster.id)">

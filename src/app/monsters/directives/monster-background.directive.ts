@@ -9,8 +9,8 @@ import { MonsterAttributes } from '../interfaces/monster-attributes';
 //a dos variables por el tipo y por el juego y finalmente asigna el fondo como una gradiente con ambos.
 
 export class MonsterBackgroundDirective {
-typeColor:string;
-gameColor:string;
+private typeColor:string;
+private gameColor:string;
   constructor(private element:ElementRef) {
     this.typeColor = '#fabada';
     this.gameColor = '#beeeef';
