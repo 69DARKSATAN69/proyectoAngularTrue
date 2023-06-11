@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CharacterServiceService } from './services/character-service.service';
 import { Observable } from 'rxjs/internal/Observable';
 import { CharacterDTO } from './characterDTO/characterDTO';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-characters',
@@ -12,14 +12,18 @@ import { ActivatedRoute } from '@angular/router';
 export class CharactersComponent {
 	public characterObservable$;
 	public mainImage:string;
+	public loggedIn = false;
 
-	constructor(private serviceCharacter:CharacterServiceService){
+	constructor(private serviceCharacter:CharacterServiceService, private rutas:Router){
 		this.characterObservable$ = new Observable<CharacterDTO[]>();	
 		this.mainImage = 'https://i.imgur.com/TNa7unG.png';
 	}
 
 	ngOnInit(){
 		this.characterObservable$ = this.serviceCharacter.getCharactersByGame("VII");
+		if (sessionStorage.getItem('token')){
+			this.loggedIn = true;
+		}
 	}
 
 	onSelected(value:string){
@@ -27,7 +31,7 @@ export class CharactersComponent {
 		this.showMainImage(value);
 	}
 
-	showCharacter(id:number){
+	showCharacter(id:number | null){
 		let urlCharacter = "characters/individual/" + id;
 		window.open(urlCharacter);
 	}
@@ -47,5 +51,9 @@ export class CharactersComponent {
 			break; 
 			} 
 		}
+	}
+
+	openModifyList(){
+		this.rutas.navigate(["characters/private"]);
 	}
 }
