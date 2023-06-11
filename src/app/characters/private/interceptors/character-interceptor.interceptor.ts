@@ -3,15 +3,16 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpErrorResponse
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable()
 export class CharacterInterceptorInterceptor implements HttpInterceptor {
 
-  constructor(private rutas:Router) {}
+  constructor(private route:Router) {}
 
 	intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 		let token = sessionStorage.getItem('token');
@@ -23,11 +24,26 @@ export class CharacterInterceptorInterceptor implements HttpInterceptor {
 				}
 			});
 			
-			return next.handle(authRequest);
+			return next.handle(authRequest).pipe(
+				catchError(this.errorHandler.bind(this))
+			);
+			
 		}else{
-			this.rutas.navigate(["auth"]);
+			this.route.navigate(["auth"]);
 		}
 			
 		return next.handle(request);
+	}
+
+	errorHandler(error:any){
+		const unauthorized = 401;
+
+		if(error instanceof HttpErrorResponse){
+			if(error.status === unauthorized){
+				this.route.navigate(["auth"]);
+			}
+		}
+
+		return throwError(() => new Error(error));
 	}
 }
