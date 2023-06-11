@@ -31,7 +31,7 @@ export class CharactersComponent {
 		this.showMainImage(value);
 	}
 
-	showCharacter(id:number){
+	showCharacter(id:number | null){
 		let urlCharacter = "characters/individual/" + id;
 		window.open(urlCharacter);
 	}

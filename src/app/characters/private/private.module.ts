@@ -9,6 +9,12 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CharacterInterceptorInterceptor } from './interceptors/character-interceptor.interceptor';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { CharacterServiceService } from '../services/character-service.service';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -21,9 +27,15 @@ import {MatTableModule} from '@angular/material/table';
     CommonModule,
     PrivateRoutingModule,
 	MatPaginatorModule,
-	MatTableModule
+	MatTableModule,
+	ReactiveFormsModule,
+	MatInputModule,
+	MatFormFieldModule,
+	MatCardModule,
+	MatRadioModule
   ],
   providers:[
+	CharacterServiceService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: CharacterInterceptorInterceptor,
