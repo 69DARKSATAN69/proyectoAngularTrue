@@ -14,9 +14,9 @@ import { MonsterDTO } from './DTOclasses/monsterDTO';
 //este componente es la lista pública de monstruos. Los muestra como un grid de tarjetas de angular material junto con una imagen 
 //de algún jefe del juego seleccionado por el usuario.
 export class MonstersComponent {
-selectedGame:string;
-monsterList$:Observable<MonsterDTO[]>
-isLoggedIn:boolean;
+public selectedGame:string;
+public monsterList$:Observable<MonsterDTO[]>
+public isLoggedIn:boolean;
   constructor(private fetcher:MonsterServiceService){
 this.monsterList$ = new Observable<MonsterDTO[]>;
 this.selectedGame = 'VII';
@@ -34,7 +34,7 @@ ngOnInit(){
   this.getList();
 }
 //esta es la función del select. Pasa el valor del juego seleccionado a la variable selectedGame y vuelve a pintar la lista.
-selectGame(game:string){
+public selectGame(game:string):void{
 this.selectedGame = game;
 this.getList();
 }

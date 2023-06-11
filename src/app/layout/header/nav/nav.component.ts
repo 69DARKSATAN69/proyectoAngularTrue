@@ -13,13 +13,13 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavComponent {
   private breakpointObserver = inject(BreakpointObserver);
-  isLoggedIn:boolean;
+  public isLoggedIn:boolean;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
-  userEmail:string;
+  public userEmail:string;
     constructor(private router:Router){
     //El valor inicial es la existencia de un token en sessionStorage transformado en boolean.
     //Si se llega aqui desde otro lado de la pagina, se vuelve a evaluar y comprobar los cambios. Esto se hace así porque en el módulo de auth,
@@ -35,7 +35,7 @@ export class NavComponent {
     }
 
 
-    logout():void{
+    public logout():void{
       //Este metodo borra el token y hace update del boolean de estar logeado, para cambiar en el template de html entre los dos ngIf posibles
       //de mostrar el link a login o el boton de logout. También borra el email de usuario guardado y devuelve al usuario a la página de inicio
       

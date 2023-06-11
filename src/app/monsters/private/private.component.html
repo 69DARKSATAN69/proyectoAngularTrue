@@ -15,17 +15,17 @@
     <mat-form-field>
       <mat-label for="name">Name</mat-label>
       <input matInput id="name-input" type="text" name="name" placeholder="ex. Atma Weapon" formControlName="name" >
-      <span class="error-control">{{getError('name')}}</span>
+      <mat-error><span class="error-control">{{getError('name')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="image">Image</mat-label>
       <input matInput id="image-input" type="text" name="image" placeholder="url to an image" formControlName="image">
-      <span class="error-control">{{getError('image')}}</span>
+      <mat-error><span class="error-control">{{getError('image')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="moneyDrop">Money drops in gil</mat-label>
       <input matInput id="money-input" type="number" name="moneyDrop" placeholder="ex. 5000" formControlName="moneyDrop" >
-      <span class="error-control">{{getError('moneyDrop')}}</span>
+      <mat-error><span class="error-control">{{getError('moneyDrop')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="game">Game</mat-label>
@@ -40,12 +40,12 @@
           XV
         </mat-option>
         </mat-select>
-      <span class="error-control">{{getError('game')}}</span>
+        <mat-error><span class="error-control">{{getError('game')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
       <mat-label for="drops">Item drops (separate them with commas)</mat-label>
       <input matInput id="item-input" type="text" name="drops" placeholder="ex. genji glove, offering" formControlName="drops">
-      <span class="error-control">{{getError('drops')}}</span>
+      <mat-error><span class="error-control">{{getError('drops')}}</span></mat-error>
     </mat-form-field>
     <mat-form-field>
     <mat-label for="type">Monster type</mat-label>
@@ -78,12 +78,12 @@
         Elemental
       </mat-option>
       </mat-select>
-    <span class="error-control">{{getError('type')}}</span>
+      <mat-error><span class="error-control">{{getError('type')}}</span></mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label for="id">Monster ID</mat-label>
     <input matInput id="moster-id" type="number" name="id" placeholder="ex. 616" formControlName="id" [readonly]="isEditing">
-    <span class="error-control">{{getError('id')}}</span>
+    <mat-error><span class="error-control">{{getError('id')}}</span></mat-error>
   </mat-form-field>
   <button type="button" name="send" mat-raised-button color="primary" *ngIf="!isEditing" (click)="newMonster()" [disabled]="formGroup.invalid">Submit new monster</button>
   <button type="button" name="send" mat-raised-button color="primary" *ngIf="isEditing" (click)="editMonster()" [disabled]="formGroup.invalid">Edit existing monster</button>
