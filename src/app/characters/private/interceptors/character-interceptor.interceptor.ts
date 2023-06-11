@@ -23,7 +23,7 @@ export class CharacterInterceptorInterceptor implements HttpInterceptor {
 				}
 			});
 			
-			return next.handle(request);
+			return next.handle(authRequest);
 		}else{
 			this.rutas.navigate(["auth"]);
 		}

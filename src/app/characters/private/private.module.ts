@@ -5,7 +5,7 @@ import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
 import { CharacterFormComponent } from './character-form/character-form.component';
 import { CharacterListComponent } from './character-list/character-list.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CharacterInterceptorInterceptor } from './interceptors/character-interceptor.interceptor';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
@@ -34,7 +34,10 @@ import { MatButtonModule } from '@angular/material/button';
 	MatFormFieldModule,
 	MatCardModule,
 	MatRadioModule,
-	MatButtonModule
+	MatButtonModule,
+	//fue añadir aquí la importación y el interceptor funcionó perfecto en el módulo privado (a pesar de estar ya importado en appmodule)
+	//quizás es porque como el interceptor solo funciona en el módulo en el que está necesita ahí la importación sí o sí ????
+	HttpClientModule
   ],
   providers:[
 	CharacterServiceService,
