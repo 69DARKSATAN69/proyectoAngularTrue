@@ -20,6 +20,8 @@ import { ContactService } from './pages/contact/services/contact.service';
 import { MatButtonModule } from '@angular/material/button';
 import { NotificationComponent } from './pages/notification/notification.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogComponent } from './pages/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AboutUsComponent,
     HomeComponent,
     NotificationComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,8 +48,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatDialogModule,
   ],
   providers: [ContactService],
   bootstrap: [AppComponent],
+  exports: [DialogComponent],
 })
 export class AppModule {}
