@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CharacterServiceService } from './services/character-service.service';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
+import { AlignmentDirective } from './directives/alignment.directive';
 
 
 
 @NgModule({
   declarations: [
     CharactersComponent,
-    IndividualComponent
+    IndividualComponent,
+    AlignmentDirective
   ],
   imports: [
     CommonModule,
