@@ -24,12 +24,11 @@
 			  </mat-form-field>
 			</div>
 			<div class="col">
-			  <mat-form-field class="full-width">
-				<input matInput placeholder="Alignment" formControlName="alignment">
-				<mat-error>
-				  Alignment is <strong>required</strong>
-				</mat-error>
-			  </mat-form-field>
+				<label>Alignment: </label>
+				<mat-radio-group formControlName="alignment">
+					<mat-radio-button value="good">Good</mat-radio-button>
+					<mat-radio-button value="evil">Evil</mat-radio-button>
+				</mat-radio-group>
 			</div>
 		  </div>
 		  <div class="row">

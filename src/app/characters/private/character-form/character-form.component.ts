@@ -26,7 +26,7 @@ export class CharacterFormComponent {
 		this.characterForm = this.formBuilder.group({
 			name: ["",[Validators.required]],
 			image: ["",[Validators.required]],
-			alignment: ["",[Validators.required]],
+			alignment: ["good",[Validators.required]],
 			height: ["",[Validators.required]],
 			game: ["VII",[Validators.required]],
 			weapon: ["",[Validators.required]],
