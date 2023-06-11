@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -19,7 +19,8 @@ export class NavComponent {
       map(result => result.matches),
       shareReplay()
     );
-    constructor(private detector:ChangeDetectorRef, private router:Router){
+  userEmail:string;
+    constructor(private router:Router){
     //El valor inicial es la existencia de un token en sessionStorage transformado en boolean.
     //Si se llega aqui desde otro lado de la pagina, se vuelve a evaluar y comprobar los cambios. Esto se hace así porque en el módulo de auth,
     //al hacer login se redirige a este componente, y por tanto es cuando nos interesa ver si sigue existiendo o no el token.
@@ -27,19 +28,21 @@ export class NavComponent {
       this.router.events.subscribe((ev)=>{
         if(ev instanceof NavigationEnd){
           this.isLoggedIn = !!sessionStorage.getItem('token');
-          this.detector.detectChanges();
+          this.userEmail = sessionStorage.getItem('userEmail') || '';
         }
       })
-
+      this.userEmail = sessionStorage.getItem('userEmail') || '';
     }
 
 
     logout():void{
       //Este metodo borra el token y hace update del boolean de estar logeado, para cambiar en el template de html entre los dos ngIf posibles
-      //de mostrar el link a login o el boton de logout.
+      //de mostrar el link a login o el boton de logout. También borra el email de usuario guardado y devuelve al usuario a la página de inicio
+      
       sessionStorage.removeItem('token');
+      sessionStorage.removeItem('userEmail');
       this.isLoggedIn = !!sessionStorage.getItem('token');
-      this.detector.detectChanges();
+      this.router.navigate(['']);
     }
 
 
