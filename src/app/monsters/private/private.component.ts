@@ -13,16 +13,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./private.component.css']
 })
 export class PrivateComponent {
-monsterList$:Observable<MonsterDTO[]>;
-monsterList:MonsterDTO[];
-displayedColumns: string[]; 
-dataSource = new MatTableDataSource<MonsterDTO>();
-showForm:boolean;
-buttonMsg:string;
-isEditing:boolean;
-formGroup: FormGroup
-formSubmitted:boolean;
-monsterEditing: MonsterDTO;
+public monsterList$:Observable<MonsterDTO[]>;
+public monsterList:MonsterDTO[];
+public displayedColumns: string[]; 
+public dataSource = new MatTableDataSource<MonsterDTO>();
+public showForm:boolean;
+public buttonMsg:string;
+public isEditing:boolean;
+public formGroup: FormGroup
+public formSubmitted:boolean;
+private monsterEditing: MonsterDTO;
 
 constructor(private fetcher:MonsterServiceService, private formBuilder:FormBuilder, ){
   //No interesa mostrar todo de todos los monstruos, sólo lo suficiente para identificarlos. 'Actions' es para editar y borrar.
@@ -41,7 +41,7 @@ this.monsterEditing = new MonsterDTO;
 this.formSubmitted = false;
 }
 
-getMonsterList():void{
+public getMonsterList():void{
 //Utiliza el servicio de monstruos para obtener la lista del servidor y mediante una subscripción mete esa lista en una variable.
 //Esa variable es entonces utilizada para dibujar la tabla de material.
 //La suscripción llama a crear formulario para que el validador de mínimo de id contenga la length apropiada de la lista de monstruos.
@@ -61,23 +61,26 @@ ngOnInit(){
   this.formCreation();
 }
 
-changeView(){
+public changeView():void{
   //Esta función es la que se llama desde el evento de pulsar en el evento de mostrar formulario/lista. Cambia el boolean showForm 
   // a su contrario y el texto del botón al apropiado para lo que se esté mostrando en ese momento.
+  //También resetea el valor de formSubmitted, ocultando el mensaje de formulario enviado cuando se sale del propio formulario.
   this.showForm = !this.showForm;
   this.buttonMsg = this.showForm ? 'Show monster info list' : 'Show monster entry form';
+  this.formSubmitted = false;
 }
 
-deleteMonster(id:number):void{
+public deleteMonster(id:number):void{
   //Utiliza el servicio de monstruos para borrar, recibiendo la id del monstruo cuya fila tiene el botón pulsado.
   //Tras eso, la lista de monstruos sacada de la subscripción es filtrada para eliminar el monstruo borrado de ella y redibujar la tabla.
   //Esto hace que la tabla reaccione a los borrados inmediatamente sin necesidad de refrescar la página.
   this.fetcher.deleteMonster(id).subscribe();
   this.monsterList = this.monsterList.filter((monster)=>monster.id !== id);
-  this.dataSource = new MatTableDataSource<MonsterDTO>(this.monsterList);
+  this.dataSource.data = this.monsterList;
+
 }
 
-formCreation(){
+private formCreation():void{
   //función sencilla de crear formulario de base, se llama al montar el componente, hace poco mas que cargar los controles y validadores.
   //la id debe tener como mínimo uno más del tamaño de la lista de monstruos.
   this.formGroup = this.formBuilder.group({
@@ -89,16 +92,10 @@ formCreation(){
         type: [ '', [Validators.required]],
         id: [ 0, [Validators.required, Validators.min(this.monsterList.length+1)]]
       });
-      this.formGroup.get('name')?.markAsUntouched();
-      this.formGroup.get('moneyDrop')?.markAsUntouched();
-
-      this.formGroup.get('game')?.markAsUntouched();
-
-      this.formGroup.get('type')?.markAsUntouched();
 
 }
 
-formEditCreation(){
+private formEditCreation():void{
   //esta función se utiliza cuando se intenta editar un monstruo. Recrea el formGroup utilizando los datos del monstruo seleccionado.
   //para los drops, toma el array de strings y lo une, separando cada uno con una coma.
   //En este caso la id no tiene validador de mínimo puesto que tiene que ser una en concreto, además, en el template queda como readonly.
@@ -113,7 +110,7 @@ formEditCreation(){
   });
 }
 
-editStart(monster:MonsterDTO){
+public editStart(monster:MonsterDTO):void{
   //esta función es la que llama cada botón de edit. Toma los datos del monstruo a editar, los guarda en la variable monsterEditing,
   //cambia el valor de la variable isEditing a true para modificar partes del template, muestra el formulario, oculta la lista y 
   //rellena el formulario con los datos del monstruo a editar.
@@ -123,13 +120,13 @@ editStart(monster:MonsterDTO){
   this.formEditCreation();
 }
 
-public createDropArray(dropString:string){
+private createDropArray(dropString:string):string[]{
   //esta función recibe el string de drops del formulario y lo convierte en array de strings, que es el tipo de dato que recibe el DTO.
   //utiliza la coma para el split, que es lo que pido en el formulario que use el usuario para separar sus items.
   return dropString.split(',');
 }
 
-public getError(controlName: string) {
+public getError(controlName: string):string {
   //Comprueba si el grupo de control del formulario tiene algún error, y de ser el caso muestra un mensaje relevante en el span bajo el input.
   let error = '';
   const control = this.formGroup.get(controlName);
@@ -151,14 +148,14 @@ public getError(controlName: string) {
 
 
 
-public testForm(){
+public testForm():void{
   //función sencilla de testing para ver si el formulario hace lo que debe
   let formData = {...this.formGroup.value};
   formData.drops = this.createDropArray(formData.drops);
   console.log('El formgroup tiene: ', formData);
 }
 
-public newMonster(){
+public newMonster():void{
   //función para crear nuevo monstruo siguiendo los datos del formulario. Saca los valores del formulario del objeto formGroup,
   //modifica el de drops a ser un array de strings siguiendo la función createDropArray y los manda al servidor utilizando el servicio.
   if(this.formGroup.invalid){
@@ -167,27 +164,40 @@ public newMonster(){
   this.formSubmitted = true;
   let formData = {...this.formGroup.value};
   formData.drops = this.createDropArray(formData.drops);
-  this.fetcher.postMonster(formData).subscribe();
+  this.fetcher.postMonster(formData).subscribe((newMonster:MonsterDTO)=>{
+    this.monsterList.push(newMonster);
+    this.dataSource.data = this.monsterList;
+    this.cancelEdit();
+  });
 }
 
-public cancelEdit(){
+public cancelEdit():void{
   //función para salir del proceso de editado, vaciando el formulario y reseteando las variables.
   this.monsterEditing = new MonsterDTO;
   this.isEditing = false;
   this.formCreation();
 }
 
-public editMonster(){
+public editMonster():void{
   //función a la que llama el botón de mandar el formulario en el proceso de editación. Corta la función si los validadores no están satisfechos,
   //y si lo están toma los valores, transforma el string de drops a array de strings y utiliza el servicio para enviarlo al servidor.
-  //acto seguido, llama a la función anterior para resetear todo.
+  //Dentro del suscribe busca en qué lugar del array monsterList estaba el monstruo editado, lo reemplaza por los nuevos datos y refresca
+  //la datasource con la nueva lista resultante. Acto seguido, llama a la función anterior para resetear todo.
   if(this.formGroup.invalid){
     return;
   }
   this.formSubmitted = true;
   let formData = {...this.formGroup.value};
   formData.drops = this.createDropArray(formData.drops);
-  this.fetcher.editMonster(this.monsterEditing.id, formData).subscribe();
+  this.fetcher.editMonster(this.monsterEditing.id, formData).subscribe((editedMonster: MonsterDTO) => 
+  {
+    const index = this.monsterList.findIndex(monster => monster.id === editedMonster.id);
+    if (index !== -1) {
+      this.monsterList[index] = formData;
+      this.dataSource.data = this.monsterList;
+    };
+    
+});
   this.cancelEdit();
 }
 
