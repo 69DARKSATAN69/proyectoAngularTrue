@@ -1,7 +1,7 @@
 <div>
 	<section *ngIf="individualCharacter$ | async as character">
 			<header>
-				<h1>{{character.name}}</h1>
+				<h1 [appAlignment]="character.alignment">{{character.name}}</h1>
 			</header>
 			<img src="{{character.image}}" alt="Photo of a Final Fantasy character">
 
@@ -18,7 +18,7 @@
 				<!-- Alignment Column -->
 				<ng-container matColumnDef="alignment">
 				<th mat-header-cell *matHeaderCellDef> Alignment </th>
-				<td mat-cell *matCellDef="let element"> {{character.alignment}} </td>
+				<td mat-cell *matCellDef="let element" [appAlignment]="character.alignment"> {{character.alignment}} </td>
 				</ng-container>
 			
 				<!-- Height Column -->
