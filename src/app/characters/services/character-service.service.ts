@@ -40,9 +40,18 @@ export class CharacterServiceService {
 	});
   }
 
-  public putCharacter(id:number, character: CharacterDTO):Observable<CharacterDTO>{
+  public editCharacter(id:number, character: CharacterDTO){
+
     let url = this.urlApi + "/" + id;
-    return this.http.put<CharacterDTO>(url, character);
+    this.http.put<CharacterDTO>(url, character).subscribe({
+		next: (data) => {
+			this.resultado = [];
+			this.resultado.push(data);
+		},
+		error: (error) => {
+			console.log(error)
+		}
+	});
   }
 
   public deleteCharacter(id:number){

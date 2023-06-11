@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CharacterServiceService } from '../services/character-service.service';
 import { CharacterDTO } from '../characterDTO/characterDTO';
 import { Observable } from 'rxjs/internal/Observable';
-import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-private',
@@ -12,10 +11,12 @@ import { MatTableDataSource } from '@angular/material/table';
 export class PrivateComponent {
 	public characterArray$:Observable<CharacterDTO[]>;
 	public characters:CharacterDTO[];
+	public editableCharacter:CharacterDTO;
 
 	constructor(private service:CharacterServiceService){
 		this.characterArray$ = new Observable<CharacterDTO[]>();
 		this.characters = [];
+		this.editableCharacter = new CharacterDTO();
 	}
 
 	ngOnInit(){
@@ -29,6 +30,10 @@ export class PrivateComponent {
 			},
 			error: err => console.log("err")
 		});
+	}
+
+	public editChar(character:CharacterDTO){
+		this.editableCharacter = character;
 	}
 
 }

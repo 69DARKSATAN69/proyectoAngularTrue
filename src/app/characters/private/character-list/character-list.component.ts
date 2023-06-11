@@ -1,7 +1,5 @@
-import { Component, Input, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CharacterDTO } from '../../characterDTO/characterDTO';
-import { MatTableDataSource } from '@angular/material/table';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { CharacterServiceService } from '../../services/character-service.service';
 
 
@@ -12,11 +10,11 @@ let ELEMENT_DATA: CharacterDTO[] = [];
   templateUrl: './character-list.component.html',
   styleUrls: ['./character-list.component.css']
 })
-export class CharacterListComponent implements AfterViewInit {
+export class CharacterListComponent {
 	displayedColumns: string[] = ['id', 'name', 'alignment', 'height', 'game', 'weapon', 'actions'];
-	dataSource = new MatTableDataSource<CharacterDTO>(ELEMENT_DATA);
 
 	@Input() characters:CharacterDTO[];
+	@Output() characterToEdit = new EventEmitter<CharacterDTO>();
 
 	constructor(private service:CharacterServiceService){
 		this.characters = [];
@@ -30,7 +28,15 @@ export class CharacterListComponent implements AfterViewInit {
 		window.location.reload();
 	}
 
-	ngAfterViewInit() {
-		ELEMENT_DATA = this.characters;
+	//Como es entre componentes hermanos, le paso con un Emitter el personaje a editar al padre (private) para que este luego 
+	//se lo pase al otro hijo.
+	editCharacter(character:CharacterDTO){
+		this.characterToEdit.emit(character);
+		window.scrollTo(0, 0);
 	}
+
+	ngOnChanges(){
+		console.log(this.characters);
+	}
+
 }

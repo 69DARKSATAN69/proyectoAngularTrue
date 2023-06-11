@@ -1,7 +1,7 @@
 <form [formGroup]="characterForm">
 	<mat-card class="shipping-card">
 		<mat-card-header>
-		  <mat-card-title>New Character</mat-card-title>
+		  <mat-card-title>{{formTitle}}</mat-card-title>
 		</mat-card-header>
 		<mat-card-content>
 		  <div class="row">
@@ -46,7 +46,7 @@
 			<div class="col">
 				<label>Game: </label>
 				<mat-radio-group formControlName="game">
-					<mat-radio-button value="VII"  [checked] = "true">VII</mat-radio-button>
+					<mat-radio-button value="VII">VII</mat-radio-button>
 					<mat-radio-button value="X">X</mat-radio-button>
 					<mat-radio-button value="XV">XV</mat-radio-button>
 				</mat-radio-group>
@@ -84,7 +84,10 @@
 		  </div>
 		</mat-card-content>
 		<mat-card-actions class="form-button">
-		  <button mat-raised-button type="submit" (click) ="createCharacter()">Save</button>
+		<div>
+		  <button mat-raised-button type="submit" (click) ="createCharacter()" *ngIf="!editing">Save</button>
+		  <button mat-raised-button type="submit" (click) ="editCharacter()" *ngIf="editing">Edit</button>
+		</div>
 		</mat-card-actions>
 	  </mat-card>
 </form>

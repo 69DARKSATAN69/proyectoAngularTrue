@@ -1,2 +1,2 @@
-<app-character-form></app-character-form>
-<app-character-list [characters] = "characters"></app-character-list>
+<app-character-form [characterToEdit] = "editableCharacter"></app-character-form>
+<app-character-list [characters] = "characters" (characterToEdit)="editChar($event)"></app-character-list>
