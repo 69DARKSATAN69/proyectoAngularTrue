@@ -16,6 +16,13 @@ button{
     width: 100%;
 }
 
+.form-control, .table-control{
+    width: 50%;
+    margin: auto;
+}
+
+
+
 .error-control{
     color: crimson;
 }

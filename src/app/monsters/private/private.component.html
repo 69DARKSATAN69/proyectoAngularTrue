@@ -95,7 +95,7 @@
     <header>
         <h2>Lista de monstruos</h2>
     </header>
-    <main *ngIf="monsterList$">
+    <main *ngIf="monsterList$" class="table-control">
         <table mat-table [dataSource]="dataSource">
             <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef> ID </th>

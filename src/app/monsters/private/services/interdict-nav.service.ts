@@ -9,9 +9,8 @@ import { Observable, catchError, throwError } from 'rxjs';
 //Esta es una versión más genérica del interceptor situado en el módulo monstruos. Comprueba la existencia del token cuando se trata
 //de navegar a cualquier parte en este módulo y de ser falsy redirige a la página de auth.
 //en caso de existir, lo añade a la request como header.
-//no tiene uso ahora mismo porque este módulo sólo contiene un componente y no hay http requests dentro del mismo excepto para salir.
-//no obstante, decidí dejarlo aquí como ampliación, por si en un futuro se extendiese la zona privada, en cuyo caso este interceptor
-//sería necesario.
+//Puesto que esta zona privada es un sólo componente cuyo acceso ya está regido por otro interceptor, este sólo entra en juego
+//cuando una vez dentro de la zona privada el usuario trata de borrar, editar o postear monstruos sin token.
 export class InterdictNavService implements HttpInterceptor{
 token:string
   constructor(private router:Router) {
@@ -21,7 +20,7 @@ token:string
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     //funciona de manera similar al del módulo padre, aunque las comprobaciones son sólamente sobre la existencia del token.
-    //puesto que esta zona es privada, cualquier navegación dentro de ella sería restringida.
+    //puesto que esta zona es privada, cualquier navegación dentro de ella debe restringirse.
     this.token = sessionStorage.getItem('token') || '';
     if(!this.token){
       this.router.navigate(['/auth']);

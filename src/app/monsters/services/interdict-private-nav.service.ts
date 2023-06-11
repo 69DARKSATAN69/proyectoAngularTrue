@@ -11,7 +11,7 @@ token:string
   constructor(private router:Router) {
     this.token = '';
    }
-//Esto es un interceptor cuyo cometido es interrumpir la navegación y redirigir a la página de auth si el usuario trata de entrar a la
+//Esto es un interceptor cuyo cometido es interrumpir la navegación y redirigir a la página de auth si el usuario trata de hacer cosas en la
 //zona privada sin disponer de un token. Puesto que nuestra zona privada es un sólo componente sin navegación extra, hubo que colocar este
 //interceptor en su módulo padre para interrumpir la navegación hacia la misma.
 
