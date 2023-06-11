@@ -11,6 +11,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { CharacterServiceService } from './services/character-service.service';
 import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -28,7 +29,8 @@ import {MatTableModule} from '@angular/material/table';
 	MatInputModule,
 	MatSelectModule,
 	HttpClientModule,
-	MatTableModule
+	MatTableModule,
+	MatButtonModule
   ],
   providers: [
 	CharacterServiceService

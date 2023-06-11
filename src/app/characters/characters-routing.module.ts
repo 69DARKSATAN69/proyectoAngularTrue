@@ -15,6 +15,10 @@ const routes: Routes = [
 	{
 		path: "individual/:characterId",
 		component:  IndividualComponent
+	},
+	{ 
+		path: 'private', 
+		loadChildren: () => import('./private/private.module').then(m => m.PrivateModule) 
 	}
 ];
 

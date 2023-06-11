@@ -1,0 +1,90 @@
+<form [formGroup]="characterForm">
+	<mat-card class="shipping-card">
+		<mat-card-header>
+		  <mat-card-title>New Character</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+		  <div class="row">
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<input matInput placeholder="Name" formControlName="name">
+				<mat-error>
+					Name is <strong>required</strong>
+				  </mat-error>
+			  </mat-form-field>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<input matInput placeholder="Url of the image" formControlName="image" type="url">
+				<mat-error>
+				  Image is <strong>required</strong>
+				</mat-error>
+			  </mat-form-field>
+			</div>
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<input matInput placeholder="Alignment" formControlName="alignment">
+				<mat-error>
+				  Alignment is <strong>required</strong>
+				</mat-error>
+			  </mat-form-field>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<input matInput placeholder="Height" formControlName="height" type="number">
+				<mat-error>
+				  Height is <strong>required</strong>
+				</mat-error>
+			  </mat-form-field>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+				<label>Game: </label>
+				<mat-radio-group formControlName="game">
+					<mat-radio-button value="VII">VII</mat-radio-button>
+					<mat-radio-button value="X">X</mat-radio-button>
+					<mat-radio-button value="XV">XV</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<input matInput placeholder="Weapon" formControlName="weapon">
+				<mat-error>
+				  Weapon is <strong>required</strong>
+				</mat-error>
+			  </mat-form-field>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<textarea matInput placeholder="A small recap about the character" formControlName="recap"></textarea>
+				<mat-error>
+				  Recap is <strong>required</strong>
+				</mat-error>
+			  </mat-form-field>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col">
+			  <mat-form-field class="full-width">
+				<textarea matInput placeholder="Info about the character" formControlName="info"></textarea>
+				<mat-error>
+				  Info is <strong>required</strong>
+				</mat-error>
+			  </mat-form-field>
+			</div>
+		  </div>
+		</mat-card-content>
+		<mat-card-actions>
+		  <button mat-raised-button color="primary" type="submit" (click) ="createCharacter()">Save</button>
+		</mat-card-actions>
+	  </mat-card>
+</form>
