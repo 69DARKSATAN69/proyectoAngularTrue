@@ -3,6 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ContactService } from './services/contact.service';
+import {
+  NotificationComponent,
+  DataMessage,
+} from '../notification/notification.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -13,14 +18,11 @@ export class ContactComponent {
   public formGroup: FormGroup;
   public contactData$: Observable<any> = new Observable<any>();
 
-  public sendComments() {
-    const data = this.formGroup.value;
-  }
-
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    private contactService: ContactService
+    private contactService: ContactService,
+    private _snackBar: MatSnackBar
   ) {
     this.formGroup = formBuilder.group({});
     route.params.subscribe(() => {
@@ -28,11 +30,11 @@ export class ContactComponent {
     });
   }
 
-  public createComment(data: any) {
+  public createForm(data: any) {
     this.formGroup = this.formBuilder.group({
       name: [data.name, [Validators.required, Validators.maxLength(20)]],
       surname: [data.surname, [Validators.required, Validators.maxLength(10)]],
-      email: [data.email, [Validators.email]],
+      email: [data.email],
       subject: [data.subject, [Validators.required]],
       comment: [data.comment, [Validators.maxLength(200)]],
     });
@@ -41,19 +43,40 @@ export class ContactComponent {
   public getError(controlName: string) {
     let error = '';
     const control = this.formGroup.get(controlName);
-    if (control?.errors != null) {
+    if (control?.valid != null) {
       error = 'Enter the required information to continue';
       console.log(error);
     }
   }
 
+  public sendComment() {
+    this.contactService.createComment(this.formGroup.value).subscribe({
+      next: (response: any) =>
+        this.showNotification({
+          message: 'Message sent successfully!',
+          type: 'success',
+        }),
+      error: (err: any) =>
+        this.showNotification({ message: 'An errors ocurred', type: 'error' }),
+    });
+  }
+
+  public showNotification(data: DataMessage) {
+    this._snackBar.openFromComponent(NotificationComponent, {
+      data,
+      duration: 2000,
+      panelClass: data.type,
+    });
+  }
+
   public ngOnInit() {
     let data = {
       name: '',
-      surnmae: '',
+      surname: '',
+      email: '',
       subject: '',
       comment: '',
     };
-    this.createComment(data);
+    this.createForm(data);
   }
 }

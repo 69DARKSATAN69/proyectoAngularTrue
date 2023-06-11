@@ -12,4 +12,8 @@ export class ContactService {
   public getContact() {
     return this.http.get<any>(this.urlAPI);
   }
+
+  public createComment(body: any) {
+    return this.http.post<any>(this.urlAPI, body);
+  }
 }
