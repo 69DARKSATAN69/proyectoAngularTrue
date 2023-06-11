@@ -38,8 +38,8 @@
 		</ng-container>
 
 		<!-- Buttons Column -->
-		<ng-container matColumnDef="buttons">
-			<th mat-header-cell *matHeaderCellDef> Buttons </th>
+		<ng-container matColumnDef="actions">
+			<th mat-header-cell *matHeaderCellDef> Actions </th>
 			<td mat-cell *matCellDef="let element"> 
 				<button mat-raised-button>Edit</button>
 				<button mat-raised-button (click)="deleteCharacter(element.id)">Delete</button>
@@ -50,10 +50,5 @@
 		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
 		</table>
-	
-		<mat-paginator #paginator [pageSizeOptions]="[5, 10, 20]"
-					showFirstLastButtons
-					aria-label="Select page of FF characters">
-		</mat-paginator>
 	</div>
 </section>

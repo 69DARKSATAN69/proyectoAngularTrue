@@ -1,12 +1,17 @@
 <div>
-	<div class="div-selector">
-		<mat-form-field class="selector-game">
-			<select #game matNativeControl (change)="onSelected(game.value)" required>
-				<option value="VII" default>Final Fantasy VII</option>
-				<option value="X">Final Fantasy X</option>
-				<option value="XV">Final Fantasy XV</option>
-			</select>
-		</mat-form-field>
+	<div>
+		<div class="div-selector">
+			<mat-form-field class="selector-game">
+				<select #game matNativeControl (change)="onSelected(game.value)" required>
+					<option value="VII" default>Final Fantasy VII</option>
+					<option value="X">Final Fantasy X</option>
+					<option value="XV">Final Fantasy XV</option>
+				</select>
+			</mat-form-field>
+		</div>
+		<div class="admin-button">
+			<button mat-raised-button [hidden]="!loggedIn" (click)="openModifyList()">Modify character list</button>
+		</div>
 	</div>
 	<main class="main-content">
 		<figure class="main-image">
@@ -23,9 +28,6 @@
 					</p>
 				</mat-card-content>
 			</mat-card>	
-			<div class="admin-button">
-				<button mat-raised-button [hidden]="!loggedIn" (click)="openModifyList()">Modify character list</button>
-			</div>
 		</div>
 	</main>
 </div>

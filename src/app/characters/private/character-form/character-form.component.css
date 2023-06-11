@@ -1,0 +1,16 @@
+form {
+	width: 50%;
+	margin: 1.5rem auto;
+}
+
+mat-form-field {
+	width: 100%;
+}
+
+.form-button {
+	justify-content: end;
+}
+
+mat-card-header {
+	justify-content: center;
+}
