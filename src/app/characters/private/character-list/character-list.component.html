@@ -41,8 +41,10 @@
 		<ng-container matColumnDef="actions">
 			<th mat-header-cell *matHeaderCellDef> Actions </th>
 			<td mat-cell *matCellDef="let element"> 
-				<button mat-raised-button>Edit</button>
-				<button mat-raised-button (click)="deleteCharacter(element.id)">Delete</button>
+				<div class="actions">
+					<button mat-raised-button>Edit</button>
+					<button mat-raised-button (click)="deleteCharacter(element.id)">Delete</button>
+				</div>
 			</td>
 		</ng-container>
 	

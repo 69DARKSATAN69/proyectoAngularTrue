@@ -1,4 +1,9 @@
-mat-elevation-z8 {
+.mat-elevation-z8 {
 	width: 50%;
 	margin: 1.3rem auto;
+}
+
+.actions{
+	display: flex;
+	gap: 1rem;
 }
