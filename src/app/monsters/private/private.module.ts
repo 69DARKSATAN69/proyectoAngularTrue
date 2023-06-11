@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -12,7 +16,11 @@ import { PrivateComponent } from './private.component';
   imports: [
     CommonModule,
     PrivateRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class PrivateModule { }

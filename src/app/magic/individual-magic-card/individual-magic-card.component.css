@@ -1,0 +1,41 @@
+section {
+  width: 100%;
+  padding: 1.3rem;
+  margin: 1.87rem auto;
+  border-radius: 10px;
+}
+.img-container {
+  text-align: center;
+  margin-right: 3.5rem;
+}
+
+h1 {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 50px;
+}
+
+img {
+  max-width: 100%;
+  margin: 2rem;
+  border-radius: 10px;
+}
+table {
+  margin: 2rem 0;
+  padding: 1rem;
+  max-width: 80%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.th {
+  text-align: start;
+  padding-right: 0.2rem;
+  border-right: groove;
+}
+.td {
+  padding-left: 1rem;
+}
+
+.td.damage {
+  color: red;
+  font-weight: bold;
+}

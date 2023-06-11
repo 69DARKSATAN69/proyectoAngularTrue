@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, filter, map, of } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 import { SummonsDTO } from '../magicDTO/summonsDTO';
 import { MagicService } from '../services/magic.service';
 import { SpellsDTO } from '../magicDTO/spellsDTO';
@@ -51,6 +51,16 @@ export class GroupMagicCardComponent {
       this.getSummonsList(this.selectedGame);
     else if (this.selectedMagic === 'spells')
       this.getSpellsList(this.selectedGame);
+  }
+
+  showSpell(id: number) {
+    let urlSpell = 'spells/individual/' + id;
+    window.open(urlSpell);
+  }
+
+  showSummon(id: number) {
+    let urlSummon = 'summons/individual/' + id;
+    window.open(urlSummon);
   }
 
   ngOnInit() {

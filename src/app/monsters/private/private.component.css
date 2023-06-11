@@ -1,0 +1,17 @@
+section{
+    text-align: center;
+}
+
+button{
+    margin: 0 2em;
+}
+
+#go-back{
+    margin: 2em 0;
+}
+
+#post-put-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

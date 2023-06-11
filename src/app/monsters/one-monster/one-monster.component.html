@@ -1,14 +1,14 @@
 <article *ngIf="oneMonster$ | async as monster">
-    <mat-card class="monster-card">
+    <mat-card class="monster-card" [appMonsterBackground]="{game: monster.game, type: monster.type}">
     <mat-card-header class="monster-card-header">
         <h1 mat-card-title>{{monster.name}}</h1>
         <h3 mat-card-subtitle>Encountered in Final Fantasy {{monster.game}}</h3>
         </mat-card-header>
         <mat-card-content>
-            <img mat-card-image [src]="monster.image">
+            <img mat-card-xl-image [src]="monster.image">
             <p>If it wasn't obvious, this monster is type: {{monster.type}}</p>
             <p *ngIf="!convertingToEur">Slaughtering it results in being {{monster.moneyDrop}} gil richer <button mat-stroked-button (click)="toggleConvert()">Convert to €</button></p>
-            <p *ngIf="convertingToEur">Slaughtering it results in being {{monster.moneyDrop | cashConversion:'eur'}}€ richer <button mat-stroked-button (click)="toggleConvert()">Convert to €</button></p>
+            <p *ngIf="convertingToEur">Slaughtering it results in being {{monster.moneyDrop | cashConversion:'eur'}}€ richer <button mat-stroked-button (click)="toggleConvert()">Convert to gil</button></p>
 
             <p>It also may result in the following drops:</p>
             <ul *ngIf="monster.drops && monster.drops.length > 0; else noDrops"><li *ngFor="let drop of monster.drops"> {{drop}} </li></ul>
@@ -18,6 +18,7 @@
 <p>Please take care when encountering it in the wild!</p>
 </mat-card-footer>
 </mat-card>
+<button mat-raised-button color="primary" routerLink="/monsters">Back to monster list</button>
 </article>
 
-<!-- {{monster.moneyDrop | cashConversion:'eur'}} -->
+
