@@ -12,7 +12,6 @@ export class GiphyService {
 
   searchGiphy(keyword: string) {
     const url = `${this.BASE_URL}/search?api_key=${this.API_KEY}&q=${keyword}&limit=20&offset=0&rating=g&lang=en`;
-    console.log(url);
     return this.http.get(url).pipe(map((gifData: any) => gifData.data));
   }
 }
