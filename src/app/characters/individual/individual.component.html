@@ -24,7 +24,7 @@
 				<!-- Height Column -->
 				<ng-container matColumnDef="height">
 				<th mat-header-cell *matHeaderCellDef> Height </th>
-				<td mat-cell *matCellDef="let element"> {{character.height}} </td>
+				<td mat-cell *matCellDef="let element"> {{character.height | toInches}} </td>
 				</ng-container>
 			
 				<!-- Game Column -->

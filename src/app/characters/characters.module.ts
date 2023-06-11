@@ -13,6 +13,7 @@ import { CharacterServiceService } from './services/character-service.service';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { AlignmentDirective } from './directives/alignment.directive';
+import { ToInchesPipe } from './pipes/to-inches.pipe';
 
 
 
@@ -20,7 +21,8 @@ import { AlignmentDirective } from './directives/alignment.directive';
   declarations: [
     CharactersComponent,
     IndividualComponent,
-    AlignmentDirective
+    AlignmentDirective,
+    ToInchesPipe
   ],
   imports: [
     CommonModule,
