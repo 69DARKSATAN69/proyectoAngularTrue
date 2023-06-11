@@ -33,7 +33,7 @@ export class CharactersComponent {
 
 	showCharacter(id:number | null){
 		let urlCharacter = "characters/individual/" + id;
-		window.open(urlCharacter);
+		window.open(urlCharacter, "_self");
 	}
 
 	showMainImage(game:string){
