@@ -1,7 +1,7 @@
 .div-selector {
   display: flex;
-  margin-right: 1.25rem;
-  margin-top: 1.25rem;
+  margin-right: 1rem;
+  /* margin-top: 1.25rem; */
   flex-wrap: wrap;
   justify-content: end;
 }
@@ -13,7 +13,7 @@
   max-width: 33%;
 }
 .main-image img {
-  width: 100%;
+  width: 110%;
 }
 .cards-container {
   flex-grow: 3;
@@ -46,4 +46,10 @@ mat-card img {
 
 mat-grid-tile {
   background-color: rgb(99, 196, 228);
+}
+
+.actions {
+  justify-content: end;
+  display: flex;
+  margin-right: 1.25rem;
 }
