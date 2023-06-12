@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { SpellsDTO } from 'src/app/magic/magicDTO/spellsDTO';
 import { SummonsDTO } from 'src/app/magic/magicDTO/summonsDTO';
@@ -15,12 +16,13 @@ import { NotificationComponent } from 'src/app/pages/notification/notification.c
 })
 export class MagicListComponent {
   public magicList$: Observable<any>;
-  public magicSelected: string = 'summons';
+  public magicSelected: string = 'summon';
 
   constructor(
     private magicService: MagicService,
     private _snackBar: MatSnackBar,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private route: Router
   ) {
     this.magicList$ = new Observable<SummonsDTO[] | SpellsDTO[]>();
   }
@@ -40,7 +42,11 @@ export class MagicListComponent {
     this.getAllSummons();
   }
 
-  editMagic(id: number) {}
+  editMagic(id: number) {
+    this.route.navigate(['magic/private/editMagic'], {
+      queryParams: { type: this.magicSelected, id: id },
+    });
+  }
 
   deleteMagic(id: number) {
     const dialogRef = this.dialog.open(DialogComponent, {
@@ -58,13 +64,13 @@ export class MagicListComponent {
               duration: 2000,
               panelClass: 'success',
             });
-            this.magicSelected === 'summons'
+            this.magicSelected === 'summon'
               ? this.getAllSummons()
               : this.getAllSpells();
           },
           error: () => {},
         };
-        this.magicSelected === 'summons'
+        this.magicSelected === 'summon'
           ? this.magicService.deleteSummon(id).subscribe(subscribeFunction)
           : this.magicService.deleteSpell(id).subscribe(subscribeFunction);
       }
@@ -72,9 +78,9 @@ export class MagicListComponent {
   }
 
   onSelectedMagic() {
-    if (this.magicSelected === 'spells') {
+    if (this.magicSelected === 'spell') {
       this.getAllSpells();
-    } else if (this.magicSelected === 'summons') {
+    } else if (this.magicSelected === 'summon') {
       this.getAllSummons();
     }
   }

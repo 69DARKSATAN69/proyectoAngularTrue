@@ -1,1 +1,211 @@
-<p>post-edit-delete works!</p>
+<button class="actions" mat-raised-button routerLink="/magic/private">Back to list</button>
+<form [formGroup]="magicForm" autocomplete="on">
+  <mat-card class="shipping-card">
+
+    <mat-card-header>
+      <mat-card-title>New {{ type }}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <!--COMMON-->
+      <div class="row">
+        <div class="col">
+          <label>Game: </label>
+          <mat-radio-group formControlName="game">
+            <mat-radio-button name="game" value="VII">VII</mat-radio-button>
+            <mat-radio-button name="game" value="X">X</mat-radio-button>
+            <mat-radio-button name="game" value="XV">XV</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="row" *ngIf="id">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="ID" formControlName="id">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" formControlName="name">
+            <mat-error>
+              Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Image</mat-label>
+            <input matInput placeholder="Url of the image" formControlName="image" type="url">
+            <mat-error>
+              Image is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>MP</mat-label>
+            <input matInput placeholder="MP" formControlName="MP" type="number">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Level</mat-label>
+            <input matInput placeholder="Level" formControlName="level" type="number">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Effect Attack</mat-label>
+            <input matInput placeholder="Effect attack" formControlName="effect" type="text">
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>Resume</mat-label>
+            <textarea matInput placeholder="A small resume about it" formControlName="resume"></textarea>
+            <mat-error>
+              Resume is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-label>About</mat-label>
+            <textarea matInput placeholder="Info extra about magic choice" *ngIf="type === 'summon'"
+              formControlName="info"></textarea>
+            <textarea matInput placeholder="Info extra about magic choice" *ngIf="type === 'spell'"
+              formControlName="use"></textarea>
+            <mat-error>
+              About is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!--SUMMON-->
+      <ng-container *ngIf="type === 'summon'; else spellFields">
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Magic Materia</mat-label>
+              <input matInput placeholder="Magic Materia" formControlName="magic-materia">
+              <mat-error>
+                Magic Materia is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Obtained</mat-label>
+              <input matInput placeholder="Obtained" formControlName="location" type="text">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Element</mat-label>
+              <input matInput placeholder="Element" formControlName="element" type="text">
+              <mat-error>
+                Element is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Attack</mat-label>
+              <input matInput placeholder="Attack" formControlName="Attack" type="text">
+              <mat-error>
+                Attack is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Attributes</mat-label>
+              <input matInput placeholder="Attributes" formControlName="Attributes" type="text">
+              <mat-error>
+                Attributes is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </ng-container>
+
+      <!--SPELL-->
+      <ng-template #spellFields>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Type</mat-label>
+              <input matInput placeholder="Type" formControlName="type">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Element required</mat-label>
+              <input matInput placeholder="Elements required" formControlName="required" type="text">
+              <mat-error>
+                Required is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-label>Power</mat-label>
+
+              <input matInput placeholder="Power" formControlName="power" type="number">
+              <mat-error>
+                Power is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </ng-template>
+    </mat-card-content>
+
+    <mat-card-actions class="actions">
+      <div>
+        <button mat-raised-button type="submit" (click)="createMagic()">Save</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</form>

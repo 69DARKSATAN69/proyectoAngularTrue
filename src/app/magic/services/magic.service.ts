@@ -19,7 +19,7 @@ export class MagicService {
   getSummonById(id: number): Observable<SummonsDTO> {
     return this.http.get<SummonsDTO>(this.url + `/summons/${id}`);
   }
-  postSummon(body: SummonsDTO): Observable<SummonsDTO> {
+  createSummon(body: SummonsDTO): Observable<SummonsDTO> {
     return this.http.post<SummonsDTO>(this.url + '/summons', body);
   }
   deleteSummon(id: number): Observable<SummonsDTO> {
@@ -36,7 +36,7 @@ export class MagicService {
   getSpellById(id: number): Observable<SpellsDTO> {
     return this.http.get<SpellsDTO>(this.url + `/spells/${id}`);
   }
-  postSpell(body: SpellsDTO): Observable<SpellsDTO> {
+  createSpell(body: SpellsDTO): Observable<SpellsDTO> {
     return this.http.post<SpellsDTO>(this.url + '/spells', body);
   }
   deleteSpell(id: number): Observable<SpellsDTO> {

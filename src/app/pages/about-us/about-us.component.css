@@ -1,22 +1,28 @@
 mat-grid-tile {
-	margin-top: 1.25rem;
-  }
-
-header{
-	text-align: center;
-	margin-top: 1.25rem;
+  margin-top: 1.25rem;
 }
 
-  .about-us-card {
-	max-width: 25rem;
-	height: 30rem;
-  }
-  
-  .header-image {
-	background-image: url('https://i.imgur.com/Rd00hsK.png');
-	background-size: cover;
-  }
+header {
+  text-align: center;
+  margin-top: 1.25rem;
+}
 
-  .handsome{
-	width: 100%;
-  }
+.about-us-card {
+  max-width: 25rem;
+  height: 30rem;
+}
+
+.header-image {
+  background-image: url("https://i.imgur.com/Rd00hsK.png");
+  background-size: cover;
+}
+
+.flavia-img {
+  margin: 0 auto;
+  width: 320px;
+  height: 250px;
+}
+
+.handsome {
+  width: 100%;
+}
