@@ -27,6 +27,7 @@ button {
 .character-card {
 	max-width: 25rem;
 	height: 30rem;
+	cursor: pointer;
   }
   
 .main-content {
