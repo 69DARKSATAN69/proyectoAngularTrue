@@ -13,11 +13,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { TranslateDirective } from './directives/translate.directive';
 
 @NgModule({
   declarations: [
     MagicPipe,
     MagicDirective,
+    TranslateDirective,
     IndividualMagicCardComponent,
     GroupMagicCardComponent,
   ],

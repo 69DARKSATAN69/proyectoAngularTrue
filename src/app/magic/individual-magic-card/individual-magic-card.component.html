@@ -1,6 +1,6 @@
 <mat-grid-list cols="2" rowHeight="1:1" class="grid">
   <section *ngIf="individualMagic$ | async as magic">
-    <h1>{{magic.name}}</h1>
+    <h1 appTranslate>{{magic.name}}</h1>
     <mat-grid-tile>
       <div class="img-container">
         <img appMagic src="{{magic.image}}" alt="Photo of Final Fantasy magic">
