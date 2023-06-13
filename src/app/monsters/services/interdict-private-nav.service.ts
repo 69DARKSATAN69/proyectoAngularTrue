@@ -28,7 +28,6 @@ token:string
     }else if(requiresAuth && this.token){
 //las req no se pueden modificar directamente, hay que clonarlas y sobre las clonadas añadir los campos pertinentes
     let authenticated_req = req.clone({headers: req.headers.set('Authorization', `Bearer ${this.token}`) });
-    console.log(authenticated_req);
     return next.handle(authenticated_req).pipe(
       // En caso de error, llama a la función manejadorPeticionesError.
       catchError(this.manejadorPeticionesError.bind(this))); 
