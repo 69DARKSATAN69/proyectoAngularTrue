@@ -28,6 +28,7 @@
     border: 1px solid black;
     border-radius: 12px;
     background: radial-gradient(circle, #fabada, #FFFFFF);
+    cursor: pointer;
 }
 .header-image{
     text-align: center;
