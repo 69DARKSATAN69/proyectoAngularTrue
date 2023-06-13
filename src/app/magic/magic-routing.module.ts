@@ -3,6 +3,7 @@ import { RouterModule, Routes, UrlSegment } from '@angular/router';
 import { GroupMagicCardComponent } from './group-magic-card/group-magic-card.component';
 import { IndividualMagicCardComponent } from './individual-magic-card/individual-magic-card.component';
 
+//Enrutado que permite acceder a dos opciones dentro de un mismo componente, mirando su path.
 const magicRegex = '^spells$|^summons$';
 const regexMatcher = (url: UrlSegment[]) => {
   return url.length === 2 && url[0].path.match(magicRegex)

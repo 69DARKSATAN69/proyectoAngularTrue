@@ -45,7 +45,6 @@ export class ContactComponent {
     const control = this.formGroup.get(controlName);
     if (control?.valid != null) {
       error = 'Enter the required information to continue';
-      console.log(error);
     }
   }
 

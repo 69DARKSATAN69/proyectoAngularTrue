@@ -26,6 +26,7 @@ export class GroupMagicCardComponent {
     this.principalImageSpell = 'https://i.imgur.com/btWFAtq.png';
   }
 
+  // seteo la lista de summon por versión de juego
   public getSummonsList(game: string): void {
     this.magicService
       .getSummonsList()
@@ -35,6 +36,7 @@ export class GroupMagicCardComponent {
       });
   }
 
+  // seteo la lista de spell por versión de juego
   public getSpellsList(game: string): void {
     this.magicService
       .getSpellsList()
@@ -44,6 +46,7 @@ export class GroupMagicCardComponent {
       });
   }
 
+  // cambio de lista basado en tipo de magia
   onSelectedMagic() {
     if (this.selectedMagic === 'spells') {
       this.getSpellsList(this.selectedGame);
@@ -52,6 +55,7 @@ export class GroupMagicCardComponent {
     }
   }
 
+  // cambio de lista e imagen basado en versión
   onSelectedGame() {
     if (this.selectedMagic === 'summons') {
       this.getSummonsList(this.selectedGame);
