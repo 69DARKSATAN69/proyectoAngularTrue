@@ -14,6 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslateDirective } from './directives/translate.directive';
+import { TranslateService } from './services/translate.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,6 @@ import { TranslateDirective } from './directives/translate.directive';
     MatTableModule,
     MatButtonModule,
   ],
-  exports: [IndividualMagicCardComponent],
+  exports: [IndividualMagicCardComponent, TranslateDirective],
 })
 export class MagicModule {}
