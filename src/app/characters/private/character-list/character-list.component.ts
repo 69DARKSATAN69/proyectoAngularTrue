@@ -16,6 +16,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CharacterDTO } from '../../characterDTO/characterDTO';
 import { CharacterServiceService } from '../../services/character-service.service';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DialogComponent } from 'src/app/pages/dialog/dialog.component';
+import { NotificationComponent } from 'src/app/pages/notification/notification.component';
 
 
 @Component({
@@ -32,7 +36,7 @@ export class CharacterListComponent {
 	//Se envía al padre el personaje para el que se pulsó el botón de "edit".
 	@Output() characterToEdit = new EventEmitter<CharacterDTO>();
 
-	constructor(private service:CharacterServiceService){
+	constructor(private service:CharacterServiceService, private dialog: MatDialog, private _snackBar: MatSnackBar){
 		this.characters = [];
 	}
 
@@ -40,9 +44,33 @@ export class CharacterListComponent {
 	//por hacerlo desde los hijos porque me parece que no tiene mucha lógica coger algo que es del hijo en sí y
 	//llevarlo al padre y hacer la acción que sea desde allí.
 	deleteCharacter(id:number){
-		this.service.deleteCharacter(id);
-		window.location.reload();
-	}
+		//Añadido diálogo de Flavia que pregunta antes de borrar.
+		const dialogRef = this.dialog.open(DialogComponent, {
+			data: 'Are you certain?',
+		  });
+		  dialogRef.afterClosed().subscribe((confirm) => {
+			if (confirm) {
+			  const subscribeFunction = {
+				next: () => {
+				  this._snackBar.openFromComponent(NotificationComponent, {
+					data: {
+					  message: 'Monster deleted successfully',
+					  type: 'success',
+					},
+					duration: 2000,
+					panelClass: 'success',
+				  });
+	  
+				},
+				error: () => {},
+			  };
+
+			  this.service.deleteCharacter(id).subscribe(subscribeFunction);
+			  window.location.reload();
+			}
+		});
+	}	
+	
 
 	//Como es entre componentes hermanos, le paso con un Emitter el personaje a editar al padre (private) para que este luego 
 	//se lo pase al otro hijo.
