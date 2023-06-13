@@ -4,6 +4,10 @@ import { MonsterDTO } from '../DTOclasses/monsterDTO';
 import { Observable } from 'rxjs';
 import { MonsterServiceService } from '../services/monster-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DialogComponent } from 'src/app/pages/dialog/dialog.component';
+import { NotificationComponent } from 'src/app/pages/notification/notification.component';
+import { MatDialog } from '@angular/material/dialog';
 //Este componente contedrá la lógica para mostrar la lista de todos los monstruos y el formulario para crear nuevos o editar existentes.
 //Además de la lógica para borrarlos. 
 
@@ -24,7 +28,7 @@ public formGroup: FormGroup
 public formSubmitted:boolean;
 private monsterEditing: MonsterDTO;
 
-constructor(private fetcher:MonsterServiceService, private formBuilder:FormBuilder, ){
+constructor(private fetcher:MonsterServiceService, private formBuilder:FormBuilder, private _snackBar: MatSnackBar, private dialog: MatDialog){
   //No interesa mostrar todo de todos los monstruos, sólo lo suficiente para identificarlos. 'Actions' es para editar y borrar.
   //showForm gobierna si se muestra el formulario o la lista, buttonMsg es el mensaje para el botón que gobierna esta variable a su vez
   //isEditing, como su nombre indica, comprueba si el formulario se está usando o no para editar un monstruo.
@@ -74,11 +78,39 @@ public deleteMonster(id:number):void{
   //Utiliza el servicio de monstruos para borrar, recibiendo la id del monstruo cuya fila tiene el botón pulsado.
   //Tras eso, la lista de monstruos sacada de la subscripción es filtrada para eliminar el monstruo borrado de ella y redibujar la tabla.
   //Esto hace que la tabla reaccione a los borrados inmediatamente sin necesidad de refrescar la página.
-  this.fetcher.deleteMonster(id).subscribe();
-  this.monsterList = this.monsterList.filter((monster)=>monster.id !== id);
-  this.dataSource.data = this.monsterList;
+  //También utiliza la función hecha por Flavia (con su permiso) para abrir un cuadro de diálogo antes del borrado por si acaso.
+   const dialogRef = this.dialog.open(DialogComponent, {
+      data: 'Are you certain?',
+    });
+    dialogRef.afterClosed().subscribe((confirm) => {
+      if (confirm) {
+        const subscribeFunction = {
+          next: () => {
+            this._snackBar.openFromComponent(NotificationComponent, {
+              data: {
+                message: 'Monster deleted successfully',
+                type: 'success',
+              },
+              duration: 2000,
+              panelClass: 'success',
+            });
+          
+          },
+          error: () => {},
+        };
+        this.fetcher.deleteMonster(id).subscribe(subscribeFunction);
+        this.monsterList = this.monsterList.filter((monster)=>monster.id !== id);
+        this.dataSource.data = this.monsterList;
+      }
+    });
+  }
+  
+  
+  
+  
 
-}
+
+
 
 private formCreation():void{
   //función sencilla de crear formulario de base, se llama al montar el componente, hace poco mas que cargar los controles y validadores.
@@ -152,7 +184,6 @@ public testForm():void{
   //función sencilla de testing para ver si el formulario hace lo que debe
   let formData = {...this.formGroup.value};
   formData.drops = this.createDropArray(formData.drops);
-  console.log('El formgroup tiene: ', formData);
 }
 
 public newMonster():void{

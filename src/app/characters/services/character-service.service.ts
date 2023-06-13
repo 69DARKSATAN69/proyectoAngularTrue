@@ -13,6 +13,9 @@ import { Injectable } from '@angular/core';
 import { CharacterDTO } from '../characterDTO/characterDTO';
 import { map } from 'rxjs/internal/operators/map';
 import { Observable } from 'rxjs/internal/Observable';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationComponent } from 'src/app/pages/notification/notification.component';
 
 @Injectable({
   providedIn: 'root'
@@ -72,15 +75,9 @@ export class CharacterServiceService {
   }
 
   //Borro un personaje según su id.
-  public deleteCharacter(id:number){
-    let url = this.urlApi + "/" + id;
-    this.http.delete<CharacterDTO>(url).subscribe({
-		next: (data) => {
-			this.resultado.push(data);
-		},
-		error: (error) => {
-			console.log(error)
-		}
-	});
-  }
+   public deleteCharacter(id:number):Observable<CharacterDTO>{
+	 	let url = this.urlApi + "/" + id;
+		return this.http.delete<CharacterDTO>(url);
+	}
+	   
 }

@@ -18,7 +18,8 @@
     </div>
     <div class="card-grid" >
     <mat-grid-list cols="2" rowHeight="2:1" *ngIf="(monsterList$ | async) as monsters; else loading">
-        <mat-grid-tile *ngFor="let monster of monsters">	<mat-card class="monster-card" routerLink={{monster.id}} [appMonsterBackground]="{game: monster.game, type: monster.type}">
+        <mat-grid-tile *ngFor="let monster of monsters">	<mat-card class="monster-card" routerLink={{monster.id}} 
+          [appMonsterBackground]="{game: monster.game, type: monster.type}">
             <mat-card-header>
               <div mat-card-avatar class="header-image"></div>
               <mat-card-title>{{monster.name}}</mat-card-title>
