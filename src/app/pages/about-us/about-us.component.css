@@ -12,6 +12,10 @@ header {
   height: 30rem;
 }
 
+p {
+	margin-top: 1.25rem;
+}
+
 .header-image {
   background-image: url("https://i.imgur.com/Rd00hsK.png");
   background-size: cover;

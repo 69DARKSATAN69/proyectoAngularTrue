@@ -34,9 +34,9 @@
 		  <div class="row">
 			<div class="col">
 			  <mat-form-field class="full-width">
-				<input matInput placeholder="Height (centimeters)" formControlName="height" type="number">
+				<input matInput placeholder="Height (centimeters)" formControlName="height" type="number" min="1">
 				<mat-error>
-				  Height is <strong>required</strong>
+				  Height is <strong>required</strong> / Can't be a negative number nor 0
 				</mat-error>
 			  </mat-form-field>
 			</div>

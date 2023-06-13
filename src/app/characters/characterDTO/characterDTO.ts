@@ -1,3 +1,14 @@
+/* 
+  **************************************************************
+	Clase CharacterDTO.
+	Clase base de este módulo. En ella se define toda la información básica que van a tener los objetos de esta clase.
+	Es todo información relevante que se mostrará en las diferentes páginas.
+
+	Fecha de entrega: 13/06/2023
+	Dev: Andrea
+  **************************************************************
+*/
+
 import { CharacterInterface } from "../interfaces/character-interface";
 
 export class CharacterDTO implements CharacterInterface{
