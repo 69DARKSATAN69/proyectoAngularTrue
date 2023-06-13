@@ -20,7 +20,9 @@ export class TranslateDirective {
   @HostListener('mouseenter')
   onMouseEnter() {
     this.originalText = this.elementRef.nativeElement.innerText;
+    // solo traduzco el nombre en inglés
     const [keyword] = this.originalText.split('/');
+    // para prevenir multiples llamadas al pasar el mouse por encima
     this.setTimeOutId = setTimeout(() => {
       this.translateSubscription = this.translateService
         .translate(keyword)
@@ -33,6 +35,7 @@ export class TranslateDirective {
   }
 
   @HostListener('mouseleave') onMouseLeave() {
+    // previene que el cambio perpetúe si hay demora en la llamada
     clearTimeout(this.setTimeOutId);
     this.translateSubscription.unsubscribe();
     this.elementRef.nativeElement.innerText = this.originalText;

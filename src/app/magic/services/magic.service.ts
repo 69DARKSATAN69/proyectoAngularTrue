@@ -12,7 +12,7 @@ export class MagicService {
   constructor(private http: HttpClient) {
     this.url = 'http://localhost:3000';
   }
-  //summons
+  //summons API services
   getSummonsList(): Observable<SummonsDTO[]> {
     return this.http.get<SummonsDTO[]>(this.url + '/summons');
   }
@@ -29,7 +29,7 @@ export class MagicService {
     return this.http.put<SummonsDTO>(this.url + `/summons/${id}`, body);
   }
 
-  //spells
+  //spells API services
   getSpellsList(): Observable<SpellsDTO[]> {
     return this.http.get<SpellsDTO[]>(this.url + '/spells');
   }

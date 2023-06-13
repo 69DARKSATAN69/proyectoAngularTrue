@@ -26,7 +26,6 @@ export class MagicListComponent {
   ) {
     this.magicList$ = new Observable<SummonsDTO[] | SpellsDTO[]>();
   }
-
   getAllSummons() {
     this.magicService.getSummonsList().subscribe((data) => {
       this.magicList$ = of(data);
@@ -64,6 +63,7 @@ export class MagicListComponent {
               duration: 2000,
               panelClass: 'success',
             });
+            //necesario para evitar recargar la página nuevamente para ver la información actualizada
             this.magicSelected === 'summon'
               ? this.getAllSummons()
               : this.getAllSpells();

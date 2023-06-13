@@ -39,7 +39,8 @@ export class PostEditDeleteComponent {
   private summonFields = {};
   private spellFields = {};
 
-  private initFields(data: any) {
+  private initFields() {
+    // evita repetir los mismo campos
     this.commonFieldsMagic = {
       id: { value: '', disabled: true },
       name: ['', [Validators.required]],
@@ -81,6 +82,7 @@ export class PostEditDeleteComponent {
       this.type = params.get('type');
 
       if (this.id) {
+        // en modo edición se setean los campos con los valores de la bbdd
         const magicObserve: any =
           this.type === 'summon'
             ? this.service.getSummonById(Number(this.id))
@@ -91,7 +93,7 @@ export class PostEditDeleteComponent {
           },
         });
       }
-      this.initFields({});
+      this.initFields();
       this.type === 'summon' ? this.createSummonForm() : this.createSpellForm();
     });
   }
@@ -111,13 +113,15 @@ export class PostEditDeleteComponent {
       });
     let magicObserve: any;
     if (!this.id) {
+      // formulario en modo creación de magic
       magicObserve =
         this.type === 'spell'
           ? this.service.createSpell(this.magicForm.value)
           : this.service.createSummon(this.magicForm.value);
     } else {
+      // formulario en modo edición de magic
       magicObserve =
-        this.type === 'spell'
+        this.type === 'spell' //el query param es tipo string
           ? this.service.editSpell(Number(this.id), this.magicForm.value)
           : this.service.editSummon(Number(this.id), this.magicForm.value);
     }

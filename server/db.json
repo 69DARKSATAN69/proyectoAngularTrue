@@ -650,9 +650,12 @@
       "email": "dd@dd",
       "password": "$2a$10$cSBUmuh791Z9PhGs77ux/.OTWzVhGB9pTlI.Qw4sJiLClvc/./Yp.",
       "id": 4
+    },
+    {
+      "email": "flavia.mabras@gmail.com",
+      "password": "$2a$10$l/RrVMoqNLq.3wOu6sWyrOiP2lwPS.qIrzB9tVmn2/X9K9AGyRLNi",
+      "id": 5
     }
   ],
-  "contact": [
-
-  ]
+  "contact": []
 }

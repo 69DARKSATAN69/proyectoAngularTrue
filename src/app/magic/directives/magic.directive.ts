@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 export class MagicDirective {
   private gifSubscription: Subscription;
 
+  //suscripción a API de Giphy
   constructor(
     private elementRef: ElementRef,
     private giphyService: GiphyService
@@ -22,6 +23,7 @@ export class MagicDirective {
     this.gifSubscription = this.giphyService
       .searchGiphy('final fantasy game trailer')
       .subscribe((data) => {
+        // evita obtener un índice que no exista en el arrary de gifs
         const maxRandomIndex = data.length;
         const randomIndex = Math.floor(Math.random() * maxRandomIndex);
         const srcGif = data[randomIndex].images.downsized_large.url;
@@ -31,6 +33,7 @@ export class MagicDirective {
 
   @HostListener('mouseleave') onMouseLeave() {
     this.setSrcImage(this.originalSrc);
+    // previene que el cambio de imagen si la petición demora demasiado o pasamos el mouse muy rápido
     this.gifSubscription.unsubscribe();
   }
 
