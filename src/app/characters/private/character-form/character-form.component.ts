@@ -1,3 +1,16 @@
+/* 
+  **************************************************************
+	Formulario de personaje para crear/editar.
+	Permite, según el valor de la variable "editing", crear o editar un personaje.
+	Si esta variable está a false, entonces se muestra el botón de crear, si está a true, entonces se muestra el de editar.
+
+	Recibe por Input el personaje que se ha de editar.
+
+	Fecha de entrega: 13/06/2023
+	Dev: Andrea
+  **************************************************************
+*/
+
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CharacterDTO } from '../../characterDTO/characterDTO';
@@ -13,6 +26,7 @@ export class CharacterFormComponent {
 	public formTitle:string;
 	public editing;
 
+	//Recibe del padre el personaje que va a editar.
 	@Input() characterToEdit:CharacterDTO;
 
 	constructor(private formBuilder:FormBuilder, private service:CharacterServiceService){
@@ -22,6 +36,7 @@ export class CharacterFormComponent {
 		this.editing = false;
 	}
 
+	//Método donde creo el formulario reactivo con sus validators básicos para todos los campos obligatorios.
 	private createForm(){
 		this.characterForm = this.formBuilder.group({
 			name: ["",[Validators.required]],
@@ -42,7 +57,7 @@ export class CharacterFormComponent {
 	//Uso este método porque se ejecuta cuando cambian propiedades input, así recojo el objeto cuando ya tiene datos que me llegan desde el padre y puedo usarlo.
 	ngOnChanges(){
 	
-		//Con esto cambio el título del formulario según lo que haga.
+		//Con esto cambio el título/botón del formulario según se cree/edite.
 		if(this.characterToEdit.id === null){
 			this.formTitle = "New Character";
 			this.editing = false;
@@ -51,6 +66,7 @@ export class CharacterFormComponent {
 			this.editing = true;
 		}
 
+		//Se settean los valores del personaje a editar en los campos del formulario.
 		this.characterForm.get('name')?.setValue(this.characterToEdit.name);
 		this.characterForm.get('image')?.setValue(this.characterToEdit.image);
 		this.characterForm.get('alignment')?.setValue(this.characterToEdit.alignment);
@@ -61,7 +77,9 @@ export class CharacterFormComponent {
 		this.characterForm.get('info')?.setValue(this.characterToEdit.info);
 	}
 
+	//Creo un nuevo objeto de personaje con los datos que recibo del formulario.
 	createCharacter(){
+		//Si el formulario no es inválido entonces guardo el objeto en el json-server.
 		if(!this.characterForm.invalid){
 			let character = new CharacterDTO(
 				this.characterForm.value.name, 
@@ -78,13 +96,16 @@ export class CharacterFormComponent {
 		}
 	}
 
+	
 	editCharacter(){
+		//Meto en un objeto los valores del formulario.
 		let editedCharacter = new CharacterDTO();
 		editedCharacter = {...this.characterForm.value};
 		
 		//Le asigno la id del personaje que me llega porque en el formulario no la tengo guardada de por si.
 		editedCharacter.id = this.characterToEdit.id;
 
+		//Envío el personaje a editar al servicio.
 		this.service.editCharacter(editedCharacter.id!,editedCharacter);
 		window.location.reload();
 	}
