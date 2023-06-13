@@ -1,9 +1,22 @@
+/* 
+  **************************************************************
+	Lista con los personajes.
+	Muestra todos los personajes que hay en el json-server. Permite editarlos y borrarlos de forma individual.
+
+	Recibe por input un array con todos los personajes a mostrar.
+	Envía por output al padre (para que este luego envíe al formulario) el personaje a editar.
+
+	Se gestiona el borrado de personajes desde aquí.
+
+	Fecha de entrega: 13/06/2023
+	Dev: Andrea
+  **************************************************************
+*/
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CharacterDTO } from '../../characterDTO/characterDTO';
 import { CharacterServiceService } from '../../services/character-service.service';
 
-
-let ELEMENT_DATA: CharacterDTO[] = [];
 
 @Component({
   selector: 'app-character-list',
@@ -11,9 +24,12 @@ let ELEMENT_DATA: CharacterDTO[] = [];
   styleUrls: ['./character-list.component.css']
 })
 export class CharacterListComponent {
+	//Columnas a mostrar en la tabla.
 	displayedColumns: string[] = ['id', 'name', 'alignment', 'height', 'game', 'weapon', 'actions'];
 
+	//Array de personajes que se muestran en la lista.
 	@Input() characters:CharacterDTO[];
+	//Se envía al padre el personaje para el que se pulsó el botón de "edit".
 	@Output() characterToEdit = new EventEmitter<CharacterDTO>();
 
 	constructor(private service:CharacterServiceService){
@@ -33,10 +49,6 @@ export class CharacterListComponent {
 	editCharacter(character:CharacterDTO){
 		this.characterToEdit.emit(character);
 		window.scrollTo(0, 0);
-	}
-
-	ngOnChanges(){
-		console.log(this.characters);
 	}
 
 }
