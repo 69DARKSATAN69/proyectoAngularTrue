@@ -78,6 +78,7 @@ public deleteMonster(id:number):void{
   //Utiliza el servicio de monstruos para borrar, recibiendo la id del monstruo cuya fila tiene el botón pulsado.
   //Tras eso, la lista de monstruos sacada de la subscripción es filtrada para eliminar el monstruo borrado de ella y redibujar la tabla.
   //Esto hace que la tabla reaccione a los borrados inmediatamente sin necesidad de refrescar la página.
+  //También utiliza la función hecha por Flavia (con su permiso) para abrir un cuadro de diálogo antes del borrado por si acaso.
    const dialogRef = this.dialog.open(DialogComponent, {
       data: 'Are you certain?',
     });
