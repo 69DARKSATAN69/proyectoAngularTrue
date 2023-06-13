@@ -1,7 +1,7 @@
 <div>
 	<section *ngIf="individualCharacter$ | async as character">
 			<header>
-				<h1 [appAlignment]="character.alignment">{{character.name}}</h1>
+				<h1 [appAlignment]="character.alignment" appTranslate>{{character.name}}</h1>
 			</header>
 			<img src="{{character.image}}" alt="Photo of a Final Fantasy character">
 

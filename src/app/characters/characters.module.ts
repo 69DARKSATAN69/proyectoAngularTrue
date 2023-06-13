@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { AlignmentDirective } from './directives/alignment.directive';
 import { ToInchesPipe } from './pipes/to-inches.pipe';
+import { MagicModule } from '../magic/magic.module';
 
 
 
@@ -34,7 +35,8 @@ import { ToInchesPipe } from './pipes/to-inches.pipe';
 	MatSelectModule,
 	HttpClientModule,
 	MatTableModule,
-	MatButtonModule
+	MatButtonModule,
+	MagicModule
   ],
   providers: [
 	CharacterServiceService
