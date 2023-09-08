@@ -22,8 +22,8 @@ export class GroupMagicCardComponent {
   constructor(private magicService: MagicService, private routes: Router) {
     this.spellsList$ = new Observable<SpellsDTO[]>();
     this.summonsList$ = new Observable<SummonsDTO[]>();
-    this.principalImageSummon = 'https://i.imgur.com/bw4IuTl.png';
-    this.principalImageSpell = 'https://i.imgur.com/btWFAtq.png';
+    this.principalImageSummon = 'https://i.imgur.com/sBJ37dU.png';
+    this.principalImageSpell = 'https://i.imgur.com/BmpjQMV.jpg';
   }
 
   // seteo la lista de summon por versión de juego
@@ -91,15 +91,15 @@ export class GroupMagicCardComponent {
   showMainImageSummon(game: string) {
     switch (game) {
       case 'X': {
-        this.principalImageSummon = 'https://i.imgur.com/R1bzVAr.png';
+        this.principalImageSummon = 'https://i.imgur.com/B8CR9hA.png';
         break;
       }
       case 'XV': {
-        this.principalImageSummon = 'https://i.imgur.com/k69kNSA.png';
+        this.principalImageSummon = 'https://i.imgur.com/j4tm3Pm.png';
         break;
       }
       default: {
-        this.principalImageSummon = 'https://i.imgur.com/bw4IuTl.png';
+        this.principalImageSummon = 'https://i.imgur.com/sBJ37dU.png';
         break;
       }
     }
@@ -107,15 +107,15 @@ export class GroupMagicCardComponent {
   showMainImageSpell(game: string) {
     switch (game) {
       case 'X': {
-        this.principalImageSpell = 'https://i.imgur.com/V82wbSx.png';
+        this.principalImageSpell = 'https://i.imgur.com/SwXGlH8.png';
         break;
       }
       case 'XV': {
-        this.principalImageSpell = 'https://i.imgur.com/3R7yufW.png';
+        this.principalImageSpell = 'https://i.imgur.com/PrL7sjQ.jpg';
         break;
       }
       default: {
-        this.principalImageSpell = 'https://i.imgur.com/btWFAtq.png';
+        this.principalImageSpell = 'https://i.imgur.com/BmpjQMV.jpg';
         break;
       }
     }
